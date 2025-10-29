@@ -10,28 +10,28 @@
       
       
       
-        <link rel="canonical" href="https://docs.example.com/latest/elastic-stack-deployment/overview/">
+        <link rel="canonical" href="https://docs.example.com/latest/opsflw-connect-platform/troubleshooting/build-failures/">
       
       
-        <link rel="prev" href="../../opsflw-connect-platform/troubleshooting/access-issues/">
+        <link rel="prev" href="../../profiles-overview/">
       
       
-        <link rel="next" href="../profiles-overview/">
+        <link rel="next" href="../access-issues/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.33">
     
     
       
-        <title>Elastic Stack deployment overview - Opsflw Connect Docs</title>
+        <title>Troubleshooting build failures - Opsflw Connect Docs</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.3cba04c6.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.3cba04c6.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,16 +50,16 @@
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -68,7 +68,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cluster-layout" class="md-skip">
+        <a href="#confirm-required-tooling" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Opsflw Connect Docs" class="md-header__button md-logo" aria-label="Opsflw Connect Docs" data-md-component="logo">
+    <a href="../../.." title="Opsflw Connect Docs" class="md-header__button md-logo" aria-label="Opsflw Connect Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -125,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Elastic Stack deployment overview
+              Troubleshooting build failures
             
           </span>
         </div>
@@ -226,7 +226,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
     
@@ -241,11 +241,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../opsflw-connect-platform/overview/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../overview/" class="md-tabs__link">
           
   
   Opsflw Connect
@@ -259,13 +261,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../elastic-stack-deployment/overview/" class="md-tabs__link">
           
   
   Elastic Stack Deployment
@@ -283,7 +283,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../getting-started/overview/" class="md-tabs__link">
+        <a href="../../../getting-started/overview/" class="md-tabs__link">
           
   
   Getting Started
@@ -301,7 +301,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../operations/backup-playbook/" class="md-tabs__link">
+        <a href="../../../operations/backup-playbook/" class="md-tabs__link">
           
   
   Operations
@@ -319,7 +319,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../reference/api/" class="md-tabs__link">
+        <a href="../../../reference/api/" class="md-tabs__link">
           
   
   Reference
@@ -352,7 +352,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Opsflw Connect Docs" class="md-nav__button md-logo" aria-label="Opsflw Connect Docs" data-md-component="logo">
+    <a href="../../.." title="Opsflw Connect Docs" class="md-nav__button md-logo" aria-label="Opsflw Connect Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -382,7 +382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -399,25 +399,30 @@
       
   
   
+    
   
   
+  
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -428,7 +433,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Opsflw Connect
@@ -442,7 +447,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../opsflw-connect-platform/overview/" class="md-nav__link">
+      <a href="../../overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -463,7 +468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../opsflw-connect-platform/network-overview/" class="md-nav__link">
+      <a href="../../network-overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -484,7 +489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../opsflw-connect-platform/maintenance-window/" class="md-nav__link">
+      <a href="../../maintenance-window/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -505,7 +510,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../opsflw-connect-platform/profiles-overview/" class="md-nav__link">
+      <a href="../../profiles-overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -523,25 +528,30 @@
                 
   
   
+    
   
   
+  
     
     
     
       
       
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
         
           
-          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -552,7 +562,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_5">
             <span class="md-nav__icon md-icon"></span>
             Troubleshooting
@@ -563,10 +573,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../opsflw-connect-platform/troubleshooting/build-failures/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Build failures
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -575,6 +603,51 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#confirm-required-tooling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confirm required tooling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-the-preflight-suite-locally" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run the preflight suite locally
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#capture-failing-output-for-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      Capture failing output for review
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -587,7 +660,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../opsflw-connect-platform/troubleshooting/access-issues/" class="md-nav__link">
+      <a href="../access-issues/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -620,30 +693,25 @@
       
   
   
-    
   
   
-  
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -654,7 +722,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Elastic Stack Deployment
@@ -665,28 +733,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Overview
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../elastic-stack-deployment/overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -695,51 +745,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#cluster-layout" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cluster layout
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deployment-automation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Deployment automation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#integration-points" class="md-nav__link">
-    <span class="md-ellipsis">
-      Integration points
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -752,7 +757,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../profiles-overview/" class="md-nav__link">
+      <a href="../../../elastic-stack-deployment/profiles-overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -773,7 +778,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../elastic-license/" class="md-nav__link">
+      <a href="../../../elastic-stack-deployment/elastic-license/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -841,7 +846,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting-started/overview/" class="md-nav__link">
+      <a href="../../../getting-started/overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -909,7 +914,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../operations/backup-playbook/" class="md-nav__link">
+      <a href="../../../operations/backup-playbook/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -977,7 +982,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/api/" class="md-nav__link">
+      <a href="../../../reference/api/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1023,27 +1028,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#cluster-layout" class="md-nav__link">
+  <a href="#confirm-required-tooling" class="md-nav__link">
     <span class="md-ellipsis">
-      Cluster layout
+      Confirm required tooling
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#deployment-automation" class="md-nav__link">
+  <a href="#run-the-preflight-suite-locally" class="md-nav__link">
     <span class="md-ellipsis">
-      Deployment automation
+      Run the preflight suite locally
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#integration-points" class="md-nav__link">
+  <a href="#capture-failing-output-for-review" class="md-nav__link">
     <span class="md-ellipsis">
-      Integration points
+      Capture failing output for review
     </span>
   </a>
   
@@ -1067,41 +1072,34 @@
   
 
 
-  <h1>Overview</h1>
+  <h1>Build failures</h1>
 
-<p>Opsflw Connect ships a managed Elastic Stack cluster to centralize logs,
-metrics, and traces from every connected environment. The deployment follows a
-repeatable architecture so day-two operations stay predictable.</p>
-<h2 id="cluster-layout">Cluster layout</h2>
-<ul>
-<li><strong>Ingest nodes</strong> scale horizontally to accept Beats, Elastic Agent, and API
-  traffic.</li>
-<li><strong>Data nodes</strong> store time-series indices with lifecycle policies tuned for
-  30-day hot, 90-day warm retention.</li>
-<li><strong>Master nodes</strong> anchor cluster coordination and receive upgrades first
-  during maintenance windows.</li>
-</ul>
-<p>All nodes run inside hardened subnets with security groups allowing limited
-inbound ports. Outbound traffic routes through shared NAT gateways controlled
-by the network overview policies.</p>
-<h2 id="deployment-automation">Deployment automation</h2>
-<p>The Elastic deployment is provisioned through Terraform modules managed in the
-Opsflw IaC repository. Pipelines ensure each change:</p>
-<ol>
-<li>Validates the plan against staging.</li>
-<li>Executes in production during an approved maintenance window.</li>
-<li>Verifies cluster health and index lifecycle status before closing the
-   change.</li>
-</ol>
-<h2 id="integration-points">Integration points</h2>
-<ul>
-<li>Control plane services ship audit logs through Beats shippers.</li>
-<li>Tenant workloads forward telemetry using fleet-managed Elastic Agents.</li>
-<li>Runbooks rely on Kibana dashboards for incident response and compliance
-  reporting.</li>
-</ul>
-<p>Continue with the profiles overview to understand how teams tailor Elastic
-access and dashboards per tenant.</p>
+<p>Opsflw Connect documentation builds fail most often because a required
+preflight step was skipped or a recent content change broke navigation. Use the
+checks below to quickly restore a green pipeline.</p>
+<h2 id="confirm-required-tooling">Confirm required tooling</h2>
+<p>Verify that the global Python and Node dependencies match the repository
+requirements. Install or upgrade them with the project-provided manifests.</p>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>--user<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+npm<span class="w"> </span>install
+</code></pre></div>
+<p>If the install commands report missing permissions, ensure you are not running
+inside a restricted container or shell session. Retry after enabling the
+recommended user-level package directories.</p>
+<h2 id="run-the-preflight-suite-locally">Run the preflight suite locally</h2>
+<p>Execute the same commands that CI uses before opening a pull request. Address
+any failures before re-running the suite.</p>
+<div class="highlight"><pre><span></span><code>mkdocs<span class="w"> </span>build<span class="w"> </span>--strict
+npx<span class="w"> </span>markdownlint-cli<span class="w"> </span><span class="s2">&quot;docs/**/*.md&quot;</span>
+npx<span class="w"> </span>playwright<span class="w"> </span><span class="nb">test</span>
+</code></pre></div>
+<p>Resolve navigation warnings from <code>mkdocs build</code> by checking <code>mkdocs.yml</code> for
+incorrect paths or duplicate headings. Fix lint errors by wrapping long lines or
+adding the required blank lines around fenced code blocks.</p>
+<h2 id="capture-failing-output-for-review">Capture failing output for review</h2>
+<p>When the build still fails, copy the command output into your pull request or
+support ticket. Include the exact command, the error snippet, and any recent
+content changes. This context helps reviewers reproduce the issue quickly.</p>
 
 
 
@@ -1180,10 +1178,10 @@ access and dashboards per tenant.</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.sections", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.af256bd8.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.af256bd8.min.js"></script>
       
     
   <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});

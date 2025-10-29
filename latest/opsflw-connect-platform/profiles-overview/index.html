@@ -16,7 +16,7 @@
         <link rel="prev" href="../maintenance-window/">
       
       
-        <link rel="next" href="../../elastic-stack-deployment/overview/">
+        <link rel="next" href="../troubleshooting/build-failures/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#profiles-overview" class="md-skip">
+        <a href="#profile-types" class="md-skip">
           Skip to content
         </a>
       
@@ -319,24 +319,6 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../troubleshooting/" class="md-tabs__link">
-          
-  
-  Troubleshooting
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
         <a href="../../reference/api/" class="md-tabs__link">
           
   
@@ -534,8 +516,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -563,8 +543,6 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-  
-    
   
   
     <label class="md-nav__title" for="__toc">
@@ -603,6 +581,99 @@
     </ul>
   
 </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Troubleshooting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/build-failures/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Build failures
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/access-issues/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Access issues
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -888,7 +959,7 @@
             
   
   <span class="md-ellipsis">
-    Troubleshooting
+    Reference
   </span>
   
 
@@ -897,74 +968,6 @@
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            Troubleshooting
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../troubleshooting/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Index
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
-        
-          
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Reference
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Reference
           </label>
@@ -1014,8 +1017,6 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-  
-    
   
   
     <label class="md-nav__title" for="__toc">
@@ -1069,28 +1070,41 @@
   
 
 
-<h1 id="profiles-overview">Profiles overview</h1>
-<p>Profiles bundle configuration defaults for environments, tenants, and applications so platform teams can apply consistent policies with minimal manual effort. Each profile defines resource limits, access controls, and automation hooks that downstream apps inherit.</p>
+  <h1>Profiles overview</h1>
+
+<p>Profiles bundle configuration defaults for environments, tenants, and
+applications so platform teams can apply consistent policies with minimal
+manual effort. Each profile defines resource limits, access controls, and
+automation hooks that downstream apps inherit.</p>
 <h2 id="profile-types">Profile types</h2>
 <ul>
-<li><strong>Environment profiles</strong> set baseline infrastructure sizes, regional placement, and network guardrails.</li>
-<li><strong>Access profiles</strong> align roles, entitlements, and SSO mappings for tenant administrators and service accounts.</li>
-<li><strong>Automation profiles</strong> bind pipelines, observability dashboards, and backup routines to workload classes.</li>
+<li><strong>Environment profiles</strong> set baseline infrastructure sizes, regional
+  placement, and network guardrails.</li>
+<li><strong>Access profiles</strong> align roles, entitlements, and SSO mappings for tenant
+  administrators and service accounts.</li>
+<li><strong>Automation profiles</strong> bind pipelines, observability dashboards, and backup
+  routines to workload classes.</li>
 </ul>
-<p>Compose these profiles to match your organizational hierarchy, then assign them to deployments during provisioning.</p>
+<p>Compose these profiles to match your organizational hierarchy, then assign them
+to deployments during provisioning.</p>
 <h2 id="lifecycle-management">Lifecycle management</h2>
 <p>Profiles follow a versioned lifecycle:</p>
 <ol>
-<li>Draft new revisions in a staging project and validate against non-production environments.</li>
+<li>Draft new revisions in a staging project and validate against non-production
+   environments.</li>
 <li>Promote the revision by tagging it as <code>stable</code> once validation passes.</li>
-<li>Deprecate older revisions after dependent deployments upgrade or reach end of support.</li>
+<li>Deprecate older revisions after dependent deployments upgrade or reach end
+   of support.</li>
 </ol>
-<p>Track profile changes in Git so audits capture the rationale behind each revision.</p>
+<p>Track profile changes in Git so audits capture the rationale behind each
+revision.</p>
 <h2 id="related-tooling">Related tooling</h2>
 <ul>
 <li><code>opsflowctl profile list</code> shows available profiles and current revision tags.</li>
-<li><code>opsflowctl profile diff &lt;profile&gt; --from &lt;rev1&gt; --to &lt;rev2&gt;</code> highlights configuration changes.</li>
-<li><code>opsflowctl profile apply &lt;profile&gt; --target &lt;deployment&gt;</code> enforces the selected revision across environments.</li>
+<li><code>opsflowctl profile diff &lt;profile&gt; --from &lt;rev1&gt; --to &lt;rev2&gt;</code> highlights
+  configuration changes.</li>
+<li><code>opsflowctl profile apply &lt;profile&gt; --target &lt;deployment&gt;</code> enforces the
+  selected revision across environments.</li>
 </ul>
 
 

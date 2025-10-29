@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#elastic-license-management" class="md-skip">
+        <a href="#license-model" class="md-skip">
           Skip to content
         </a>
       
@@ -319,24 +319,6 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../troubleshooting/" class="md-tabs__link">
-          
-  
-  Troubleshooting
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
         <a href="../../reference/api/" class="md-tabs__link">
           
   
@@ -537,6 +519,96 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Troubleshooting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../opsflw-connect-platform/troubleshooting/build-failures/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Build failures
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../opsflw-connect-platform/troubleshooting/access-issues/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Access issues
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -644,8 +716,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -673,8 +743,6 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-  
-    
   
   
     <label class="md-nav__title" for="__toc">
@@ -888,7 +956,7 @@
             
   
   <span class="md-ellipsis">
-    Troubleshooting
+    Reference
   </span>
   
 
@@ -897,74 +965,6 @@
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            Troubleshooting
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../troubleshooting/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Index
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
-        
-          
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Reference
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Reference
           </label>
@@ -1014,8 +1014,6 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-  
-    
   
   
     <label class="md-nav__title" for="__toc">
@@ -1069,29 +1067,43 @@
   
 
 
-<h1 id="elastic-license-management">Elastic license management</h1>
-<p>Opsflw Connect operates the Elastic Stack under a commercial subscription to unlock advanced security and observability features. Proper license management keeps the cluster compliant and avoids service interruptions.</p>
+  <h1>Elastic license management</h1>
+
+<p>Opsflw Connect operates the Elastic Stack under a commercial subscription to
+unlock advanced security and observability features. Proper license management
+keeps the cluster compliant and avoids service interruptions.</p>
 <h2 id="license-model">License model</h2>
 <ul>
-<li>The deployment uses the Elastic Enterprise license tier to access machine learning jobs, Alerting, and Spaces.</li>
-<li>Usage is measured in resource-metric units (RMUs) across data nodes, ingest capacity, and machine learning workloads.</li>
-<li>License files are stored securely in the Opsflw secrets manager and rotated before expiration.</li>
+<li>The deployment uses the Elastic Enterprise license tier to access machine
+  learning jobs, Alerting, and Spaces.</li>
+<li>Usage is measured in resource-metric units (RMUs) across data nodes, ingest
+  capacity, and machine learning workloads.</li>
+<li>License files are stored securely in the Opsflw secrets manager and rotated
+  before expiration.</li>
 </ul>
 <h2 id="renewal-process">Renewal process</h2>
 <ol>
-<li>Track license expiration dates in the central renewal calendar at least 90 days out.</li>
+<li>Track license expiration dates in the central renewal calendar at least 90
+   days out.</li>
 <li>Request updated license files from Elastic with projected growth estimates.</li>
-<li>Validate the new license in staging using <code>elastic-license install --scope staging</code> and monitor for warnings.</li>
-<li>Schedule production installation during a maintenance window and confirm the cluster reports the renewed expiration.</li>
+<li>Validate the new license in staging using
+   <code>elastic-license install --scope staging</code> and monitor for warnings.</li>
+<li>Schedule production installation during a maintenance window and confirm the
+   cluster reports the renewed expiration.</li>
 </ol>
-<p>Document the renewal in the change log and attach the confirmation email for audit readiness.</p>
+<p>Document the renewal in the change log and attach the confirmation email for
+audit readiness.</p>
 <h2 id="compliance-monitoring">Compliance monitoring</h2>
 <ul>
-<li>Enable license usage alerts in Kibana to notify the platform team when consumption approaches 80% of the limit.</li>
-<li>Review monthly RMU reports to ensure tenant workloads align with contracted capacity.</li>
-<li>Coordinate with finance and procurement during quarterly business reviews to adjust entitlements proactively.</li>
+<li>Enable license usage alerts in Kibana to notify the platform team when
+  consumption approaches 80% of the limit.</li>
+<li>Review monthly RMU reports to ensure tenant workloads align with contracted
+  capacity.</li>
+<li>Coordinate with finance and procurement during quarterly business reviews to
+  adjust entitlements proactively.</li>
 </ul>
-<p>Rely on the Opsflw Connect profiles to enforce consistent access controls after each license update.</p>
+<p>Rely on the Opsflw Connect profiles to enforce consistent access controls after
+each license update.</p>
 
 
 

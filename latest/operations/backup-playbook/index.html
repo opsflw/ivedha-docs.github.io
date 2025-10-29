@@ -16,7 +16,7 @@
         <link rel="prev" href="../../getting-started/overview/">
       
       
-        <link rel="next" href="../../troubleshooting/">
+        <link rel="next" href="../../reference/api/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#backup-playbook" class="md-skip">
+        <a href="#nightly-backup-routine" class="md-skip">
           Skip to content
         </a>
       
@@ -319,24 +319,6 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../troubleshooting/" class="md-tabs__link">
-          
-  
-  Troubleshooting
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
         <a href="../../reference/api/" class="md-tabs__link">
           
   
@@ -532,6 +514,96 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Troubleshooting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../opsflw-connect-platform/troubleshooting/build-failures/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Build failures
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../opsflw-connect-platform/troubleshooting/access-issues/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Access issues
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -780,8 +852,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -809,8 +879,6 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-  
-    
   
   
     <label class="md-nav__title" for="__toc">
@@ -879,7 +947,7 @@
             
   
   <span class="md-ellipsis">
-    Troubleshooting
+    Reference
   </span>
   
 
@@ -888,74 +956,6 @@
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            Troubleshooting
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../troubleshooting/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Index
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
-        
-          
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Reference
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Reference
           </label>
@@ -1006,8 +1006,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1051,8 +1049,10 @@
   
 
 
-<h1 id="backup-playbook">Backup Playbook</h1>
-<p>Opsflow stores configuration data in the control plane and artifacts in S3-compatible storage.</p>
+  <h1>Backup Playbook</h1>
+
+<p>Opsflow stores configuration data in the control plane and artifacts in
+S3-compatible storage.</p>
 <h2 id="nightly-backup-routine">Nightly Backup Routine</h2>
 <ol>
 <li>Trigger the <code>opsflow-backup</code> workflow in the customer portal.</li>
@@ -1062,10 +1062,13 @@
 <h2 id="restore-checklist">Restore Checklist</h2>
 <ul>
 <li>Identify the backup timestamp that matches the incident window.</li>
-<li>Run the restore job with the backup ID:
-  <div class="highlight"><pre><span></span><code>opsflowctl<span class="w"> </span>restore<span class="w"> </span>--backup-id<span class="w"> </span>&lt;timestamp&gt;
-</code></pre></div></li>
-<li>Validate restored pipelines in the staging environment before promoting back to production.</li>
+<li>Run the restore job with the backup ID:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>opsflowctl<span class="w"> </span>restore<span class="w"> </span>--backup-id<span class="w"> </span>&lt;timestamp&gt;
+</code></pre></div>
+<ul>
+<li>Validate restored pipelines in the staging environment before promoting back
+  to production.</li>
 </ul>
 
 

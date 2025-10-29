@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#elastic-profiles-overview" class="md-skip">
+        <a href="#what-profiles-configure" class="md-skip">
           Skip to content
         </a>
       
@@ -319,24 +319,6 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../troubleshooting/" class="md-tabs__link">
-          
-  
-  Troubleshooting
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
         <a href="../../reference/api/" class="md-tabs__link">
           
   
@@ -537,6 +519,96 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Troubleshooting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../opsflw-connect-platform/troubleshooting/build-failures/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Build failures
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../opsflw-connect-platform/troubleshooting/access-issues/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Access issues
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -623,8 +695,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -652,8 +722,6 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-  
-    
   
   
     <label class="md-nav__title" for="__toc">
@@ -888,7 +956,7 @@
             
   
   <span class="md-ellipsis">
-    Troubleshooting
+    Reference
   </span>
   
 
@@ -897,74 +965,6 @@
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            Troubleshooting
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../troubleshooting/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Index
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
-        
-          
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Reference
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Reference
           </label>
@@ -1014,8 +1014,6 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-  
-    
   
   
     <label class="md-nav__title" for="__toc">
@@ -1069,27 +1067,40 @@
   
 
 
-<h1 id="elastic-profiles-overview">Elastic profiles overview</h1>
-<p>Elastic profiles extend the Opsflw Connect profile system to observability data. They map tenant requirements to index lifecycle policies, role mappings, and curated dashboards so teams can grant least-privilege access quickly.</p>
+  <h1>Profiles overview</h1>
+
+<p>Elastic profiles extend the Opsflw Connect profile system to observability
+data. They map tenant requirements to index lifecycle policies, role mappings,
+and curated dashboards so teams can grant least-privilege access quickly.</p>
 <h2 id="what-profiles-configure">What profiles configure</h2>
 <ul>
-<li><strong>Data views</strong> specify index patterns, default time ranges, and filters for dashboards.</li>
-<li><strong>Role mappings</strong> align tenant SSO groups with Elastic roles that control read and write permissions.</li>
-<li><strong>Lifecycle policies</strong> enforce retention and rollover schedules that match compliance obligations.</li>
+<li><strong>Data views</strong> specify index patterns, default time ranges, and filters for
+  dashboards.</li>
+<li><strong>Role mappings</strong> align tenant SSO groups with Elastic roles that control
+  read and write permissions.</li>
+<li><strong>Lifecycle policies</strong> enforce retention and rollover schedules that match
+  compliance obligations.</li>
 </ul>
-<p>Each profile references a baseline set of Kibana objects stored in Git, ensuring reproducible dashboards across environments.</p>
+<p>Each profile references a baseline set of Kibana objects stored in Git,
+ensuring reproducible dashboards across environments.</p>
 <h2 id="workflow-for-updates">Workflow for updates</h2>
 <ol>
-<li>Clone the Elastic content repository and create a feature branch for the profile change.</li>
-<li>Update the JSON exports or Fleet packages that define dashboards and visualizations.</li>
-<li>Submit a pull request with screenshots, retention impact, and expected migration steps.</li>
+<li>Clone the Elastic content repository and create a feature branch for the
+   profile change.</li>
+<li>Update the JSON exports or Fleet packages that define dashboards and
+   visualizations.</li>
+<li>Submit a pull request with screenshots, retention impact, and expected
+   migration steps.</li>
 </ol>
-<p>Automation syncs merged changes into staging first, then production during the next maintenance window.</p>
+<p>Automation syncs merged changes into staging first, then production during the
+next maintenance window.</p>
 <h2 id="validation-checklist">Validation checklist</h2>
 <ul>
-<li>Confirm role mappings continue to enforce least privilege with automated access tests.</li>
+<li>Confirm role mappings continue to enforce least privilege with automated
+  access tests.</li>
 <li>Verify dashboards load within SLO targets after the sync completes.</li>
-<li>Ensure lifecycle policies keep storage costs within the allocated budget by reviewing hot and warm usage.</li>
+<li>Ensure lifecycle policies keep storage costs within the allocated budget by
+  reviewing hot and warm usage.</li>
 </ul>
 
 
