@@ -86,11 +86,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#confirm-required-tooling" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -583,17 +578,6 @@
       
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Build failures
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -603,50 +587,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#confirm-required-tooling" class="md-nav__link">
-    <span class="md-ellipsis">
-      Confirm required tooling
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#run-the-preflight-suite-locally" class="md-nav__link">
-    <span class="md-ellipsis">
-      Run the preflight suite locally
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#capture-failing-output-for-review" class="md-nav__link">
-    <span class="md-ellipsis">
-      Capture failing output for review
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -1021,41 +961,6 @@
   
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#confirm-required-tooling" class="md-nav__link">
-    <span class="md-ellipsis">
-      Confirm required tooling
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#run-the-preflight-suite-locally" class="md-nav__link">
-    <span class="md-ellipsis">
-      Run the preflight suite locally
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#capture-failing-output-for-review" class="md-nav__link">
-    <span class="md-ellipsis">
-      Capture failing output for review
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1077,7 +982,8 @@
 <p>Opsflw Connect documentation builds fail most often because a required
 preflight step was skipped or a recent content change broke navigation. Use the
 checks below to quickly restore a green pipeline.</p>
-<h2 id="confirm-required-tooling">Confirm required tooling</h2>
+<details class="note">
+<summary>Confirm required tooling</summary>
 <p>Verify that the global Python and Node dependencies match the repository
 requirements. Install or upgrade them with the project-provided manifests.</p>
 <div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>--user<span class="w"> </span>-r<span class="w"> </span>requirements.txt
@@ -1086,7 +992,9 @@ npm<span class="w"> </span>install
 <p>If the install commands report missing permissions, ensure you are not running
 inside a restricted container or shell session. Retry after enabling the
 recommended user-level package directories.</p>
-<h2 id="run-the-preflight-suite-locally">Run the preflight suite locally</h2>
+</details>
+<details class="note">
+<summary>Run the preflight suite locally</summary>
 <p>Execute the same commands that CI uses before opening a pull request. Address
 any failures before re-running the suite.</p>
 <div class="highlight"><pre><span></span><code>mkdocs<span class="w"> </span>build<span class="w"> </span>--strict
@@ -1094,12 +1002,15 @@ npx<span class="w"> </span>markdownlint-cli<span class="w"> </span><span class="
 npx<span class="w"> </span>playwright<span class="w"> </span><span class="nb">test</span>
 </code></pre></div>
 <p>Resolve navigation warnings from <code>mkdocs build</code> by checking <code>mkdocs.yml</code> for
-incorrect paths or duplicate headings. Fix lint errors by wrapping long lines or
-adding the required blank lines around fenced code blocks.</p>
-<h2 id="capture-failing-output-for-review">Capture failing output for review</h2>
+incorrect paths or duplicate headings. Fix lint errors by wrapping long
+lines or adding the required blank lines around fenced code blocks.</p>
+</details>
+<details class="note">
+<summary>Capture failing output for review</summary>
 <p>When the build still fails, copy the command output into your pull request or
 support ticket. Include the exact command, the error snippet, and any recent
 content changes. This context helps reviewers reproduce the issue quickly.</p>
+</details>
 
 
 
@@ -1122,7 +1033,7 @@ content changes. This context helps reviewers reproduce the issue quickly.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 29, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 30, 2025</span>
   </span>
 
     
@@ -1132,7 +1043,7 @@ content changes. This context helps reviewers reproduce the issue quickly.</p>
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 29, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 30, 2025</span>
   </span>
 
     
