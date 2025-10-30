@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" role="img" aria-labelledby="title desc">
+  <title id="title">Queue depth widget</title>
+  <desc id="desc">Stylized chart showing queue depth trend across five intervals.</desc>
+  <rect width="320" height="180" fill="#0f172a" rx="12"/>
+  <text x="24" y="36" fill="#38bdf8" font-family="'Segoe UI', 'Roboto', 'Helvetica', sans-serif" font-size="20" font-weight="600">Queue depth</text>
+  <text x="24" y="60" fill="#cbd5f5" font-family="'Segoe UI', 'Roboto', 'Helvetica', sans-serif" font-size="12">Messages waiting for processing</text>
+  <polyline points="24,140 92,124 160,136 228,96 296,108" fill="none" stroke="#fbbf24" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="24" cy="140" r="6" fill="#fbbf24"/>
+  <circle cx="92" cy="124" r="6" fill="#fbbf24"/>
+  <circle cx="160" cy="136" r="6" fill="#fbbf24"/>
+  <circle cx="228" cy="96" r="6" fill="#fbbf24"/>
+  <circle cx="296" cy="108" r="6" fill="#fbbf24"/>
+  <line x1="24" y1="76" x2="296" y2="76" stroke="#1e293b" stroke-width="2"/>
+  <text x="24" y="164" fill="#94a3b8" font-family="'Segoe UI', 'Roboto', 'Helvetica', sans-serif" font-size="10">Last updated 5 minutes ago</text>
+</svg>
