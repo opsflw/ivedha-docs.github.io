@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://docs.example.com/latest/operations/backup-playbook/">
+        <link rel="canonical" href="https://docs.example.com/latest/opsflw-connect-platform/security-overview/">
       
       
-        <link rel="prev" href="../../getting-started/overview/">
+        <link rel="prev" href="../opsflw-connect-on-azure-cloud/">
       
       
-        <link rel="next" href="../../reference/api/">
+        <link rel="next" href="../password-and-secrets-management/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Backup Playbook - Opsflw Connect Docs</title>
+        <title>Security overview - Opsflw Connect Docs</title>
       
     
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#nightly-backup-routine" class="md-skip">
+        <a href="#security-principles" class="md-skip">
           Skip to content
         </a>
       
@@ -125,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Backup Playbook
+              Security overview
             
           </span>
         </div>
@@ -241,11 +241,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../opsflw-connect-platform/introduction/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../introduction/" class="md-tabs__link">
           
   
   Opsflw Connect
@@ -295,13 +297,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../operations/backup-playbook/" class="md-tabs__link">
           
   
   Operations
@@ -399,25 +399,30 @@
       
   
   
+    
   
   
+  
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -428,7 +433,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Opsflw Connect
@@ -442,7 +447,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../opsflw-connect-platform/introduction/" class="md-nav__link">
+      <a href="../introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -463,7 +468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../opsflw-connect-platform/opsflw-connect-on-azure-cloud/" class="md-nav__link">
+      <a href="../opsflw-connect-on-azure-cloud/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -481,10 +486,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../opsflw-connect-platform/security-overview/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Security overview
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -493,6 +516,51 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#security-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security principles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#end-user-expectations" class="md-nav__link">
+    <span class="md-ellipsis">
+      End-user expectations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shared-responsibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shared responsibility
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -505,7 +573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../opsflw-connect-platform/password-and-secrets-management/" class="md-nav__link">
+      <a href="../password-and-secrets-management/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -526,7 +594,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../opsflw-connect-platform/compliance-and-governance/" class="md-nav__link">
+      <a href="../compliance-and-governance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -547,7 +615,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../opsflw-connect-platform/what-is-a-maintenance-window/" class="md-nav__link">
+      <a href="../what-is-a-maintenance-window/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -568,7 +636,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../opsflw-connect-platform/support-emails-and-contacts/" class="md-nav__link">
+      <a href="../support-emails-and-contacts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -589,7 +657,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../opsflw-connect-platform/how-to-get-support-and-submit-tickets/" class="md-nav__link">
+      <a href="../how-to-get-support-and-submit-tickets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -615,17 +683,20 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
         
           
-          <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -650,7 +721,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../opsflw-connect-platform/troubleshooting/build-failures/" class="md-nav__link">
+      <a href="../troubleshooting/build-failures/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -671,7 +742,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../opsflw-connect-platform/troubleshooting/access-issues/" class="md-nav__link">
+      <a href="../troubleshooting/access-issues/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1224,30 +1295,25 @@
       
   
   
-    
   
   
-  
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1258,7 +1324,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Operations
@@ -1269,28 +1335,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Backup Playbook
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../operations/backup-playbook/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1299,42 +1347,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#nightly-backup-routine" class="md-nav__link">
-    <span class="md-ellipsis">
-      Nightly Backup Routine
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#restore-checklist" class="md-nav__link">
-    <span class="md-ellipsis">
-      Restore Checklist
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1440,18 +1452,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#nightly-backup-routine" class="md-nav__link">
+  <a href="#security-principles" class="md-nav__link">
     <span class="md-ellipsis">
-      Nightly Backup Routine
+      Security principles
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#restore-checklist" class="md-nav__link">
+  <a href="#end-user-expectations" class="md-nav__link">
     <span class="md-ellipsis">
-      Restore Checklist
+      End-user expectations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shared-responsibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shared responsibility
     </span>
   </a>
   
@@ -1475,26 +1496,31 @@
   
 
 
-  <h1>Backup Playbook</h1>
+  <h1>Security overview</h1>
 
-<p>Opsflow stores configuration data in the control plane and artifacts in
-S3-compatible storage.</p>
-<h2 id="nightly-backup-routine">Nightly Backup Routine</h2>
-<ol>
-<li>Trigger the <code>opsflow-backup</code> workflow in the customer portal.</li>
-<li>Verify the job status under <strong>Operations ▸ Jobs</strong>.</li>
-<li>Confirm that the artifact landed in the designated bucket.</li>
-</ol>
-<h2 id="restore-checklist">Restore Checklist</h2>
+<p>Opsflw Connect applies a security-first operating model for managed
+applications on Azure.</p>
+<h2 id="security-principles">Security principles</h2>
 <ul>
-<li>Identify the backup timestamp that matches the incident window.</li>
-<li>Run the restore job with the backup ID:</li>
+<li>Least-privilege access for users and service identities</li>
+<li>Role-based access control for customer and operator responsibilities</li>
+<li>Controlled operational change through approved workflows</li>
+<li>Monitoring and response processes for security-relevant events</li>
 </ul>
-<div class="highlight"><pre><span></span><code>opsflowctl<span class="w"> </span>restore<span class="w"> </span>--backup-id<span class="w"> </span>&lt;timestamp&gt;
-</code></pre></div>
+<h2 id="end-user-expectations">End-user expectations</h2>
+<p>As an end user, you should expect:</p>
 <ul>
-<li>Validate restored pipelines in the staging environment before promoting back
-  to production.</li>
+<li>Access based on assigned role and approved business need</li>
+<li>Authentication and authorization controls aligned with enterprise policy</li>
+<li>Security updates applied through planned platform operations</li>
+</ul>
+<h2 id="shared-responsibility">Shared responsibility</h2>
+<p>Opsflw manages platform and service security controls.</p>
+<p>Customers remain responsible for:</p>
+<ul>
+<li>User governance in their organization</li>
+<li>Correct use of assigned permissions</li>
+<li>Internal policy compliance for data and access usage</li>
 </ul>
 
 

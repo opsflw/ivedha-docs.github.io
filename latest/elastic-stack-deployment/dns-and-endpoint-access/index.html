@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://docs.example.com/latest/operations/backup-playbook/">
+        <link rel="canonical" href="https://docs.example.com/latest/elastic-stack-deployment/dns-and-endpoint-access/">
       
       
-        <link rel="prev" href="../../getting-started/overview/">
+        <link rel="prev" href="../post-deployment-network-configuration/">
       
       
-        <link rel="next" href="../../reference/api/">
+        <link rel="next" href="../secure-access-kibana-elasticsearch/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Backup Playbook - Opsflw Connect Docs</title>
+        <title>DNS and endpoint access - Opsflw Connect Docs</title>
       
     
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#nightly-backup-routine" class="md-skip">
+        <a href="#dns-scenarios" class="md-skip">
           Skip to content
         </a>
       
@@ -125,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Backup Playbook
+              DNS and endpoint access
             
           </span>
         </div>
@@ -259,11 +259,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../elastic-stack-deployment/introduction/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../introduction/" class="md-tabs__link">
           
   
   Elastic Stack
@@ -295,13 +297,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../operations/backup-playbook/" class="md-tabs__link">
           
   
   Operations
@@ -704,25 +704,30 @@
       
   
   
+    
   
   
+  
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -733,7 +738,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Elastic Stack
@@ -747,7 +752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../elastic-stack-deployment/introduction/" class="md-nav__link">
+      <a href="../introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -768,7 +773,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../elastic-stack-deployment/architecture-and-deployment-models/" class="md-nav__link">
+      <a href="../architecture-and-deployment-models/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -789,7 +794,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../elastic-stack-deployment/prerequisites-and-planning/" class="md-nav__link">
+      <a href="../prerequisites-and-planning/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -810,7 +815,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../elastic-stack-deployment/network-design-prerequisites/" class="md-nav__link">
+      <a href="../network-design-prerequisites/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -831,7 +836,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../elastic-stack-deployment/deploying-opsflw-managed-elastic-stack/" class="md-nav__link">
+      <a href="../deploying-opsflw-managed-elastic-stack/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -852,7 +857,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../elastic-stack-deployment/post-deployment-network-configuration/" class="md-nav__link">
+      <a href="../post-deployment-network-configuration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -870,10 +875,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../elastic-stack-deployment/dns-and-endpoint-access/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    DNS and endpoint access
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -882,6 +905,42 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dns-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      DNS scenarios
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -894,7 +953,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../elastic-stack-deployment/secure-access-kibana-elasticsearch/" class="md-nav__link">
+      <a href="../secure-access-kibana-elasticsearch/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -915,7 +974,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../elastic-stack-deployment/license-and-feature-management/" class="md-nav__link">
+      <a href="../license-and-feature-management/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -936,7 +995,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../elastic-stack-deployment/operations-and-lifecycle-management/" class="md-nav__link">
+      <a href="../operations-and-lifecycle-management/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -957,7 +1016,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../elastic-stack-deployment/troubleshooting-and-support/" class="md-nav__link">
+      <a href="../troubleshooting-and-support/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -978,7 +1037,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../elastic-stack-deployment/appendix-limits-references-checklists/" class="md-nav__link">
+      <a href="../appendix-limits-references-checklists/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1004,17 +1063,20 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_13" >
         
           
-          <label class="md-nav__link" for="__nav_3_13" id="__nav_3_13_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_13" id="__nav_3_13_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -1039,7 +1101,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../elastic-stack-deployment/overview/" class="md-nav__link">
+      <a href="../overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1060,7 +1122,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../elastic-stack-deployment/profiles-overview/" class="md-nav__link">
+      <a href="../profiles-overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1081,7 +1143,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../elastic-stack-deployment/elastic-license/" class="md-nav__link">
+      <a href="../elastic-license/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1102,7 +1164,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../elastic-stack-deployment/public-dns/" class="md-nav__link">
+      <a href="../public-dns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1123,7 +1185,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../elastic-stack-deployment/private-dns/" class="md-nav__link">
+      <a href="../private-dns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1224,30 +1286,25 @@
       
   
   
-    
   
   
-  
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1258,7 +1315,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Operations
@@ -1269,28 +1326,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Backup Playbook
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../operations/backup-playbook/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1299,42 +1338,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#nightly-backup-routine" class="md-nav__link">
-    <span class="md-ellipsis">
-      Nightly Backup Routine
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#restore-checklist" class="md-nav__link">
-    <span class="md-ellipsis">
-      Restore Checklist
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1440,18 +1443,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#nightly-backup-routine" class="md-nav__link">
+  <a href="#dns-scenarios" class="md-nav__link">
     <span class="md-ellipsis">
-      Nightly Backup Routine
+      DNS scenarios
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#restore-checklist" class="md-nav__link">
+  <a href="#validation" class="md-nav__link">
     <span class="md-ellipsis">
-      Restore Checklist
+      Validation
     </span>
   </a>
   
@@ -1475,27 +1478,18 @@
   
 
 
-  <h1>Backup Playbook</h1>
+  <h1>DNS and endpoint access</h1>
 
-<p>Opsflow stores configuration data in the control plane and artifacts in
-S3-compatible storage.</p>
-<h2 id="nightly-backup-routine">Nightly Backup Routine</h2>
-<ol>
-<li>Trigger the <code>opsflow-backup</code> workflow in the customer portal.</li>
-<li>Verify the job status under <strong>Operations ▸ Jobs</strong>.</li>
-<li>Confirm that the artifact landed in the designated bucket.</li>
-</ol>
-<h2 id="restore-checklist">Restore Checklist</h2>
+<p>Endpoint access depends on correct DNS records and expected certificate
+resolution for each environment.</p>
+<h2 id="dns-scenarios">DNS scenarios</h2>
 <ul>
-<li>Identify the backup timestamp that matches the incident window.</li>
-<li>Run the restore job with the backup ID:</li>
+<li>Public DNS for internet-reachable deployments.</li>
+<li>Private DNS zones for internal-only deployments.</li>
 </ul>
-<div class="highlight"><pre><span></span><code>opsflowctl<span class="w"> </span>restore<span class="w"> </span>--backup-id<span class="w"> </span>&lt;timestamp&gt;
-</code></pre></div>
-<ul>
-<li>Validate restored pipelines in the staging environment before promoting back
-  to production.</li>
-</ul>
+<h2 id="validation">Validation</h2>
+<p>Verify name resolution, TLS certificate trust, and endpoint reachability before
+handover to application teams.</p>
 
 
 
