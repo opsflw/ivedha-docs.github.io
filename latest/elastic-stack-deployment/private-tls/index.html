@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://docs.example.com/latest/elastic-stack-deployment/operations-and-lifecycle-management/">
+        <link rel="canonical" href="https://docs.example.com/latest/elastic-stack-deployment/private-tls/">
       
       
-        <link rel="prev" href="../license-and-feature-management/">
+        <link rel="prev" href="../private-access/">
       
       
-        <link rel="next" href="../troubleshooting-and-support/">
+        <link rel="next" href="../license-and-feature-management/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Operations and lifecycle management - Opsflw Connect Docs</title>
+        <title>Managing TLS Certificates for Private Endpoints - Opsflw Connect Docs</title>
       
     
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#operational-areas" class="md-skip">
+        <a href="#certificate-provisioning-options" class="md-skip">
           Skip to content
         </a>
       
@@ -125,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Operations and lifecycle management
+              Managing TLS Certificates for Private Endpoints
             
           </span>
         </div>
@@ -938,10 +938,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../private-tls/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Manage TLS for Private Endpoint
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -950,6 +968,75 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#certificate-provisioning-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Certificate provisioning options
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Certificate provisioning options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-1-generate-and-sign-a-csr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option 1 — Generate and sign a CSR
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-2-upload-your-own-certificate-and-private-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option 2 — Upload your own certificate and private key
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#including-intermediate-certificates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Including intermediate certificates
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#applying-certificate-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Applying certificate changes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -980,28 +1067,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Operations and lifecycle management
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../operations-and-lifecycle-management/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1010,33 +1079,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#operational-areas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Operational areas
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1476,9 +1518,51 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#operational-areas" class="md-nav__link">
+  <a href="#certificate-provisioning-options" class="md-nav__link">
     <span class="md-ellipsis">
-      Operational areas
+      Certificate provisioning options
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Certificate provisioning options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-1-generate-and-sign-a-csr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option 1 — Generate and sign a CSR
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-2-upload-your-own-certificate-and-private-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option 2 — Upload your own certificate and private key
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#including-intermediate-certificates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Including intermediate certificates
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#applying-certificate-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Applying certificate changes
     </span>
   </a>
   
@@ -1502,16 +1586,74 @@
   
 
 
-  <h1>Operations and lifecycle management</h1>
+  <h1>Manage TLS for Private Endpoint</h1>
 
-<p>Day-two operations should follow approved maintenance and change windows.</p>
-<h2 id="operational-areas">Operational areas</h2>
-<ul>
-<li>Scaling and performance tuning.</li>
-<li>Scheduled maintenance and platform upgrades.</li>
-<li>Backup, restore, and disaster recovery readiness.</li>
-</ul>
-<p>Track operational actions with audit-ready change records.</p>
+<p>For private Elastic Stack deployments, users must provide a <strong>TLS certificate</strong>
+for the private domain associated with their deployment.</p>
+<p>Since <strong>OpsFlw cannot issue certificates on behalf of customer domains</strong>, the
+certificate must be obtained from your own certificate authority or issuer
+and uploaded through the OpsFlw portal.</p>
+<p>Once uploaded, the certificate will be <strong>automatically applied to the private
+endpoint</strong>.</p>
+<p>Because the certificate is issued by your organization, <strong>you are responsible
+for managing its lifecycle</strong>, including renewals and updates.</p>
+<p>All certificate management operations are performed through the
+<a href="https://chat.opsflw.io/ui">OpsFlw portal</a>.</p>
+<h2 id="certificate-provisioning-options">Certificate provisioning options</h2>
+<p>Users have two options for providing certificates.</p>
+<h3 id="option-1-generate-and-sign-a-csr">Option 1 — Generate and sign a CSR</h3>
+<ol>
+<li>
+<p>Navigate to the
+   <a href="https://chat.opsflw.io/ui">OpsFlw portal</a>.</p>
+</li>
+<li>
+<p>Generate and download the <strong>Certificate Signing Request (CSR)</strong> for your
+   deployment.</p>
+</li>
+<li>
+<p>Submit the CSR to your certificate issuer, such as your internal CA or a
+   public certificate provider.</p>
+</li>
+<li>
+<p>Once the certificate is issued, upload the <strong>public certificate</strong> through
+   the portal.</p>
+</li>
+</ol>
+<p>The platform will automatically apply the certificate to the private endpoint.</p>
+<h3 id="option-2-upload-your-own-certificate-and-private-key">Option 2 — Upload your own certificate and private key</h3>
+<p>If you already have a certificate and private key, you can upload them
+directly.</p>
+<p>You must combine the certificate and key into a <strong>single PEM chain file</strong>
+using the following format:</p>
+<div class="highlight"><pre><span></span><code>-----BEGIN CERTIFICATE-----
+xxx
+-----END CERTIFICATE-----
+-----BEGIN RSA PRIVATE KEY-----
+yyy
+-----END RSA PRIVATE KEY-----
+</code></pre></div>
+<p>Ensure that the certificate includes all private URLs used to access the
+deployment as Subject Alternative Names (SANs). Connections may fail if the
+accessed hostname is not present in the certificate SAN list.</p>
+<p>Once uploaded, your custom certificate and key will be used for the private
+endpoint deployment.</p>
+<h2 id="including-intermediate-certificates">Including intermediate certificates</h2>
+<p>If your certificate chain includes <strong>intermediate certificates</strong>, they can be
+included in the uploaded file.</p>
+<p>Append intermediate certificates <strong>after the leaf certificate</strong>.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>-----BEGIN CERTIFICATE-----
+leaf cert
+-----END CERTIFICATE-----
+-----BEGIN CERTIFICATE-----
+intermediate cert(s)
+-----END CERTIFICATE-----
+</code></pre></div>
+<h2 id="applying-certificate-changes">Applying certificate changes</h2>
+<p>After uploading or updating a certificate, the changes are automatically
+applied to the deployment.</p>
+<p>Propagation typically takes <strong>5–10 minutes</strong>.</p>
 
 
 

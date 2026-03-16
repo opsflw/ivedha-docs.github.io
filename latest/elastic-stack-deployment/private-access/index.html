@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://docs.example.com/latest/elastic-stack-deployment/operations-and-lifecycle-management/">
+        <link rel="canonical" href="https://docs.example.com/latest/elastic-stack-deployment/private-access/">
       
       
-        <link rel="prev" href="../license-and-feature-management/">
+        <link rel="prev" href="../secure-access-kibana-elasticsearch/">
       
       
-        <link rel="next" href="../troubleshooting-and-support/">
+        <link rel="next" href="../private-tls/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Operations and lifecycle management - Opsflw Connect Docs</title>
+        <title>Accessing a Private Elastic Stack Deployment - Opsflw Connect Docs</title>
       
     
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#operational-areas" class="md-skip">
+        <a href="#create-a-private-endpoint" class="md-skip">
           Skip to content
         </a>
       
@@ -125,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Operations and lifecycle management
+              Accessing a Private Elastic Stack Deployment
             
           </span>
         </div>
@@ -917,10 +917,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../private-access/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Accessing Kibana and Elasticsearch using Private Endpoint
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -929,6 +947,66 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-private-endpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a Private Endpoint
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#private-endpoint-approval" class="md-nav__link">
+    <span class="md-ellipsis">
+      Private Endpoint approval
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Private Endpoint approval">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#same-subscription" class="md-nav__link">
+    <span class="md-ellipsis">
+      Same subscription
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#different-subscription" class="md-nav__link">
+    <span class="md-ellipsis">
+      Different subscription
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -980,28 +1058,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Operations and lifecycle management
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../operations-and-lifecycle-management/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1010,33 +1070,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#operational-areas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Operational areas
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1476,11 +1509,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#operational-areas" class="md-nav__link">
+  <a href="#create-a-private-endpoint" class="md-nav__link">
     <span class="md-ellipsis">
-      Operational areas
+      Create a Private Endpoint
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#private-endpoint-approval" class="md-nav__link">
+    <span class="md-ellipsis">
+      Private Endpoint approval
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Private Endpoint approval">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#same-subscription" class="md-nav__link">
+    <span class="md-ellipsis">
+      Same subscription
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#different-subscription" class="md-nav__link">
+    <span class="md-ellipsis">
+      Different subscription
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1502,16 +1568,90 @@
   
 
 
-  <h1>Operations and lifecycle management</h1>
+  <h1>Accessing Kibana and Elasticsearch using Private Endpoint</h1>
 
-<p>Day-two operations should follow approved maintenance and change windows.</p>
-<h2 id="operational-areas">Operational areas</h2>
+<p>In a <strong>private Elastic Stack deployment</strong>, service endpoints are not exposed
+to the public internet. Access to Elasticsearch, Kibana, fleet and related
+services is available only through <strong>private networking and approved routes</strong>.</p>
+<p>To connect to the deployment, users must create an <strong>Azure Private Endpoint</strong>
+that connects to the <strong>Private Link Service</strong> automatically created during
+Elastic Stack deployment.</p>
+<p>If you need additional information about your deployment (such as deployment
+name, region, or subscription), you can obtain it from one of the following
+locations:</p>
 <ul>
-<li>Scaling and performance tuning.</li>
-<li>Scheduled maintenance and platform upgrades.</li>
-<li>Backup, restore, and disaster recovery readiness.</li>
+<li>OpsFlow portal: <a href="https://chat.opsflw.io/ui">https://chat.opsflw.io/ui</a></li>
+<li>Azure Portal → <strong>Managed Applications</strong> → locate your Elastic Stack deployment</li>
 </ul>
-<p>Track operational actions with audit-ready change records.</p>
+<h2 id="create-a-private-endpoint">Create a Private Endpoint</h2>
+<p>Follow the steps below to create a Private Endpoint.</p>
+<ol>
+<li>
+<p>Open the <strong>Azure Portal</strong>:<br />
+<a href="https://portal.azure.com">https://portal.azure.com</a></p>
+</li>
+<li>
+<p>Sign in using your Azure account.</p>
+</li>
+<li>
+<p>Navigate to <strong>Network Foundation</strong>.</p>
+</li>
+<li>
+<p>In the left navigation pane, select<br />
+<strong>Private Link → Private Endpoints</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Create Private Endpoint</strong>.</p>
+</li>
+<li>
+<p>In the <strong>Basics</strong> tab, provide the following information:</p>
+</li>
+<li>
+<p>Subscription</p>
+</li>
+<li>Resource group</li>
+<li>Name for the Private Endpoint</li>
+<li>
+<p>Region (should typically match your deployment region)</p>
+</li>
+<li>
+<p>Under <strong>Connection method</strong>, select<br />
+<strong>Connect to an Azure resource by resource ID or alias</strong>.</p>
+</li>
+<li>
+<p>Provide the <strong>Private Link Service resource ID</strong> in the following format:</p>
+<div class="highlight"><pre><span></span><code>/subscriptions/{subscriptionID}/resourceGroups/mc_{deploymentName}-aks_{deploymentRegion}_node-rg/providers/Microsoft.Network/privateLinkServices/ElasticStack{DeploymentNameWithFirstLetterAsCapital}Svc
+</code></pre></div>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>/subscriptions/xxxx/resourceGroups/mc-elastic-aks-westus2_node-rg/providers/Microsoft.Network/privateLinkServices/ElasticStackExampleSvc
+</code></pre></div>
+</li>
+<li>
+<p>Continue through the wizard and provide the required networking
+   configuration such as the <strong>virtual network</strong> and <strong>subnet</strong> where the
+   Private Endpoint will be created.</p>
+</li>
+<li>
+<p>Review the configuration and click <strong>Create</strong>.</p>
+</li>
+</ol>
+<h2 id="private-endpoint-approval">Private Endpoint approval</h2>
+<p>Approval behavior depends on where the Private Endpoint is created.</p>
+<h3 id="same-subscription">Same subscription</h3>
+<p>If the Private Endpoint is created in the <strong>same subscription</strong> as the Elastic
+Stack deployment, the connection will be <strong>automatically approved</strong>.</p>
+<h3 id="different-subscription">Different subscription</h3>
+<p>If the Private Endpoint is created in a <strong>different subscription</strong>, the
+connection must be manually approved.</p>
+<p>To approve the request:</p>
+<ol>
+<li>Open the <strong>Azure Portal</strong>.</li>
+<li>Navigate to <strong>Network Foundations → Private Link → Pending Connections</strong>.</li>
+<li>Locate the pending connection for the Elastic Stack deployment.</li>
+<li>Approve the connection request.</li>
+</ol>
+<p>Once approved, the Private Endpoint will establish connectivity to the
+Elastic Stack services through the private network.</p>
 
 
 
