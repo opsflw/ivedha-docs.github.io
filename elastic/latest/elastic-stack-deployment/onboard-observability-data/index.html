@@ -1285,6 +1285,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#choose-the-supported-intake-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choose the supported intake path
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#before-you-begin" class="md-nav__link">
     <span class="md-ellipsis">
       Before you begin
@@ -2130,6 +2139,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#choose-the-supported-intake-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choose the supported intake path
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#before-you-begin" class="md-nav__link">
     <span class="md-ellipsis">
       Before you begin
@@ -2185,6 +2203,41 @@
 customer-operated collector that can batch, retry, and control egress. This
 procedure applies only when the deployment's Elasticsearch version supports
 the OTLP/HTTP endpoint.</p>
+<p><a class="glightbox" href="../../_media/azure/observability-otlp.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="OpenTelemetry onboarding path showing instrumented applications sending OTLP to a customer-operated Collector, which uses OTLP over HTTPS to reach Elasticsearch data streams and Kibana in the managed Azure platform." src="../../_media/azure/observability-otlp.svg" /></a></p>
+<p><em>Applications send telemetry to a customer-operated Collector. The Collector
+uses the deployment-provided HTTPS endpoint; telemetry remains in the
+customer's Azure-hosted managed platform.</em></p>
+<h2 id="choose-the-supported-intake-path">Choose the supported intake path</h2>
+<p>Do not treat all Elastic OpenTelemetry endpoints as interchangeable:</p>
+<table>
+<thead>
+<tr>
+<th>Path</th>
+<th>When to use it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Direct Elasticsearch OTLP/HTTP</td>
+<td>Use this tutorial only after confirming the deployed Elasticsearch version exposes <code>/_otlp/v1/logs</code>, <code>/_otlp/v1/metrics</code>, and <code>/_otlp/v1/traces</code></td>
+</tr>
+<tr>
+<td>Customer-operated Collector</td>
+<td>Recommended gateway for batching, retry, egress control, and limiting application connection churn</td>
+</tr>
+<tr>
+<td>APM Server OTLP intake</td>
+<td>Use only when the deployment explicitly exposes and supports an APM Server endpoint; its protocol and paths differ</td>
+</tr>
+<tr>
+<td>Elastic Agent and Fleet</td>
+<td>Use when Fleet and the required integration are exposed and compatible with the deployed Elastic version</td>
+</tr>
+</tbody>
+</table>
+<p>The direct Elasticsearch endpoint accepts OTLP/HTTP with protobuf encoding. It
+does not accept OTLP/gRPC. Do not send OTLP to Kibana, omit the <code>/_otlp</code> base
+path, or guess that a Cloud-hosted or APM endpoint exists.</p>
 <h2 id="before-you-begin">Before you begin</h2>
 <p>Confirm:</p>
 <ul>
@@ -2195,69 +2248,74 @@ the OTLP/HTTP endpoint.</p>
 <li>a non-production source for the first validation;</li>
 <li>ownership for collector availability, buffering, and upgrades.</li>
 </ul>
-<p>Elasticsearch accepts OTLP over HTTP, not OTLP/gRPC, on its direct OTLP
-endpoint. Use a Collector rather than connecting many applications directly.</p>
 <h2 id="create-a-least-privilege-api-key">Create a least-privilege API key</h2>
 <p>Set the endpoint without credentials:</p>
-<p><code>bash
-export ELASTICSEARCH_URL="https://&lt;deployment-elasticsearch-hostname&gt;"</code></p>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">ELASTICSEARCH_URL</span><span class="o">=</span><span class="s2">&quot;https://&lt;deployment-elasticsearch-hostname&gt;&quot;</span>
+</code></pre></div>
 <p>Using an approved administrator credential, create an expiring onboarding key:</p>
-<p><code>bash
-curl --fail-with-body --user "&lt;api-key-administrator&gt;" \
-  --request POST "${ELASTICSEARCH_URL}/_security/api_key" \
-  --header "Content-Type: application/json" \
-  --data '{
-    "name": "otel-gateway",
-    "expiration": "30d",
-    "role_descriptors": {
-      "otel_writer": {
-        "indices": [
-          {
-            "names": ["logs-*", "metrics-*", "traces-*"],
-            "privileges": ["auto_configure", "create_doc"]
-          }
-        ]
-      }
-    }
-  }'</code></p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--fail-with-body<span class="w"> </span>--user<span class="w"> </span><span class="s2">&quot;&lt;api-key-administrator&gt;&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--request<span class="w"> </span>POST<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">ELASTICSEARCH_URL</span><span class="si">}</span><span class="s2">/_security/api_key&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--header<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--data<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">    &quot;name&quot;: &quot;otel-gateway&quot;,</span>
+<span class="s1">    &quot;expiration&quot;: &quot;30d&quot;,</span>
+<span class="s1">    &quot;role_descriptors&quot;: {</span>
+<span class="s1">      &quot;otel_writer&quot;: {</span>
+<span class="s1">        &quot;indices&quot;: [</span>
+<span class="s1">          {</span>
+<span class="s1">            &quot;names&quot;: [&quot;logs-*&quot;, &quot;metrics-*&quot;, &quot;traces-*&quot;],</span>
+<span class="s1">            &quot;privileges&quot;: [&quot;auto_configure&quot;, &quot;create_doc&quot;]</span>
+<span class="s1">          }</span>
+<span class="s1">        ]</span>
+<span class="s1">      }</span>
+<span class="s1">    }</span>
+<span class="s1">  }&#39;</span>
+</code></pre></div>
 <p>Enter the administrator password through the client prompt. Store the returned
 encoded API key in the approved secret store; do not place it in a file,
 screenshot, shell history, or ticket.</p>
 <h2 id="configure-the-collector">Configure the Collector</h2>
 <p>Use environment substitution for the endpoint and secret:</p>
-<p>```yaml
-receivers:
-  otlp:
-    protocols:
-      http:</p>
-<p>processors:
-  batch: {}
-  memory_limiter:
-    check_interval: 1s
-    limit_mib: 512</p>
-<p>exporters:
-  otlphttp/elastic:
-    endpoint: ${env:ELASTICSEARCH_URL}
-    headers:
-      Authorization: ApiKey ${env:ELASTIC_API_KEY}</p>
-<p>service:
-  pipelines:
-    logs:
-      receivers: [otlp]
-      processors: [memory_limiter, batch]
-      exporters: [otlphttp/elastic]
-    metrics:
-      receivers: [otlp]
-      processors: [memory_limiter, batch]
-      exporters: [otlphttp/elastic]
-    traces:
-      receivers: [otlp]
-      processors: [memory_limiter, batch]
-      exporters: [otlphttp/elastic]
-```</p>
+<div class="highlight"><pre><span></span><code><span class="nt">receivers</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">otlp</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">protocols</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">http</span><span class="p">:</span>
+
+<span class="nt">processors</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">batch</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
+<span class="w">  </span><span class="nt">memory_limiter</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">check_interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">    </span><span class="nt">limit_mib</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">512</span>
+
+<span class="nt">exporters</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">otlphttp/elastic</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">endpoint</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${env:ELASTICSEARCH_URL}/_otlp</span>
+<span class="w">    </span><span class="nt">headers</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">Authorization</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ApiKey</span><span class="nv"> </span><span class="s">${env:ELASTIC_API_KEY}&quot;</span>
+
+<span class="nt">service</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">pipelines</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">logs</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">receivers</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">otlp</span><span class="p p-Indicator">]</span>
+<span class="w">      </span><span class="nt">processors</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">memory_limiter</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">batch</span><span class="p p-Indicator">]</span>
+<span class="w">      </span><span class="nt">exporters</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">otlphttp/elastic</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">metrics</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">receivers</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">otlp</span><span class="p p-Indicator">]</span>
+<span class="w">      </span><span class="nt">processors</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">memory_limiter</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">batch</span><span class="p p-Indicator">]</span>
+<span class="w">      </span><span class="nt">exporters</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">otlphttp/elastic</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">traces</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">receivers</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">otlp</span><span class="p p-Indicator">]</span>
+<span class="w">      </span><span class="nt">processors</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">memory_limiter</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">batch</span><span class="p p-Indicator">]</span>
+<span class="w">      </span><span class="nt">exporters</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">otlphttp/elastic</span><span class="p p-Indicator">]</span>
+</code></pre></div>
 <p>Pin a Collector version supported by your organization. Add persistent
 buffering, high availability, resource limits, and telemetry for the Collector
 before production use.</p>
+<p>The exporter appends <code>/v1/logs</code>, <code>/v1/metrics</code>, or <code>/v1/traces</code> to the
+<code>/_otlp</code> base path. Follow the
+<a href="https://www.elastic.co/docs/manage-data/ingest/otlp-endpoint">Elastic Elasticsearch OTLP/HTTP endpoint guidance</a>
+for the deployed version rather than copying configuration for Elastic Cloud
+Managed OTLP or APM Server.</p>
 <h2 id="verify-and-hand-over">Verify and hand over</h2>
 <ol>
 <li>Send one synthetic log, metric, and trace from a test source.</li>
@@ -2280,12 +2338,12 @@ failures, follow <a href="../troubleshoot-connectivity/">connectivity troublesho
   <aside class="md-source-file" aria-label="Document metadata">
     
       <span class="md-source-file__fact">
-        <strong>Last reviewed:</strong> 2026-07-28
+        <strong>Last verified:</strong> 2026-07-29
       </span>
     
     
       <span class="md-source-file__fact">
-        <strong>Originally published:</strong> <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 29, 2026</span>
+        <strong>Published:</strong> <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 29, 2026</span>
       </span>
     
     

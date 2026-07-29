@@ -2202,9 +2202,9 @@
 <p>Use a user with only the diagnostic privileges required for the affected
 operation.</p>
 <h2 id="check-cluster-health">Check cluster health</h2>
-<p><code>bash
-curl --fail-with-body --user "&lt;user&gt;" \
-  "https://&lt;elasticsearch-hostname&gt;/_cluster/health?pretty"</code></p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--fail-with-body<span class="w"> </span>--user<span class="w"> </span><span class="s2">&quot;&lt;user&gt;&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="s2">&quot;https://&lt;elasticsearch-hostname&gt;/_cluster/health?pretty&quot;</span>
+</code></pre></div>
 <p>Record status, unassigned shards, node count, and task symptoms.</p>
 <h2 id="writes-are-blocked-or-return-http-429">Writes are blocked or return HTTP 429</h2>
 <p>Check disk use and watermark messages. At flood stage, Elasticsearch can mark
@@ -2239,12 +2239,12 @@ service requires intervention.</p>
   <aside class="md-source-file" aria-label="Document metadata">
     
       <span class="md-source-file__fact">
-        <strong>Last reviewed:</strong> 2026-07-28
+        <strong>Last verified:</strong> 2026-07-28
       </span>
     
     
       <span class="md-source-file__fact">
-        <strong>Originally published:</strong> <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 28, 2026</span>
+        <strong>Published:</strong> <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 28, 2026</span>
       </span>
     
     

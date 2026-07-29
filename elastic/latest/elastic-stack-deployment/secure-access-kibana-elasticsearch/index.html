@@ -2163,9 +2163,9 @@ TLS configuration before entering credentials.</p>
 <h2 id="elasticsearch-client-access">Elasticsearch client access</h2>
 <p>Use HTTPS and an individual user, API key, or other approved authentication
 method. Do not place secrets in source files or shell history.</p>
-<p><code>bash
-curl --fail-with-body --user "&lt;user&gt;" \
-  "https://&lt;elasticsearch-hostname&gt;/_cluster/health"</code></p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--fail-with-body<span class="w"> </span>--user<span class="w"> </span><span class="s2">&quot;&lt;user&gt;&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="s2">&quot;https://&lt;elasticsearch-hostname&gt;/_cluster/health&quot;</span>
+</code></pre></div>
 <p>Enter the password through the client prompt or an approved secret mechanism.</p>
 <p>The built-in <code>elastic</code> user is a superuser and should be reserved for tasks
 that require full cluster access. Elastic recommends creating users with the
@@ -2182,12 +2182,12 @@ minimum required privileges. See
   <aside class="md-source-file" aria-label="Document metadata">
     
       <span class="md-source-file__fact">
-        <strong>Last reviewed:</strong> 2026-07-28
+        <strong>Last verified:</strong> 2026-07-28
       </span>
     
     
       <span class="md-source-file__fact">
-        <strong>Originally published:</strong> <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 3, 2026</span>
+        <strong>Published:</strong> <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 3, 2026</span>
       </span>
     
     

@@ -1333,6 +1333,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#create-the-validation-api-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create the validation API key
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#load-the-keys-without-echoing-them" class="md-nav__link">
+    <span class="md-ellipsis">
+      Load the keys without echoing them
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#index-and-search-a-document" class="md-nav__link">
     <span class="md-ellipsis">
       Index and search a document
@@ -2166,6 +2184,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#create-the-validation-api-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create the validation API key
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#load-the-keys-without-echoing-them" class="md-nav__link">
+    <span class="md-ellipsis">
+      Load the keys without echoing them
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#index-and-search-a-document" class="md-nav__link">
     <span class="md-ellipsis">
       Index and search a document
@@ -2210,81 +2246,115 @@ separate naming, mapping, lifecycle, and relevance design for production data.</
 <li>approval to create and delete tutorial resources.</li>
 </ul>
 <p>Set the endpoint without embedding credentials:</p>
-<p><code>bash
-export ELASTICSEARCH_URL="https://&lt;deployment-elasticsearch-hostname&gt;"</code></p>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">ELASTICSEARCH_URL</span><span class="o">=</span><span class="s2">&quot;https://&lt;deployment-elasticsearch-hostname&gt;&quot;</span>
+</code></pre></div>
 <h2 id="create-the-data-stream-template">Create the data-stream template</h2>
-<p><code>bash
-curl --fail-with-body --user "&lt;search-administrator&gt;" \
-  --request PUT "${ELASTICSEARCH_URL}/_index_template/docs-search-template" \
-  --header "Content-Type: application/json" \
-  --data '{
-    "index_patterns": ["docs-search-*"],
-    "data_stream": {},
-    "template": {
-      "mappings": {
-        "properties": {
-          "@timestamp": {"type": "date"},
-          "title": {"type": "text"},
-          "body": {"type": "text"},
-          "source_id": {"type": "keyword"}
-        }
-      }
-    }
-  }'</code></p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--fail-with-body<span class="w"> </span>--user<span class="w"> </span><span class="s2">&quot;&lt;search-administrator&gt;&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--request<span class="w"> </span>PUT<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">ELASTICSEARCH_URL</span><span class="si">}</span><span class="s2">/_index_template/docs-search-template&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--header<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--data<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">    &quot;index_patterns&quot;: [&quot;docs-search-*&quot;],</span>
+<span class="s1">    &quot;data_stream&quot;: {},</span>
+<span class="s1">    &quot;template&quot;: {</span>
+<span class="s1">      &quot;mappings&quot;: {</span>
+<span class="s1">        &quot;properties&quot;: {</span>
+<span class="s1">          &quot;@timestamp&quot;: {&quot;type&quot;: &quot;date&quot;},</span>
+<span class="s1">          &quot;title&quot;: {&quot;type&quot;: &quot;text&quot;},</span>
+<span class="s1">          &quot;body&quot;: {&quot;type&quot;: &quot;text&quot;},</span>
+<span class="s1">          &quot;source_id&quot;: {&quot;type&quot;: &quot;keyword&quot;}</span>
+<span class="s1">        }</span>
+<span class="s1">      }</span>
+<span class="s1">    }</span>
+<span class="s1">  }&#39;</span>
+</code></pre></div>
 <p>Confirm the response contains <code>"acknowledged":true</code>.</p>
 <h2 id="create-the-writer-api-key">Create the writer API key</h2>
-<p><code>bash
-curl --fail-with-body --user "&lt;api-key-administrator&gt;" \
-  --request POST "${ELASTICSEARCH_URL}/_security/api_key" \
-  --header "Content-Type: application/json" \
-  --data '{
-    "name": "docs-search-writer",
-    "expiration": "7d",
-    "role_descriptors": {
-      "docs_search_writer": {
-        "indices": [
-          {
-            "names": ["docs-search-*"],
-            "privileges": ["auto_configure", "create_doc", "read"]
-          }
-        ]
-      }
-    }
-  }'</code></p>
-<p>Store the returned encoded key in an approved secret store:</p>
-<p><code>bash
-export ELASTIC_API_KEY="&lt;encoded-api-key&gt;"</code></p>
-<p>Do not retain this export in shell history or a profile.</p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--fail-with-body<span class="w"> </span>--user<span class="w"> </span><span class="s2">&quot;&lt;api-key-administrator&gt;&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--request<span class="w"> </span>POST<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">ELASTICSEARCH_URL</span><span class="si">}</span><span class="s2">/_security/api_key&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--header<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--data<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">    &quot;name&quot;: &quot;docs-search-writer&quot;,</span>
+<span class="s1">    &quot;expiration&quot;: &quot;7d&quot;,</span>
+<span class="s1">    &quot;role_descriptors&quot;: {</span>
+<span class="s1">      &quot;docs_search_writer&quot;: {</span>
+<span class="s1">        &quot;indices&quot;: [</span>
+<span class="s1">          {</span>
+<span class="s1">            &quot;names&quot;: [&quot;docs-search-*&quot;],</span>
+<span class="s1">            &quot;privileges&quot;: [&quot;auto_configure&quot;, &quot;create_doc&quot;]</span>
+<span class="s1">          }</span>
+<span class="s1">        ]</span>
+<span class="s1">      }</span>
+<span class="s1">    }</span>
+<span class="s1">  }&#39;</span>
+</code></pre></div>
+<p>Confirm that the response contains an API-key ID and encoded key. Store both
+in the approved secret store.</p>
+<h2 id="create-the-validation-api-key">Create the validation API key</h2>
+<p>Use a separate read-only identity for the tutorial search:</p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--fail-with-body<span class="w"> </span>--user<span class="w"> </span><span class="s2">&quot;&lt;api-key-administrator&gt;&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--request<span class="w"> </span>POST<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">ELASTICSEARCH_URL</span><span class="si">}</span><span class="s2">/_security/api_key&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--header<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--data<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">    &quot;name&quot;: &quot;docs-search-validator&quot;,</span>
+<span class="s1">    &quot;expiration&quot;: &quot;7d&quot;,</span>
+<span class="s1">    &quot;role_descriptors&quot;: {</span>
+<span class="s1">      &quot;docs_search_validator&quot;: {</span>
+<span class="s1">        &quot;indices&quot;: [</span>
+<span class="s1">          {</span>
+<span class="s1">            &quot;names&quot;: [&quot;docs-search-*&quot;],</span>
+<span class="s1">            &quot;privileges&quot;: [&quot;read&quot;]</span>
+<span class="s1">          }</span>
+<span class="s1">        ]</span>
+<span class="s1">      }</span>
+<span class="s1">    }</span>
+<span class="s1">  }&#39;</span>
+</code></pre></div>
+<p>Store the validation key and its ID separately from the writer key. A
+production ingestion identity normally does not need <code>read</code>.</p>
+<h2 id="load-the-keys-without-echoing-them">Load the keys without echoing them</h2>
+<p>Retrieve the encoded values from the approved secret store and enter them at
+the prompts:</p>
+<div class="highlight"><pre><span></span><code><span class="nv">IFS</span><span class="o">=</span><span class="w"> </span><span class="nb">read</span><span class="w"> </span>-rsp<span class="w"> </span><span class="s2">&quot;Writer API key: &quot;</span><span class="w"> </span>ELASTIC_WRITE_API_KEY
+<span class="nb">printf</span><span class="w"> </span><span class="s2">&quot;\n&quot;</span>
+<span class="nv">IFS</span><span class="o">=</span><span class="w"> </span><span class="nb">read</span><span class="w"> </span>-rsp<span class="w"> </span><span class="s2">&quot;Validation API key: &quot;</span><span class="w"> </span>ELASTIC_READ_API_KEY
+<span class="nb">printf</span><span class="w"> </span><span class="s2">&quot;\n&quot;</span>
+</code></pre></div>
+<p>The secret input is not echoed and is not part of the command stored in Bash
+history. Do not export either variable, save it in a shell profile, or enter
+the value directly on a command line.</p>
 <h2 id="index-and-search-a-document">Index and search a document</h2>
-<p><code>bash
-curl --fail-with-body \
-  --request POST \
-  "${ELASTICSEARCH_URL}/docs-search-default/_doc?op_type=create&amp;refresh=wait_for" \
-  --header "Authorization: ApiKey ${ELASTIC_API_KEY}" \
-  --header "Content-Type: application/json" \
-  --data '{
-    "@timestamp": "2026-07-28T00:00:00Z",
-    "title": "Synthetic onboarding document",
-    "body": "This document validates the managed search ingestion path.",
-    "source_id": "docs-tutorial-001"
-  }'</code></p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--fail-with-body<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--request<span class="w"> </span>POST<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">ELASTICSEARCH_URL</span><span class="si">}</span><span class="s2">/docs-search-default/_doc?op_type=create&amp;refresh=wait_for&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--header<span class="w"> </span><span class="s2">&quot;Authorization: ApiKey </span><span class="si">${</span><span class="nv">ELASTIC_WRITE_API_KEY</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--header<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--data<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">    &quot;@timestamp&quot;: &quot;2026-07-29T00:00:00Z&quot;,</span>
+<span class="s1">    &quot;title&quot;: &quot;Synthetic onboarding document&quot;,</span>
+<span class="s1">    &quot;body&quot;: &quot;This document validates the managed search ingestion path.&quot;,</span>
+<span class="s1">    &quot;source_id&quot;: &quot;docs-tutorial-001&quot;</span>
+<span class="s1">  }&#39;</span>
+</code></pre></div>
 <p>Confirm the response reports <code>"result":"created"</code>, then search:</p>
-<p><code>bash
-curl --fail-with-body \
-  "${ELASTICSEARCH_URL}/docs-search-default/_search?q=source_id:docs-tutorial-001" \
-  --header "Authorization: ApiKey ${ELASTIC_API_KEY}"</code></p>
-<p>The response must contain exactly the synthetic document.</p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--fail-with-body<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">ELASTICSEARCH_URL</span><span class="si">}</span><span class="s2">/docs-search-default/_search?q=source_id:docs-tutorial-001&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--header<span class="w"> </span><span class="s2">&quot;Authorization: ApiKey </span><span class="si">${</span><span class="nv">ELASTIC_READ_API_KEY</span><span class="si">}</span><span class="s2">&quot;</span>
+</code></pre></div>
+<p>The response must contain exactly the synthetic document. Remove the keys from
+the current shell immediately after validation:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">unset</span><span class="w"> </span>ELASTIC_WRITE_API_KEY<span class="w"> </span>ELASTIC_READ_API_KEY
+</code></pre></div>
 <h2 id="clean-up">Clean up</h2>
 <p>Delete the tutorial data stream and template with an approved administrator,
 then invalidate the API key:</p>
-<p>```bash
-curl --fail-with-body --user "<search-administrator>" \
-  --request DELETE "${ELASTICSEARCH_URL}/_data_stream/docs-search-default"</p>
-<p>curl --fail-with-body --user "<search-administrator>" \
-  --request DELETE "${ELASTICSEARCH_URL}/_index_template/docs-search-template"
-```</p>
-<p>Use the API-key ID returned at creation time with the invalidate API. Do not
-reuse the tutorial key for production.</p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--fail-with-body<span class="w"> </span>--user<span class="w"> </span><span class="s2">&quot;&lt;search-administrator&gt;&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--request<span class="w"> </span>DELETE<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">ELASTICSEARCH_URL</span><span class="si">}</span><span class="s2">/_data_stream/docs-search-default&quot;</span>
+
+curl<span class="w"> </span>--fail-with-body<span class="w"> </span>--user<span class="w"> </span><span class="s2">&quot;&lt;search-administrator&gt;&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--request<span class="w"> </span>DELETE<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">ELASTICSEARCH_URL</span><span class="si">}</span><span class="s2">/_index_template/docs-search-template&quot;</span>
+</code></pre></div>
+<p>Use both API-key IDs returned at creation time with the invalidate API. Do not
+reuse either tutorial key for production.</p>
 
   
   
@@ -2294,12 +2364,12 @@ reuse the tutorial key for production.</p>
   <aside class="md-source-file" aria-label="Document metadata">
     
       <span class="md-source-file__fact">
-        <strong>Last reviewed:</strong> 2026-07-28
+        <strong>Last verified:</strong> 2026-07-29
       </span>
     
     
       <span class="md-source-file__fact">
-        <strong>Originally published:</strong> <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 29, 2026</span>
+        <strong>Published:</strong> <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 29, 2026</span>
       </span>
     
     

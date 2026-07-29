@@ -2140,14 +2140,27 @@ available for controlled rollback until the new certificate is verified.</p>
 <li>
 <p>From each client network, set the exact deployment-provided hostname and
    verify hostname, chain, and expiration:</p>
-<p>```bash
-SERVICE_HOSTNAME="<deployment-service-hostname>"</p>
-<p>openssl s_client \
-  -connect "${SERVICE_HOSTNAME}:443" \
-  -servername "${SERVICE_HOSTNAME}" \
-  -verify_return_error </p>
+<div class="highlight"><pre><span></span><code><span class="nv">SERVICE_HOSTNAME</span><span class="o">=</span><span class="s2">&quot;&lt;deployment-service-hostname&gt;&quot;</span>
+
+openssl<span class="w"> </span>s_client<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-connect<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">SERVICE_HOSTNAME</span><span class="si">}</span><span class="s2">:443&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-servername<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">SERVICE_HOSTNAME</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-verify_return_error<span class="w"> </span>&lt;/dev/null
+</code></pre></div>
 </li>
+<li>
+<p>Confirm the command ends with <code>Verify return code: 0 (ok)</code> and the served
+   certificate has the expected subject alternative name, issuer, serial
+   number, and new expiration date.</p>
+</li>
+<li>Test Kibana sign-in and an Elasticsearch request.</li>
+<li>Record the new expiration date and next renewal owner.</li>
 </ol>
+<p>Do not upload or distribute the deployment private key. If the certificate is
+rejected, confirm that it was issued from the current CSR and that the complete
+chain is present. If clients still receive the old certificate, confirm that
+the managed action completed and retry from every endpoint and network path
+before assuming the change propagated.</p>
 
   
   
@@ -2157,12 +2170,12 @@ SERVICE_HOSTNAME="<deployment-service-hostname>"</p>
   <aside class="md-source-file" aria-label="Document metadata">
     
       <span class="md-source-file__fact">
-        <strong>Last reviewed:</strong> 2026-07-28
+        <strong>Last verified:</strong> 2026-07-28
       </span>
     
     
       <span class="md-source-file__fact">
-        <strong>Originally published:</strong> <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 28, 2026</span>
+        <strong>Published:</strong> <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 28, 2026</span>
       </span>
     
     

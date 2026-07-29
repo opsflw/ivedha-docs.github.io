@@ -2170,21 +2170,21 @@ Do not paste production secrets or sensitive data into a tutorial request.</p>
 <li>Confirm that you can reach the Elasticsearch URL.</li>
 <li>
 <p>Set the endpoint without including credentials:</p>
-<p><code>bash
-export ELASTICSEARCH_URL="https://&lt;elasticsearch-hostname&gt;"</code></p>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">ELASTICSEARCH_URL</span><span class="o">=</span><span class="s2">&quot;https://&lt;elasticsearch-hostname&gt;&quot;</span>
+</code></pre></div>
 </li>
 <li>
 <p>Index one synthetic document:</p>
-<p><code>bash
-curl --fail-with-body --user "&lt;user&gt;" \
-  --request POST \
-  "${ELASTICSEARCH_URL}/docs-validation/_doc?refresh=wait_for" \
-  --header "Content-Type: application/json" \
-  --data '{
-    "@timestamp": "2026-07-28T00:00:00Z",
-    "message": "documentation validation event",
-    "environment": "test"
-  }'</code></p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--fail-with-body<span class="w"> </span>--user<span class="w"> </span><span class="s2">&quot;&lt;user&gt;&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--request<span class="w"> </span>POST<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">ELASTICSEARCH_URL</span><span class="si">}</span><span class="s2">/docs-validation/_doc?refresh=wait_for&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--header<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--data<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">    &quot;@timestamp&quot;: &quot;2026-07-28T00:00:00Z&quot;,</span>
+<span class="s1">    &quot;message&quot;: &quot;documentation validation event&quot;,</span>
+<span class="s1">    &quot;environment&quot;: &quot;test&quot;</span>
+<span class="s1">  }&#39;</span>
+</code></pre></div>
 </li>
 <li>
 <p>Enter the password through the client prompt or an approved secret
@@ -2193,16 +2193,16 @@ curl --fail-with-body --user "&lt;user&gt;" \
 <li>Confirm that the response reports a successful create or update result.</li>
 </ol>
 <h2 id="search-for-the-document">Search for the document</h2>
-<p><code>bash
-curl --fail-with-body --user "&lt;user&gt;" \
-  "${ELASTICSEARCH_URL}/docs-validation/_search?q=environment:test"</code></p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--fail-with-body<span class="w"> </span>--user<span class="w"> </span><span class="s2">&quot;&lt;user&gt;&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">ELASTICSEARCH_URL</span><span class="si">}</span><span class="s2">/docs-validation/_search?q=environment:test&quot;</span>
+</code></pre></div>
 <p>Confirm that the response contains the validation event.</p>
 <h2 id="clean-up">Clean up</h2>
 <p>Delete the test index after validation:</p>
-<p><code>bash
-curl --fail-with-body --user "&lt;user&gt;" \
-  --request DELETE \
-  "${ELASTICSEARCH_URL}/docs-validation"</code></p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--fail-with-body<span class="w"> </span>--user<span class="w"> </span><span class="s2">&quot;&lt;user&gt;&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--request<span class="w"> </span>DELETE<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">ELASTICSEARCH_URL</span><span class="si">}</span><span class="s2">/docs-validation&quot;</span>
+</code></pre></div>
 <p>If the request is rejected, verify the user's index privileges. Do not solve a
 permission error by giving the user broad cluster-administrator access.</p>
 <p>For production use, <a href="../data-onboarding/">choose a data onboarding path</a>, then
@@ -2218,12 +2218,12 @@ against the deployed Elastic version.</p>
   <aside class="md-source-file" aria-label="Document metadata">
     
       <span class="md-source-file__fact">
-        <strong>Last reviewed:</strong> 2026-07-28
+        <strong>Last verified:</strong> 2026-07-28
       </span>
     
     
       <span class="md-source-file__fact">
-        <strong>Originally published:</strong> <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 28, 2026</span>
+        <strong>Published:</strong> <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 28, 2026</span>
       </span>
     
     

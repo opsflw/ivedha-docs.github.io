@@ -2196,12 +2196,28 @@ the CSR and signed public certificate chain.</em></p>
 used to create the CSR and validates that the returned certificate matches it.</p>
 <h2 id="verify-tls">Verify TLS</h2>
 <p>From an approved client, set the exact deployment-provided hostname:</p>
-<p>```bash
-SERVICE_HOSTNAME="<deployment-service-hostname>"</p>
-<p>openssl s_client \
-  -connect "${SERVICE_HOSTNAME}:443" \
-  -servername "${SERVICE_HOSTNAME}" \
-  -verify_return_error </p>
+<div class="highlight"><pre><span></span><code><span class="nv">SERVICE_HOSTNAME</span><span class="o">=</span><span class="s2">&quot;&lt;deployment-service-hostname&gt;&quot;</span>
+
+openssl<span class="w"> </span>s_client<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-connect<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">SERVICE_HOSTNAME</span><span class="si">}</span><span class="s2">:443&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-servername<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">SERVICE_HOSTNAME</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-verify_return_error<span class="w"> </span>&lt;/dev/null
+</code></pre></div>
+<p>Confirm:</p>
+<ul>
+<li>the command ends with <code>Verify return code: 0 (ok)</code>;</li>
+<li>the certificate is within its validity period;</li>
+<li>the hostname appears in the subject alternative names;</li>
+<li>the chain ends at a CA trusted by the client;</li>
+<li>no private key or secret appears in command output saved for support.</li>
+</ul>
+<p><code>Name or service not known</code> indicates DNS failure. <code>Connection timed out</code> or
+<code>Connection refused</code> indicates a network or endpoint failure. <code>unable to get
+local issuer certificate</code> indicates an incomplete or untrusted chain.
+<code>certificate verify failed</code> requires inspection of the detailed verification
+error; do not disable verification.</p>
+<p>Repeat the check for each service hostname. Then
+<a href="../secure-access-kibana-elasticsearch/">sign in securely</a>.</p>
 
   
   
@@ -2211,12 +2227,12 @@ SERVICE_HOSTNAME="<deployment-service-hostname>"</p>
   <aside class="md-source-file" aria-label="Document metadata">
     
       <span class="md-source-file__fact">
-        <strong>Last reviewed:</strong> 2026-07-28
+        <strong>Last verified:</strong> 2026-07-28
       </span>
     
     
       <span class="md-source-file__fact">
-        <strong>Originally published:</strong> <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 16, 2026</span>
+        <strong>Published:</strong> <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 16, 2026</span>
       </span>
     
     

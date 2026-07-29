@@ -2181,8 +2181,8 @@ URLs and your security policy permits public access.</p>
 <li>Wait for the record's configured DNS time to live.</li>
 <li>
 <p>From an approved client, query each hostname:</p>
-<p><code>bash
-nslookup &lt;service-hostname&gt;</code></p>
+<div class="highlight"><pre><span></span><code>nslookup<span class="w"> </span>&lt;service-hostname&gt;
+</code></pre></div>
 </li>
 <li>
 <p>Confirm the answer matches the authoritative deployment target.</p>
@@ -2191,9 +2191,9 @@ nslookup &lt;service-hostname&gt;</code></p>
    certificate.</li>
 <li>
 <p>Test the Elasticsearch URL without placing credentials on the command line:</p>
-<p><code>bash
-curl --fail-with-body --user "&lt;user&gt;" \
-  "https://&lt;elasticsearch-hostname&gt;/"</code></p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--fail-with-body<span class="w"> </span>--user<span class="w"> </span><span class="s2">&quot;&lt;user&gt;&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="s2">&quot;https://&lt;elasticsearch-hostname&gt;/&quot;</span>
+</code></pre></div>
 <p>Enter the password when prompted by the client or use an organization-
 approved secret mechanism.</p>
 </li>
@@ -2213,12 +2213,12 @@ resolves but the connection fails, follow
   <aside class="md-source-file" aria-label="Document metadata">
     
       <span class="md-source-file__fact">
-        <strong>Last reviewed:</strong> 2026-07-28
+        <strong>Last verified:</strong> 2026-07-28
       </span>
     
     
       <span class="md-source-file__fact">
-        <strong>Originally published:</strong> <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 3, 2026</span>
+        <strong>Published:</strong> <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 3, 2026</span>
       </span>
     
     

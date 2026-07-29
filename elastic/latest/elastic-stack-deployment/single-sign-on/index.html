@@ -1437,6 +1437,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Register the application in Microsoft Entra">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recognize-the-expected-uri-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recognize the expected URI formats
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1461,6 +1476,24 @@
   <a href="#validate-and-recover" class="md-nav__link">
     <span class="md-ellipsis">
       Validate and recover
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rotate-the-client-credential" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rotate the client credential
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagnose-common-sign-in-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagnose common sign-in failures
     </span>
   </a>
   
@@ -2154,6 +2187,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Register the application in Microsoft Entra">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recognize-the-expected-uri-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recognize the expected URI formats
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2178,6 +2226,24 @@
   <a href="#validate-and-recover" class="md-nav__link">
     <span class="md-ellipsis">
       Validate and recover
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rotate-the-client-credential" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rotate the client credential
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagnose-common-sign-in-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagnose common sign-in failures
     </span>
   </a>
   
@@ -2281,6 +2347,36 @@ are configured.
 complete group list when a user belongs to many groups. Test a representative
 high-membership account and use an approved alternative mapping design when
 group overage occurs.</p>
+<h3 id="recognize-the-expected-uri-formats">Recognize the expected URI formats</h3>
+<p>Use the values exposed by the managed application. The following patterns help
+an Entra administrator recognize them; they are not substitutes for
+deployment-provided values.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Expected pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kibana callback</td>
+<td><code>${KIBANA_URL}/api/security/oidc/callback</code> for the authorization-code flow</td>
+</tr>
+<tr>
+<td>Entra issuer</td>
+<td><code>https://login.microsoftonline.com/${TENANT_ID}/v2.0</code> for a tenant-specific v2 endpoint</td>
+</tr>
+<tr>
+<td>Discovery document</td>
+<td><code>${ENTRA_ISSUER}/.well-known/openid-configuration</code></td>
+</tr>
+</tbody>
+</table>
+<p>The callback must use the externally visible Kibana URL and must match the
+<strong>Web</strong> redirect URI in Entra exactly, including scheme, host, path, port when
+present, and trailing-slash behavior. Do not reconstruct it when the managed
+application supplies a different value.</p>
 <h2 id="apply-the-managed-oidc-configuration">Apply the managed OIDC configuration</h2>
 <ol>
 <li>Open the deployed managed application.</li>
@@ -2308,19 +2404,19 @@ supported managed action.
 Elastic roles first, then map an approved Entra group or other stable claim to
 those roles through Kibana or the role-mapping API.</p>
 <p>For example, a mapping rule can match one approved group identifier:</p>
-<p><code>json
-{
-  "roles": ["kibana_reader"],
-  "enabled": true,
-  "rules": {
-    "field": {
-      "groups": "&lt;approved-entra-group-object-id&gt;"
-    }
-  },
-  "metadata": {
-    "owner": "identity-team"
-  }
-}</code></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;roles&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;kibana_reader&quot;</span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;enabled&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;rules&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;field&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;groups&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;approved-entra-group-object-id&gt;&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;metadata&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;owner&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;identity-team&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <p>Replace the role and group with approved values. Do not map all authenticated
 users to a broad administrator role.</p>
 <h2 id="validate-and-recover">Validate and recover</h2>
@@ -2336,6 +2432,53 @@ users to a broad administrator role.</p>
 </ol>
 <p>Do not disable the last working administrative authentication method until
 OIDC sign-in and role mapping have been validated.</p>
+<h2 id="rotate-the-client-credential">Rotate the client credential</h2>
+<ol>
+<li>Confirm break-glass access works and schedule a supported configuration
+   window.</li>
+<li>Create a second Entra credential before the current credential expires.</li>
+<li>Submit the new credential through <strong>Configure Deployment</strong> without deleting
+   the working credential.</li>
+<li>Wait for managed synchronization to complete.</li>
+<li>Test sign-in and least-privilege role mapping in a private browser session.</li>
+<li>Remove the old Entra credential only after the new credential works.</li>
+<li>Record the new expiration, owner, and validation evidence.</li>
+</ol>
+<p>Do not paste either credential into screenshots, browser developer tools,
+tickets, or documentation.</p>
+<h2 id="diagnose-common-sign-in-failures">Diagnose common sign-in failures</h2>
+<table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>Check</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>AADSTS50011</code></td>
+<td>The callback sent by Kibana must exactly match a registered Entra Web redirect URI</td>
+</tr>
+<tr>
+<td>Invalid or expired client credential</td>
+<td>Confirm the managed action received the secret <strong>value</strong>, the credential is current, and synchronization completed</td>
+</tr>
+<tr>
+<td>Entra sign-in succeeds but Kibana denies access</td>
+<td>Confirm the principal or groups claim and the Elastic role mapping</td>
+</tr>
+<tr>
+<td>A high-membership user has no <code>groups</code> claim</td>
+<td>Check for Entra group-overage behavior and use an approved mapping alternative</td>
+</tr>
+<tr>
+<td>Redirect loop or immediate return to sign-in</td>
+<td>Check the issuer, callback, browser cookies, time synchronization, and managed realm status</td>
+</tr>
+</tbody>
+</table>
+<p>Successful validation ends with Kibana loading for the test user and exposing
+only the spaces, indices, and actions assigned by the approved Elastic roles.</p>
 <p>For a redirect mismatch, compare the value sent by Kibana with the Web redirect
 URI in Entra. For missing roles, inspect the identity and groups received by
 the Elastic realm without copying tokens into a ticket. Use
@@ -2351,12 +2494,12 @@ for protocol and role-mapping behavior.</p>
   <aside class="md-source-file" aria-label="Document metadata">
     
       <span class="md-source-file__fact">
-        <strong>Last reviewed:</strong> 2026-07-28
+        <strong>Last verified:</strong> 2026-07-29
       </span>
     
     
       <span class="md-source-file__fact">
-        <strong>Originally published:</strong> <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 28, 2026</span>
+        <strong>Published:</strong> <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 28, 2026</span>
       </span>
     
     

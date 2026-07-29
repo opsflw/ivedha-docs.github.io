@@ -1803,6 +1803,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#4-check-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Check authentication
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2147,6 +2156,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#4-check-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Check authentication
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2174,23 +2192,64 @@
 <li>network security controls permit the connection.</li>
 </ul>
 <p>Test TCP connectivity without sending credentials:</p>
-<p><code>bash
-nc -vz &lt;service-hostname&gt; 443</code></p>
+<div class="highlight"><pre><span></span><code>nc<span class="w"> </span>-vz<span class="w"> </span>&lt;service-hostname&gt;<span class="w"> </span><span class="m">443</span>
+</code></pre></div>
 <h2 id="2-check-dns">2. Check DNS</h2>
-<p><code>bash
-nslookup &lt;service-hostname&gt;</code></p>
+<div class="highlight"><pre><span></span><code>nslookup<span class="w"> </span>&lt;service-hostname&gt;
+</code></pre></div>
 <p>For private access, the result must be the Private Endpoint private IP. If the
 result is NXDOMAIN, public, or stale, check the private zone, records, VNet
 links, custom DNS, and conditional forwarding.</p>
 <p>Microsoft documents common causes in
 <a href="https://learn.microsoft.com/en-us/troubleshoot/azure/private-link/troubleshoot-private-endpoint-dns-resolution">Private Endpoint DNS resolution</a>.</p>
 <h2 id="3-check-tls">3. Check TLS</h2>
-<p>```bash
-SERVICE_HOSTNAME="<deployment-service-hostname>"</p>
-<p>openssl s_client \
-  -connect "${SERVICE_HOSTNAME}:443" \
-  -servername "${SERVICE_HOSTNAME}" \
-  -verify_return_error </p>
+<div class="highlight"><pre><span></span><code><span class="nv">SERVICE_HOSTNAME</span><span class="o">=</span><span class="s2">&quot;&lt;deployment-service-hostname&gt;&quot;</span>
+
+openssl<span class="w"> </span>s_client<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-connect<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">SERVICE_HOSTNAME</span><span class="si">}</span><span class="s2">:443&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-servername<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">SERVICE_HOSTNAME</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-verify_return_error<span class="w"> </span>&lt;/dev/null
+</code></pre></div>
+<p>Check certificate dates, subject alternative names, intermediate certificates,
+and client trust. A successful check ends with
+<code>Verify return code: 0 (ok)</code>.</p>
+<p>Common results:</p>
+<table>
+<thead>
+<tr>
+<th>Result</th>
+<th>Investigate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Name or service not known</code></td>
+<td>DNS name, resolver, private zone, or forwarding</td>
+</tr>
+<tr>
+<td>Timeout or refused connection</td>
+<td>Route, firewall, Private Endpoint, endpoint health, or port</td>
+</tr>
+<tr>
+<td><code>unable to get local issuer certificate</code></td>
+<td>Missing intermediate or client trust anchor</td>
+</tr>
+<tr>
+<td>Hostname mismatch</td>
+<td>Wrong DNS name or certificate subject alternative name</td>
+</tr>
+<tr>
+<td>Expired certificate</td>
+<td>Certificate renewal and managed action status</td>
+</tr>
+</tbody>
+</table>
+<p>Do not disable certificate verification as a fix.</p>
+<h2 id="4-check-authentication">4. Check authentication</h2>
+<p>Only after TLS works, confirm the account is active and has the intended roles.
+Test in a private browser session to exclude stale cookies.</p>
+<p>If the same failure remains after these checks, <a href="../get-support/">get support</a>
+with redacted results.</p>
 
   
   
@@ -2200,12 +2259,12 @@ SERVICE_HOSTNAME="<deployment-service-hostname>"</p>
   <aside class="md-source-file" aria-label="Document metadata">
     
       <span class="md-source-file__fact">
-        <strong>Last reviewed:</strong> 2026-07-28
+        <strong>Last verified:</strong> 2026-07-28
       </span>
     
     
       <span class="md-source-file__fact">
-        <strong>Originally published:</strong> <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 28, 2026</span>
+        <strong>Published:</strong> <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 28, 2026</span>
       </span>
     
     

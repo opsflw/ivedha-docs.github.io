@@ -2294,7 +2294,32 @@ deployment.
    is <strong>Elasticsearch AI platform</strong>.</li>
 <li>Select the approved plan, then select <strong>Create</strong>.</li>
 <li>On <strong>Basics</strong>, select the approved subscription, resource group, and region.</li>
-<li>Enter an application name that follows your Azure naming policy.</li>
+<li>
+<p>Enter an application name that follows your Azure naming policy.</p>
+</li>
+<li>
+<p>On the deployment profile step, select the approved workload, capacity,
+   topology, and optional ML setting. For this example, use the choices in the
+   preceding table.</p>
+</li>
+<li>
+<p>Configure the approved private domain. Enable public access only when the
+   security owner approved it. If a custom public domain is enabled, record its
+   DNS owner.</p>
+</li>
+<li>
+<p>Enter the approved maintenance occurrence, day, start time, time zone, and
+   duration.</p>
+</li>
+<li>Enter the approved support contact.</li>
+<li>
+<p>On <strong>Review + create</strong>, resolve every validation error and review the
+   configuration, price, terms, permissions, and managed-resource-group
+   settings.</p>
+</li>
+<li>
+<p>Select <strong>Create</strong> once the review is correct.</p>
+</li>
 </ol>
 <!-- UI-ILLUSTRATION: marketplace-basics
 Screen: Marketplace Basics step.
@@ -2306,11 +2331,6 @@ Purpose: Identify the Azure-owned fields that establish the application
 resource.
 -->
 
-<ol>
-<li>On the deployment profile step, select the approved workload, capacity,
-   topology, and optional ML setting. For this example, use the choices in the
-   preceding table.</li>
-</ol>
 <!-- UI-ILLUSTRATION: marketplace-profile
 Screen: Deployment Profile step.
 Show: Elasticsearch Profile, Deployment Capacity, Cluster Topology, and Enable
@@ -2320,11 +2340,6 @@ Purpose: Show where the Marketplace plan exposes workload and capacity
 choices.
 -->
 
-<ol>
-<li>Configure the approved private domain. Enable public access only when the
-   security owner approved it. If a custom public domain is enabled, record its
-   DNS owner.</li>
-</ol>
 <!-- UI-ILLUSTRATION: marketplace-connectivity
 Screen: Ingress and DNS configuration step.
 Show: Private Domain, Enable Access over the Internet, Use Custom Domain, and
@@ -2334,14 +2349,6 @@ identifiers.
 Purpose: Distinguish private DNS from the optional public access selection.
 -->
 
-<ol>
-<li>Enter the approved maintenance occurrence, day, start time, time zone, and
-   duration.</li>
-<li>Enter the approved support contact.</li>
-<li>On <strong>Review + create</strong>, resolve every validation error and review the
-   configuration, price, terms, permissions, and managed-resource-group
-   settings.</li>
-</ol>
 <!-- UI-ILLUSTRATION: marketplace-review-create
 Screen: Review + create.
 Show: Successful validation, summarized choices, pricing/terms, and Create
@@ -2352,9 +2359,6 @@ Purpose: Show the final verification point before Azure accepts the
 deployment.
 -->
 
-<ol>
-<li>Select <strong>Create</strong> once the review is correct.</li>
-</ol>
 <h2 id="follow-the-readiness-gates">Follow the readiness gates</h2>
 <p>Do not treat Azure acceptance as service readiness:</p>
 <ol>
@@ -2393,12 +2397,12 @@ decisions before deletion.</p>
   <aside class="md-source-file" aria-label="Document metadata">
     
       <span class="md-source-file__fact">
-        <strong>Last reviewed:</strong> 2026-07-28
+        <strong>Last verified:</strong> 2026-07-28
       </span>
     
     
       <span class="md-source-file__fact">
-        <strong>Originally published:</strong> <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 29, 2026</span>
+        <strong>Published:</strong> <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 29, 2026</span>
       </span>
     
     

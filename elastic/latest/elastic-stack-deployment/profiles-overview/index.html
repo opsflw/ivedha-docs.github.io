@@ -836,7 +836,16 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Topology choices">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#require-a-versioned-sizing-record" class="md-nav__link">
+    <span class="md-ellipsis">
+      Require a versioned sizing record
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Require a versioned sizing record">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2196,7 +2205,16 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Topology choices">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#require-a-versioned-sizing-record" class="md-nav__link">
+    <span class="md-ellipsis">
+      Require a versioned sizing record
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Require a versioned sizing record">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2358,6 +2376,62 @@ workload before production.</p>
 <p>Node counts, Azure VM sizes, JVM heap, usable disk, replica policy,
 availability-zone placement, and horizontal scale increments are not published
 until the runtime configuration and live offer are verified.</p>
+<h2 id="require-a-versioned-sizing-record">Require a versioned sizing record</h2>
+<p>Before approving a production profile, obtain a sizing record for the exact
+Marketplace plan and platform release. It must include:</p>
+<table>
+<thead>
+<tr>
+<th>Required value</th>
+<th>Why it matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Platform and Elastic versions</td>
+<td>Connects the sizing statement to a reproducible release</td>
+</tr>
+<tr>
+<td>Elasticsearch instance count and roles</td>
+<td>Establishes the physical topology behind the profile label</td>
+</tr>
+<tr>
+<td>AKS node-pool VM size and count</td>
+<td>Identifies the Azure compute consumed by the platform</td>
+</tr>
+<tr>
+<td>CPU, memory, and Elasticsearch JVM heap</td>
+<td>Supports workload and concurrency review</td>
+</tr>
+<tr>
+<td>Disk per instance and usable storage after replicas</td>
+<td>Prevents treating raw disk as customer-usable capacity</td>
+</tr>
+<tr>
+<td>Example daily ingest and retention assumptions</td>
+<td>Explains the workload model used for planning</td>
+</tr>
+<tr>
+<td>Baseline availability and placement</td>
+<td>Supports resilience and recovery review</td>
+</tr>
+<tr>
+<td>Horizontal scale increment</td>
+<td>Shows the operational effect of a capacity change</td>
+</tr>
+<tr>
+<td>Azure infrastructure-cost estimate and assumptions</td>
+<td>Supports commercial review in the customer's region</td>
+</tr>
+<tr>
+<td>Limits and excluded workloads</td>
+<td>Prevents unsupported use of a general size label</td>
+</tr>
+</tbody>
+</table>
+<p>If the seller, approved offer, or service schedule does not provide these
+values, treat the physical sizing and cost as unresolved. The Small, Medium,
+and Large ranges alone are not enough for production approval.</p>
 <h3 id="all-in-one">All-in-one</h3>
 <p><a class="glightbox" href="../../_media/azure/topology-all-in-one.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Conceptual Azure AKS all-in-one topology with three combined-role Elasticsearch instances and Kibana." src="../../_media/azure/topology-all-in-one.svg" /></a></p>
 <p><em>All-in-one keeps Elasticsearch roles together. The three instances illustrate
@@ -2400,12 +2474,12 @@ requesting a profile change.</p>
   <aside class="md-source-file" aria-label="Document metadata">
     
       <span class="md-source-file__fact">
-        <strong>Last reviewed:</strong> 2026-07-28
+        <strong>Last verified:</strong> 2026-07-29
       </span>
     
     
       <span class="md-source-file__fact">
-        <strong>Originally published:</strong> <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 29, 2025</span>
+        <strong>Published:</strong> <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 29, 2025</span>
       </span>
     
     
