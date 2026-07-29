@@ -4,22 +4,22 @@
     {
       "id": "elastic-home",
       "path": "index.md",
-      "title": "iVedha-managed Elasticsearch AI platform documentation",
-      "summary": "Deploy, connect to, secure, and operate the iVedha-managed Elasticsearch AI platform on Microsoft Azure.",
+      "title": "iVedha Managed Elasticsearch Platform documentation",
+      "summary": "Understand the managed Elasticsearch platform, choose an Azure deployment path, onboard data, and operate the service safely.",
       "owner": "platform",
       "intents": [
-        "start using the managed Elasticsearch platform",
-        "find the Elasticsearch AI platform documentation"
+        "start using the iVedha Managed Elasticsearch Platform",
+        "understand how the managed Elasticsearch service works"
       ]
     },
     {
       "id": "elastic-ai-capabilities",
       "path": "elastic-stack-deployment/ai-capabilities.md",
-      "title": "What AI means",
-      "summary": "Distinguish the platform's search and machine-learning foundations from optional Elastic features that depend on licensing and deployment choices.",
+      "title": "What AI-ready means",
+      "summary": "Determine which AI, search, inference, and machine-learning capabilities are available in the deployed version, license, and configuration.",
       "owner": "platform",
       "intents": [
-        "understand what AI means in the Elasticsearch AI platform",
+        "understand what AI-ready means in the managed Elasticsearch platform",
         "find which AI and machine learning features are included"
       ]
     },
@@ -41,7 +41,7 @@
       "summary": "Understand the service components, Azure resource boundaries, and public or private access models.",
       "owner": "platform",
       "intents": [
-        "understand the Elasticsearch AI platform architecture",
+        "understand the iVedha Managed Elasticsearch Platform architecture",
         "see what Azure resources the managed application creates"
       ]
     },
@@ -103,11 +103,11 @@
     {
       "id": "elastic-deploy-platform",
       "path": "elastic-stack-deployment/deploy-platform.md",
-      "title": "Deploy the iVedha-managed Elasticsearch AI platform",
+      "title": "Deploy the iVedha Managed Elasticsearch Platform",
       "summary": "Create the approved Azure Marketplace managed application and confirm that Azure accepted the deployment.",
       "owner": "platform",
       "intents": [
-        "deploy the iVedha Elasticsearch AI platform",
+        "deploy the iVedha Managed Elasticsearch Platform",
         "create the Azure managed application"
       ]
     },
@@ -163,7 +163,7 @@
       "owner": "platform",
       "intents": [
         "contact iVedha support",
-        "open an Elasticsearch AI platform support request"
+        "open an iVedha Managed Elasticsearch Platform support request"
       ]
     },
     {
@@ -173,7 +173,7 @@
       "summary": "Distinguish Azure Managed Application, Private Endpoint, DNS, TLS, Elasticsearch, Kibana, snapshot, and deployment terminology.",
       "owner": "platform",
       "intents": [
-        "define Elasticsearch AI platform terms",
+        "define managed Elasticsearch platform terms",
         "understand Private Endpoint DNS and TLS"
       ]
     },
@@ -202,11 +202,11 @@
     {
       "id": "elastic-introduction",
       "path": "elastic-stack-deployment/introduction.md",
-      "title": "What is the iVedha-managed Elasticsearch AI platform?",
+      "title": "What is the iVedha Managed Elasticsearch Platform?",
       "summary": "Understand what the managed Elasticsearch service provides and where customer responsibility begins.",
       "owner": "platform",
       "intents": [
-        "what is the iVedha managed Elasticsearch AI platform",
+        "what is the iVedha Managed Elasticsearch Platform",
         "understand the managed Elasticsearch service"
       ]
     },
@@ -305,7 +305,7 @@
       "summary": "Operate the deployment through supported health, capacity, maintenance, licensing, recovery, upgrade, certificate, and deletion workflows.",
       "owner": "platform",
       "intents": [
-        "operate the Elasticsearch AI platform",
+        "operate the iVedha Managed Elasticsearch Platform",
         "find day two Elasticsearch tasks"
       ]
     },
@@ -316,7 +316,7 @@
       "summary": "Record the approved subscription, capacity, network, identity, certificate, licensing, and maintenance decisions needed for deployment.",
       "owner": "platform",
       "intents": [
-        "plan an Elasticsearch AI platform deployment",
+        "plan an iVedha Managed Elasticsearch Platform deployment",
         "gather deployment inputs"
       ]
     },
@@ -514,7 +514,7 @@
       "summary": "Identify the failing layer and collect safe evidence before changing networking, security, data, or managed infrastructure.",
       "owner": "platform",
       "intents": [
-        "troubleshoot the Elasticsearch AI platform",
+        "troubleshoot the iVedha Managed Elasticsearch Platform",
         "diagnose Kibana or Elasticsearch problems"
       ]
     },
