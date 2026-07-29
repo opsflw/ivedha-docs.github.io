@@ -1,3 +1,21 @@
 .md-header__source {
   display: none;
 }
+
+.md-source-file {
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.md-source-file__fact {
+  gap: 0.25rem;
+}
+
+.md-typeset img[src*="_media/azure/"] {
+  background: #fff;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.35rem;
+  box-sizing: border-box;
+  padding: 0.5rem;
+}

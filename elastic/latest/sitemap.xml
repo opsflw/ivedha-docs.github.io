@@ -2,162 +2,198 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.opsflw.io/elastic/latest/</loc>
-         <lastmod>2026-07-28</lastmod>
+         <lastmod>2026-07-29</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.opsflw.io/elastic/latest/elastic-stack-deployment/ai-capabilities/</loc>
+         <lastmod>2026-07-29</lastmod>
     </url>
     <url>
          <loc>https://docs.opsflw.io/elastic/latest/elastic-stack-deployment/appendix-limits-references-checklists/</loc>
-         <lastmod>2026-07-28</lastmod>
+         <lastmod>2026-07-29</lastmod>
     </url>
     <url>
          <loc>https://docs.opsflw.io/elastic/latest/elastic-stack-deployment/architecture-and-deployment-models/</loc>
-         <lastmod>2026-07-28</lastmod>
+         <lastmod>2026-07-29</lastmod>
     </url>
     <url>
          <loc>https://docs.opsflw.io/elastic/latest/elastic-stack-deployment/certificate-renewal/</loc>
-         <lastmod>2026-07-28</lastmod>
+         <lastmod>2026-07-29</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.opsflw.io/elastic/latest/elastic-stack-deployment/compatibility/</loc>
+         <lastmod>2026-07-29</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.opsflw.io/elastic/latest/elastic-stack-deployment/data-onboarding/</loc>
+         <lastmod>2026-07-29</lastmod>
     </url>
     <url>
          <loc>https://docs.opsflw.io/elastic/latest/elastic-stack-deployment/delete-application/</loc>
-         <lastmod>2026-07-28</lastmod>
+         <lastmod>2026-07-29</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.opsflw.io/elastic/latest/elastic-stack-deployment/deploy-first-instance/</loc>
+         <lastmod>2026-07-29</lastmod>
     </url>
     <url>
          <loc>https://docs.opsflw.io/elastic/latest/elastic-stack-deployment/deploy-platform/</loc>
-         <lastmod>2026-07-28</lastmod>
+         <lastmod>2026-07-29</lastmod>
     </url>
     <url>
          <loc>https://docs.opsflw.io/elastic/latest/elastic-stack-deployment/deployment-field-reference/</loc>
-         <lastmod>2026-07-28</lastmod>
+         <lastmod>2026-07-29</lastmod>
     </url>
     <url>
          <loc>https://docs.opsflw.io/elastic/latest/elastic-stack-deployment/deployment-outputs/</loc>
-         <lastmod>2026-07-28</lastmod>
+         <lastmod>2026-07-29</lastmod>
     </url>
     <url>
          <loc>https://docs.opsflw.io/elastic/latest/elastic-stack-deployment/deployment-status/</loc>
-         <lastmod>2026-07-28</lastmod>
+         <lastmod>2026-07-29</lastmod>
     </url>
     <url>
          <loc>https://docs.opsflw.io/elastic/latest/elastic-stack-deployment/dns-and-endpoint-access/</loc>
-         <lastmod>2026-07-28</lastmod>
+         <lastmod>2026-07-29</lastmod>
     </url>
     <url>
          <loc>https://docs.opsflw.io/elastic/latest/elastic-stack-deployment/get-support/</loc>
-         <lastmod>2026-07-28</lastmod>
+         <lastmod>2026-07-29</lastmod>
     </url>
     <url>
          <loc>https://docs.opsflw.io/elastic/latest/elastic-stack-deployment/glossary/</loc>
-         <lastmod>2026-07-28</lastmod>
+         <lastmod>2026-07-29</lastmod>
     </url>
     <url>
          <loc>https://docs.opsflw.io/elastic/latest/elastic-stack-deployment/health-and-capacity/</loc>
-         <lastmod>2026-07-28</lastmod>
+         <lastmod>2026-07-29</lastmod>
     </url>
     <url>
          <loc>https://docs.opsflw.io/elastic/latest/elastic-stack-deployment/ingest-first-data/</loc>
-         <lastmod>2026-07-28</lastmod>
+         <lastmod>2026-07-29</lastmod>
     </url>
     <url>
          <loc>https://docs.opsflw.io/elastic/latest/elastic-stack-deployment/introduction/</loc>
-         <lastmod>2026-07-28</lastmod>
+         <lastmod>2026-07-29</lastmod>
     </url>
     <url>
          <loc>https://docs.opsflw.io/elastic/latest/elastic-stack-deployment/license-and-feature-management/</loc>
-         <lastmod>2026-07-28</lastmod>
+         <lastmod>2026-07-29</lastmod>
     </url>
     <url>
          <loc>https://docs.opsflw.io/elastic/latest/elastic-stack-deployment/lifecycle-state-reference/</loc>
-         <lastmod>2026-07-28</lastmod>
+         <lastmod>2026-07-29</lastmod>
     </url>
     <url>
          <loc>https://docs.opsflw.io/elastic/latest/elastic-stack-deployment/maintenance/</loc>
-         <lastmod>2026-07-28</lastmod>
+         <lastmod>2026-07-29</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.opsflw.io/elastic/latest/elastic-stack-deployment/managed-application-navigation/</loc>
+         <lastmod>2026-07-29</lastmod>
     </url>
     <url>
          <loc>https://docs.opsflw.io/elastic/latest/elastic-stack-deployment/marketplace-prerequisites/</loc>
-         <lastmod>2026-07-28</lastmod>
+         <lastmod>2026-07-29</lastmod>
     </url>
     <url>
          <loc>https://docs.opsflw.io/elastic/latest/elastic-stack-deployment/network-design-prerequisites/</loc>
-         <lastmod>2026-07-28</lastmod>
+         <lastmod>2026-07-29</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.opsflw.io/elastic/latest/elastic-stack-deployment/onboard-observability-data/</loc>
+         <lastmod>2026-07-29</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.opsflw.io/elastic/latest/elastic-stack-deployment/onboard-search-data/</loc>
+         <lastmod>2026-07-29</lastmod>
     </url>
     <url>
          <loc>https://docs.opsflw.io/elastic/latest/elastic-stack-deployment/operations-and-lifecycle-management/</loc>
-         <lastmod>2026-07-28</lastmod>
+         <lastmod>2026-07-29</lastmod>
     </url>
     <url>
          <loc>https://docs.opsflw.io/elastic/latest/elastic-stack-deployment/prerequisites-and-planning/</loc>
-         <lastmod>2026-07-28</lastmod>
+         <lastmod>2026-07-29</lastmod>
     </url>
     <url>
          <loc>https://docs.opsflw.io/elastic/latest/elastic-stack-deployment/private-access/</loc>
-         <lastmod>2026-07-28</lastmod>
+         <lastmod>2026-07-29</lastmod>
     </url>
     <url>
          <loc>https://docs.opsflw.io/elastic/latest/elastic-stack-deployment/private-dns/</loc>
-         <lastmod>2026-07-28</lastmod>
+         <lastmod>2026-07-29</lastmod>
     </url>
     <url>
          <loc>https://docs.opsflw.io/elastic/latest/elastic-stack-deployment/private-tls/</loc>
-         <lastmod>2026-07-28</lastmod>
+         <lastmod>2026-07-29</lastmod>
     </url>
     <url>
          <loc>https://docs.opsflw.io/elastic/latest/elastic-stack-deployment/profiles-overview/</loc>
-         <lastmod>2026-07-28</lastmod>
+         <lastmod>2026-07-29</lastmod>
     </url>
     <url>
          <loc>https://docs.opsflw.io/elastic/latest/elastic-stack-deployment/public-dns/</loc>
-         <lastmod>2026-07-28</lastmod>
+         <lastmod>2026-07-29</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.opsflw.io/elastic/latest/elastic-stack-deployment/release-notes/</loc>
+         <lastmod>2026-07-29</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.opsflw.io/elastic/latest/elastic-stack-deployment/role-based-journeys/</loc>
+         <lastmod>2026-07-29</lastmod>
     </url>
     <url>
          <loc>https://docs.opsflw.io/elastic/latest/elastic-stack-deployment/roles-and-permissions/</loc>
-         <lastmod>2026-07-28</lastmod>
+         <lastmod>2026-07-29</lastmod>
     </url>
     <url>
          <loc>https://docs.opsflw.io/elastic/latest/elastic-stack-deployment/search-and-visualize/</loc>
-         <lastmod>2026-07-28</lastmod>
+         <lastmod>2026-07-29</lastmod>
     </url>
     <url>
          <loc>https://docs.opsflw.io/elastic/latest/elastic-stack-deployment/secure-access-kibana-elasticsearch/</loc>
-         <lastmod>2026-07-28</lastmod>
+         <lastmod>2026-07-29</lastmod>
     </url>
     <url>
          <loc>https://docs.opsflw.io/elastic/latest/elastic-stack-deployment/shared-responsibility/</loc>
-         <lastmod>2026-07-28</lastmod>
+         <lastmod>2026-07-29</lastmod>
     </url>
     <url>
          <loc>https://docs.opsflw.io/elastic/latest/elastic-stack-deployment/single-sign-on/</loc>
-         <lastmod>2026-07-28</lastmod>
+         <lastmod>2026-07-29</lastmod>
     </url>
     <url>
          <loc>https://docs.opsflw.io/elastic/latest/elastic-stack-deployment/snapshots-and-restore/</loc>
-         <lastmod>2026-07-28</lastmod>
+         <lastmod>2026-07-29</lastmod>
     </url>
     <url>
          <loc>https://docs.opsflw.io/elastic/latest/elastic-stack-deployment/source-references/</loc>
-         <lastmod>2026-07-28</lastmod>
+         <lastmod>2026-07-29</lastmod>
     </url>
     <url>
          <loc>https://docs.opsflw.io/elastic/latest/elastic-stack-deployment/troubleshoot-connectivity/</loc>
-         <lastmod>2026-07-28</lastmod>
+         <lastmod>2026-07-29</lastmod>
     </url>
     <url>
          <loc>https://docs.opsflw.io/elastic/latest/elastic-stack-deployment/troubleshoot-deployment/</loc>
-         <lastmod>2026-07-28</lastmod>
+         <lastmod>2026-07-29</lastmod>
     </url>
     <url>
          <loc>https://docs.opsflw.io/elastic/latest/elastic-stack-deployment/troubleshoot-elasticsearch/</loc>
-         <lastmod>2026-07-28</lastmod>
+         <lastmod>2026-07-29</lastmod>
     </url>
     <url>
          <loc>https://docs.opsflw.io/elastic/latest/elastic-stack-deployment/troubleshooting-and-support/</loc>
-         <lastmod>2026-07-28</lastmod>
+         <lastmod>2026-07-29</lastmod>
     </url>
     <url>
          <loc>https://docs.opsflw.io/elastic/latest/elastic-stack-deployment/upgrades/</loc>
-         <lastmod>2026-07-28</lastmod>
+         <lastmod>2026-07-29</lastmod>
     </url>
     <url>
          <loc>https://docs.opsflw.io/elastic/latest/elastic-stack-deployment/users-and-roles/</loc>
-         <lastmod>2026-07-28</lastmod>
+         <lastmod>2026-07-29</lastmod>
     </url>
 </urlset>

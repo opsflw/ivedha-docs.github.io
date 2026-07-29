@@ -1,0 +1,134 @@
+schema_version: 1
+illustrations:
+  - id: marketplace-offer-plan
+    page: elastic-stack-deployment/deploy-first-instance.md
+    filename: marketplace-offer-plan.png
+    purpose: Verify the iVedha publisher, application, plan, terms, and Create action.
+    screen: Azure Marketplace offer and plan selection
+    required_state: Approved offer and plan selected before creation
+    annotations: Publisher, application, plan, terms, Create
+    redactions: Tenant, subscription, billing, personal account, private offer identifiers
+    alt: Azure Marketplace offer showing the verified iVedha publisher, application, selected plan, terms, and Create action.
+    caption: Verify the publisher, application, and plan before creating the managed application.
+    status: requested
+  - id: marketplace-basics
+    page: elastic-stack-deployment/deploy-first-instance.md
+    filename: marketplace-basics.png
+    purpose: Identify the Azure fields that establish the managed application.
+    screen: Marketplace Basics
+    required_state: Valid fictional or sanitized non-production selections
+    annotations: Subscription, resource group, region, application name
+    redactions: Subscription ID, tenant ID, user identity, customer resource names
+    alt: Azure Marketplace Basics step with subscription, resource group, region, and managed-application name.
+    caption: Select the approved Azure subscription, resource group, region, and application name.
+    status: requested
+  - id: marketplace-profile
+    page: elastic-stack-deployment/deploy-first-instance.md
+    filename: marketplace-profile.png
+    purpose: Show the workload, capacity, topology, and optional machine-learning choices.
+    screen: Deployment Profile
+    required_state: Non-production example values selected
+    annotations: Elasticsearch Profile, Deployment Capacity, Cluster Topology, Enable Machine Learning
+    redactions: Production sizing or customer workload information
+    alt: Marketplace Deployment Profile step with workload, capacity, topology, and machine-learning controls.
+    caption: Select only the profile and capacity approved for the workload.
+    status: requested
+  - id: marketplace-connectivity
+    page: elastic-stack-deployment/deploy-first-instance.md
+    filename: marketplace-connectivity.png
+    purpose: Distinguish private DNS from optional public access and custom domains.
+    screen: Ingress and DNS configuration
+    required_state: Sanitized values with the chosen access model visible
+    annotations: Private Domain, public access, custom domain, Public Domain
+    redactions: Real domains and network identifiers
+    alt: Marketplace connectivity step with private domain and optional public-access controls.
+    caption: Choose the approved private or public access model and record its DNS owner.
+    status: requested
+  - id: marketplace-review-create
+    page: elastic-stack-deployment/deploy-first-instance.md
+    filename: marketplace-review-create.png
+    purpose: Show successful validation and the final review point.
+    screen: Review and create
+    required_state: Validation passed with sanitized non-production inputs
+    annotations: Validation result, summarized choices, pricing or terms, Create
+    redactions: Subscription, billing, email, resource IDs, customer values
+    alt: Marketplace Review and create step showing successful validation and the Create action.
+    caption: Resolve validation errors and review the complete deployment before selecting Create.
+    status: requested
+  - id: managed-application-overview
+    page: elastic-stack-deployment/managed-application-navigation.md
+    filename: managed-application-overview.png
+    purpose: Orient users to identity, state, JSON View, and overview actions.
+    screen: Managed application Overview
+    required_state: Sanitized application with the supported actions visible
+    annotations: Provisioning state, JSON View, Certificate Management, DNS Management, Request Support
+    redactions: Subscription ID, resource ID, tenant, domains, email, user identity
+    alt: Managed application Overview with provisioning state, JSON View, certificate, DNS, and support actions.
+    caption: Use the managed application Overview for deployment identity and supported actions.
+    status: requested
+  - id: managed-application-my-deployment
+    page: elastic-stack-deployment/managed-application-navigation.md
+    filename: managed-application-my-deployment.png
+    purpose: Show platform profile, health, and synchronization separately from Azure provisioning.
+    screen: Resources > My Deployment
+    required_state: Sanitized deployment row with all relevant columns visible
+    annotations: Profile, Capacity, Topology, Location, Health, Sync Status, More Info
+    redactions: Deployment name, identifiers, endpoints, customer-specific status
+    alt: My Deployment view showing profile, capacity, topology, location, health, and synchronization status.
+    caption: Review platform health and synchronization after Azure resource deployment completes.
+    status: requested
+  - id: managed-application-configure-deployment
+    page: elastic-stack-deployment/managed-application-navigation.md
+    filename: managed-application-configure-deployment.png
+    purpose: Identify the supported configuration action and its controlled settings.
+    screen: My Deployment > Configure Deployment
+    required_state: Configuration categories visible with no secret values entered
+    annotations: Profile, DNS, maintenance, license, SSO OIDC
+    redactions: Domains, client IDs, claims, contacts, licenses, secrets
+    alt: Configure Deployment action with profile, DNS, maintenance, licensing, and OIDC settings.
+    caption: Make supported changes through Configure Deployment rather than editing managed infrastructure.
+    status: requested
+  - id: deployment-outputs
+    page: elastic-stack-deployment/deployment-outputs.md
+    filename: deployment-outputs.png
+    purpose: Show where deployment-provided endpoints and public properties are recorded.
+    screen: Resource group deployment Outputs
+    required_state: Successful sanitized deployment selected
+    annotations: Outputs tab, platform version, access mode, service URLs, domain fields
+    redactions: Resource IDs, real domains, IP addresses, contacts, secrets
+    alt: Azure deployment Outputs view with sanitized platform and connection information.
+    caption: Copy endpoint and domain values from authoritative deployment outputs.
+    status: requested
+  - id: entra-app-registration
+    page: elastic-stack-deployment/single-sign-on.md
+    filename: entra-app-registration.png
+    purpose: Show the Entra application registration fields used by OIDC.
+    screen: Microsoft Entra App registrations
+    required_state: Sanitized non-production registration
+    annotations: Tenant, client ID, Authentication, redirect URI, token configuration
+    redactions: Tenant ID, client ID, domains, object IDs, user identity, secrets
+    alt: Microsoft Entra application registration showing authentication and token configuration areas.
+    caption: Configure the deployment-provided redirect URI and approved claims in Microsoft Entra.
+    status: requested
+  - id: managed-application-oidc
+    page: elastic-stack-deployment/single-sign-on.md
+    filename: managed-application-oidc.png
+    purpose: Show the supported managed OIDC configuration action without exposing secrets.
+    screen: Configure Deployment > SSO OIDC Settings
+    required_state: Editing enabled with sanitized public fields and empty secret control
+    annotations: Client ID, principal claim, groups claim, name claim, email claim
+    redactions: Client ID, tenant, domains, group IDs, secret, users
+    alt: Managed OIDC settings showing client and claim fields with the secret omitted.
+    caption: Submit OIDC settings through the supported managed action when it is available.
+    status: requested
+  - id: request-support
+    page: elastic-stack-deployment/get-support.md
+    filename: request-support.png
+    purpose: Show the customer-facing Request Support action and required fields.
+    screen: Managed application > Request Support
+    required_state: Empty or fictional form
+    annotations: Email, Request Subject, Request Description
+    redactions: Customer email, identifiers, incident data, credentials, personal information
+    alt: Managed application Request Support form with email, subject, and description fields.
+    caption: Submit redacted symptoms and business impact through the managed support action.
+    status: requested

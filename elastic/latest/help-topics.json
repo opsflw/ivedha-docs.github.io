@@ -13,6 +13,17 @@
       ]
     },
     {
+      "id": "elastic-ai-capabilities",
+      "path": "elastic-stack-deployment/ai-capabilities.md",
+      "title": "What AI means",
+      "summary": "Distinguish the platform's search and machine-learning foundations from optional Elastic features that depend on licensing and deployment choices.",
+      "owner": "platform",
+      "intents": [
+        "understand what AI means in the Elasticsearch AI platform",
+        "find which AI and machine learning features are included"
+      ]
+    },
+    {
       "id": "elastic-appendix-limits-references-checklists",
       "path": "elastic-stack-deployment/appendix-limits-references-checklists.md",
       "title": "Limits and checklists",
@@ -46,6 +57,28 @@
       ]
     },
     {
+      "id": "elastic-compatibility",
+      "path": "elastic-stack-deployment/compatibility.md",
+      "title": "Compatibility",
+      "summary": "Verify the deployed platform, Elastic, client, integration, and Azure versions before enabling a feature or planning a change.",
+      "owner": "platform",
+      "intents": [
+        "find supported Elasticsearch and Kibana versions",
+        "check Elastic Agent and platform compatibility"
+      ]
+    },
+    {
+      "id": "elastic-data-onboarding",
+      "path": "elastic-stack-deployment/data-onboarding.md",
+      "title": "Choose a data onboarding path",
+      "summary": "Select a production ingestion path by workload, endpoint, network, identity, version, and operational ownership.",
+      "owner": "platform",
+      "intents": [
+        "choose how to send production data to Elasticsearch",
+        "compare Elastic Agent OpenTelemetry Logstash and API ingestion"
+      ]
+    },
+    {
       "id": "elastic-delete-application",
       "path": "elastic-stack-deployment/delete-application.md",
       "title": "Delete the application",
@@ -54,6 +87,17 @@
       "intents": [
         "delete the Elasticsearch managed application",
         "decommission Elasticsearch safely"
+      ]
+    },
+    {
+      "id": "elastic-deploy-first-instance",
+      "path": "elastic-stack-deployment/deploy-first-instance.md",
+      "title": "Deploy your first platform instance",
+      "summary": "Complete a guided Azure Marketplace deployment and verify the managed application, endpoints, connectivity, and first test document.",
+      "owner": "platform",
+      "intents": [
+        "deploy my first Elasticsearch platform instance",
+        "follow an end to end Marketplace deployment tutorial"
       ]
     },
     {
@@ -200,6 +244,17 @@
       ]
     },
     {
+      "id": "elastic-managed-application-navigation",
+      "path": "elastic-stack-deployment/managed-application-navigation.md",
+      "title": "Navigate the managed application",
+      "summary": "Find deployment identity, customer actions, health, synchronization, and connection information in the Azure Managed Application.",
+      "owner": "platform",
+      "intents": [
+        "find managed application actions in Azure",
+        "find My Deployment health and sync status"
+      ]
+    },
+    {
       "id": "elastic-marketplace-prerequisites",
       "path": "elastic-stack-deployment/marketplace-prerequisites.md",
       "title": "Marketplace prerequisites",
@@ -219,6 +274,28 @@
       "intents": [
         "plan networking for Elasticsearch",
         "choose public or private endpoint access"
+      ]
+    },
+    {
+      "id": "elastic-onboard-observability-data",
+      "path": "elastic-stack-deployment/onboard-observability-data.md",
+      "title": "Onboard observability data",
+      "summary": "Send synthetic OpenTelemetry logs, metrics, or traces through a collector using a deployment-derived endpoint and least-privilege API key.",
+      "owner": "platform",
+      "intents": [
+        "send OpenTelemetry data to managed Elasticsearch",
+        "onboard logs metrics and traces"
+      ]
+    },
+    {
+      "id": "elastic-onboard-search-data",
+      "path": "elastic-stack-deployment/onboard-search-data.md",
+      "title": "Onboard search data",
+      "summary": "Create a least-privilege API key and data stream, index a synthetic search document, verify it, and remove the tutorial resources.",
+      "owner": "platform",
+      "intents": [
+        "ingest application documents with an Elasticsearch API key",
+        "create a search data stream"
       ]
     },
     {
@@ -296,6 +373,28 @@
       "intents": [
         "configure public DNS for Elasticsearch",
         "connect to public Kibana"
+      ]
+    },
+    {
+      "id": "elastic-release-notes",
+      "path": "elastic-stack-deployment/release-notes.md",
+      "title": "Release notes",
+      "summary": "Distinguish documentation updates from verified managed-platform releases and find the checks required before adopting a change.",
+      "owner": "platform",
+      "intents": [
+        "find Elasticsearch platform release notes",
+        "see what changed in the documentation"
+      ]
+    },
+    {
+      "id": "elastic-role-based-journeys",
+      "path": "elastic-stack-deployment/role-based-journeys.md",
+      "title": "Choose your role",
+      "summary": "Follow a focused documentation path for buying, deploying, connecting, securing, administering, or using the managed platform.",
+      "owner": "platform",
+      "intents": [
+        "find documentation for my platform role",
+        "understand who performs each deployment task"
       ]
     },
     {
