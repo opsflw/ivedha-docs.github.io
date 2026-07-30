@@ -16,21 +16,7 @@
         {
           "x": 20,
           "y": 75,
-          "w": 225,
-          "h": 730,
-          "label": "iVedha / Opsflw operations",
-          "fill": "#f1f8f2",
-          "stroke": "#76a67e",
-          "labelColor": "#276738",
-          "dash": [
-            1,
-            0
-          ]
-        },
-        {
-          "x": 270,
-          "y": 75,
-          "w": 310,
+          "w": 430,
           "h": 260,
           "label": "Customer environment",
           "fill": "#f7f4fb",
@@ -42,9 +28,23 @@
           ]
         },
         {
-          "x": 600,
+          "x": 20,
+          "y": 360,
+          "w": 430,
+          "h": 445,
+          "label": "iVedha / Opsflw operations",
+          "fill": "#f1f8f2",
+          "stroke": "#76a67e",
+          "labelColor": "#276738",
+          "dash": [
+            1,
+            0
+          ]
+        },
+        {
+          "x": 480,
           "y": 75,
-          "w": 980,
+          "w": 1100,
           "h": 730,
           "label": "Customer Azure subscription",
           "fill": "#f2f7fc",
@@ -56,10 +56,10 @@
           ]
         },
         {
-          "x": 625,
+          "x": 505,
           "y": 110,
-          "w": 700,
-          "h": 590,
+          "w": 1050,
+          "h": 510,
           "label": "Managed resource group",
           "fill": "#eaf4fc",
           "stroke": "#77a8c9",
@@ -76,42 +76,42 @@
       "values": [
         {
           "x": 62,
-          "y": 270,
-          "w": 140,
-          "h": 110,
-          "label": "Managed-resource\ntelemetry\nmonitoring cluster",
-          "icon": "asset:azure/vega-icons/monitoring-cluster.png",
-          "kind": "ops"
-        },
-        {
-          "x": 62,
-          "y": 620,
-          "w": 140,
-          "h": 110,
-          "label": "Lifecycle\nautomation",
-          "icon": "asset:azure/vega-icons/marketplace.png",
-          "kind": "ops"
-        },
-        {
-          "x": 292,
           "y": 150,
-          "w": 120,
+          "w": 140,
           "h": 112,
           "label": "Users and\ndata sources",
           "icon": "asset:azure/vega-icons/users.png",
           "kind": "customer"
         },
         {
-          "x": 438,
+          "x": 265,
           "y": 150,
-          "w": 120,
+          "w": 140,
           "h": 112,
           "label": "Customer network\nand DNS",
           "icon": "asset:azure/vega-icons/network.png",
           "kind": "customer"
         },
         {
-          "x": 648,
+          "x": 62,
+          "y": 420,
+          "w": 140,
+          "h": 118,
+          "label": "Managed-resource\ntelemetry\nmonitoring cluster",
+          "icon": "asset:azure/vega-icons/monitoring-cluster.png",
+          "kind": "ops"
+        },
+        {
+          "x": 62,
+          "y": 640,
+          "w": 140,
+          "h": 112,
+          "label": "Lifecycle\nautomation",
+          "icon": "asset:azure/vega-icons/marketplace.png",
+          "kind": "ops"
+        },
+        {
+          "x": 535,
           "y": 175,
           "w": 122,
           "h": 112,
@@ -120,7 +120,7 @@
           "kind": "azure"
         },
         {
-          "x": 805,
+          "x": 700,
           "y": 175,
           "w": 122,
           "h": 112,
@@ -129,7 +129,7 @@
           "kind": "azure"
         },
         {
-          "x": 968,
+          "x": 870,
           "y": 145,
           "w": 122,
           "h": 112,
@@ -138,7 +138,7 @@
           "kind": "azure"
         },
         {
-          "x": 968,
+          "x": 870,
           "y": 315,
           "w": 122,
           "h": 112,
@@ -147,7 +147,7 @@
           "kind": "elastic"
         },
         {
-          "x": 1138,
+          "x": 1040,
           "y": 315,
           "w": 122,
           "h": 112,
@@ -156,17 +156,17 @@
           "kind": "elastic"
         },
         {
-          "x": 1218,
-          "y": 490,
-          "w": 92,
-          "h": 108,
+          "x": 1210,
+          "y": 315,
+          "w": 122,
+          "h": 112,
           "label": "Storage",
           "icon": "asset:azure/vega-icons/storage.png",
           "kind": "azure"
         },
         {
-          "x": 968,
-          "y": 540,
+          "x": 1040,
+          "y": 480,
           "w": 122,
           "h": 112,
           "label": "Monitoring\nagent",
@@ -174,18 +174,18 @@
           "kind": "azure"
         },
         {
-          "x": 1348,
-          "y": 575,
-          "w": 104,
+          "x": 1210,
+          "y": 650,
+          "w": 122,
           "h": 112,
           "label": "Application\nresource group",
           "icon": "asset:azure/vega-icons/resource-group.png",
           "kind": "azure"
         },
         {
-          "x": 1460,
-          "y": 575,
-          "w": 104,
+          "x": 1380,
+          "y": 650,
+          "w": 150,
           "h": 112,
           "label": "Azure Marketplace\nmanaged\napplication",
           "icon": "asset:azure/vega-icons/marketplace.png",
@@ -197,12 +197,12 @@
       "name": "connections",
       "values": [
         {
-          "path": "M 412 206 L 438 206",
-          "endX": 438,
+          "path": "M 202 206 L 265 206",
+          "endX": 265,
           "endY": 206,
           "angle": 90,
           "label": "HTTPS and data",
-          "labelX": 425,
+          "labelX": 233,
           "labelY": 187,
           "dash": [
             1,
@@ -210,12 +210,12 @@
           ]
         },
         {
-          "path": "M 558 206 L 648 206",
-          "endX": 648,
+          "path": "M 405 206 L 535 206",
+          "endX": 535,
           "endY": 206,
           "angle": 90,
           "label": "approved access",
-          "labelX": 602,
+          "labelX": 470,
           "labelY": 187,
           "dash": [
             1,
@@ -223,12 +223,12 @@
           ]
         },
         {
-          "path": "M 770 231 L 805 231",
-          "endX": 805,
+          "path": "M 657 231 L 700 231",
+          "endX": 700,
           "endY": 231,
           "angle": 90,
           "label": "HTTPS 443",
-          "labelX": 787,
+          "labelX": 678,
           "labelY": 212,
           "dash": [
             1,
@@ -236,12 +236,12 @@
           ]
         },
         {
-          "path": "M 927 204 L 968 201",
-          "endX": 968,
+          "path": "M 822 204 L 870 201",
+          "endX": 870,
           "endY": 201,
           "angle": 90,
           "label": "secrets",
-          "labelX": 947,
+          "labelX": 846,
           "labelY": 184,
           "dash": [
             1,
@@ -249,12 +249,12 @@
           ]
         },
         {
-          "path": "M 927 250 L 948 250 L 948 371 L 968 371",
-          "endX": 968,
+          "path": "M 822 250 L 850 250 L 850 371 L 870 371",
+          "endX": 870,
           "endY": 371,
           "angle": 90,
           "label": "hosts",
-          "labelX": 950,
+          "labelX": 852,
           "labelY": 298,
           "dash": [
             1,
@@ -262,12 +262,12 @@
           ]
         },
         {
-          "path": "M 1090 371 L 1138 371",
-          "endX": 1138,
+          "path": "M 992 371 L 1040 371",
+          "endX": 1040,
           "endY": 371,
           "angle": 90,
           "label": "queries",
-          "labelX": 1114,
+          "labelX": 1016,
           "labelY": 352,
           "dash": [
             1,
@@ -275,12 +275,12 @@
           ]
         },
         {
-          "path": "M 866 287 L 866 455 L 1118 455 L 1138 414",
-          "endX": 1138,
+          "path": "M 761 287 L 761 455 L 1020 455 L 1040 414",
+          "endX": 1040,
           "endY": 414,
           "angle": 27,
           "label": "hosts",
-          "labelX": 1010,
+          "labelX": 890,
           "labelY": 438,
           "dash": [
             1,
@@ -288,78 +288,78 @@
           ]
         },
         {
-          "path": "M 1260 393 L 1278 393 L 1278 490",
-          "endX": 1278,
-          "endY": 490,
-          "angle": 180,
+          "path": "M 1162 371 L 1210 371",
+          "endX": 1210,
+          "endY": 371,
+          "angle": 90,
           "label": "snapshots",
-          "labelX": 1288,
-          "labelY": 439,
+          "labelX": 1186,
+          "labelY": 352,
           "dash": [
             1,
             0
           ]
         },
         {
-          "path": "M 927 270 L 944 270 L 944 596 L 968 596",
-          "endX": 968,
-          "endY": 596,
+          "path": "M 822 270 L 840 270 L 840 536 L 1040 536",
+          "endX": 1040,
+          "endY": 536,
           "angle": 90,
           "label": "runs",
-          "labelX": 950,
-          "labelY": 522,
+          "labelX": 936,
+          "labelY": 518,
           "dash": [
             1,
             0
           ]
         },
         {
-          "path": "M 968 610 L 600 610 L 600 475 L 245 475 L 245 325 L 202 325",
+          "path": "M 1040 560 L 470 560 L 470 479 L 202 479",
           "endX": 202,
-          "endY": 325,
+          "endY": 479,
           "angle": -90,
           "label": "forwards platform telemetry",
-          "labelX": 424,
-          "labelY": 456,
+          "labelX": 605,
+          "labelY": 542,
           "dash": [
             8,
             6
           ]
         },
         {
-          "path": "M 1460 631 L 1452 631",
-          "endX": 1452,
-          "endY": 631,
+          "path": "M 1380 706 L 1332 706",
+          "endX": 1332,
+          "endY": 706,
           "angle": -90,
           "label": "creates",
-          "labelX": 1456,
-          "labelY": 612,
+          "labelX": 1356,
+          "labelY": 687,
           "dash": [
             1,
             0
           ]
         },
         {
-          "path": "M 1348 650 L 1315 650 L 1315 720 L 835 720 L 835 287",
-          "endX": 835,
+          "path": "M 1210 706 L 1170 706 L 1170 635 L 760 635 L 760 287",
+          "endX": 760,
           "endY": 287,
           "angle": 0,
-          "label": "deploys",
-          "labelX": 1075,
-          "labelY": 702,
+          "label": "deploys managed platform",
+          "labelX": 965,
+          "labelY": 617,
           "dash": [
             1,
             0
           ]
         },
         {
-          "path": "M 202 675 L 575 675 L 575 765 L 1512 765 L 1512 687",
-          "endX": 1512,
-          "endY": 687,
+          "path": "M 202 696 L 460 696 L 460 780 L 1455 780 L 1455 762",
+          "endX": 1455,
+          "endY": 762,
           "angle": 0,
           "label": "lifecycle coordination",
-          "labelX": 1070,
-          "labelY": 747,
+          "labelX": 970,
+          "labelY": 762,
           "dash": [
             8,
             6
