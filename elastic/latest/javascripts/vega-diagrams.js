@@ -55,8 +55,7 @@
         svg.setAttribute("focusable", "false");
         svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
       }
-      source.hidden = true;
-      source.classList.add("vega-source--rendered");
+      source.remove();
     } catch (error) {
       code.dataset.vegaRendered = "false";
       const message = document.createElement("p");
