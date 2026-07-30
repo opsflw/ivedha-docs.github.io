@@ -19,3 +19,41 @@
   box-sizing: border-box;
   padding: 0.5rem;
 }
+
+.vega-architecture-diagram {
+  background: #fff;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.35rem;
+  box-sizing: border-box;
+  margin: 1.5rem 0 0.75rem;
+  overflow-x: auto;
+  padding: 0.5rem;
+}
+
+.vega-architecture-diagram__view {
+  margin: 0 auto;
+  min-width: 48rem;
+  width: 100%;
+}
+
+.vega-architecture-diagram__view svg {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+}
+
+.vega-architecture-diagram__error {
+  border-left: 0.2rem solid var(--md-code-hl-special-color);
+  padding-left: 0.8rem;
+}
+
+@media screen and (max-width: 76.25em) {
+  .vega-architecture-diagram__view {
+    min-width: 64rem;
+  }
+}
+
+.vega-source--rendered {
+  display: none !important;
+}

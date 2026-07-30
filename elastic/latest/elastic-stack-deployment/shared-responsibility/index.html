@@ -2207,14 +2207,19 @@ supported platform lifecycle without owning the customer's infrastructure.</em><
 </tr>
 <tr>
 <td>Monitoring and support evidence</td>
-<td>Monitor usage and report symptoms</td>
-<td>Investigate the managed service</td>
+<td>Monitor workload outcomes and report symptoms</td>
+<td>Operate the managed-resource monitoring agent, receive its telemetry in the iVedha monitoring cluster, and investigate platform health</td>
 </tr>
 </tbody>
 </table>
 <p>Microsoft operates Azure and enforces the Azure Managed Application and
 Marketplace contracts. Elastic defines Elasticsearch and Kibana product
 behavior, APIs, security features, and version compatibility.</p>
+<p>The monitoring agent in the managed resource group forwards operational
+platform telemetry to the iVedha monitoring cluster for health monitoring and
+incident response. This monitoring flow does not transfer ownership of the
+customer's Azure resources, Elasticsearch indices, or application data to
+iVedha.</p>
 <h2 id="customer-safety-rules">Customer safety rules</h2>
 <ul>
 <li>Do not edit, move, or delete resources in the managed resource group.</li>
@@ -2236,7 +2241,7 @@ Review <a href="../delete-application/">delete the application</a> before decomm
   <aside class="md-source-file" aria-label="Document metadata">
     
       <span class="md-source-file__fact">
-        <strong>Last verified:</strong> 2026-07-28
+        <strong>Last verified:</strong> 2026-07-29
       </span>
     
     
@@ -2293,6 +2298,10 @@ Review <a href="../delete-application/">delete the application</a> before decomm
     
     
       <script src="../../assets/javascripts/bundle.af256bd8.min.js"></script>
+      
+        <script src="../../javascripts/vendor/vega-6.2.0.min.js"></script>
+      
+        <script src="../../javascripts/vega-diagrams.js"></script>
       
     
   <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});

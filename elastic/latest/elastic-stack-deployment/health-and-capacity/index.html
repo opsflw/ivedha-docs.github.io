@@ -2166,6 +2166,11 @@
 <p>Monitor both customer workloads and managed-service readiness. A green Azure
 resource state does not prove that ingestion, search, or every Elasticsearch
 index is healthy.</p>
+<p>A monitoring agent in the managed resource group forwards operational platform
+telemetry to the iVedha monitoring cluster. iVedha uses this telemetry to
+monitor supported platform health. Customers remain responsible for verifying
+workload outcomes, data quality, ingestion completeness, dashboards, and
+application-level service objectives.</p>
 <h2 id="review-cluster-health">Review cluster health</h2>
 <p>With an appropriately privileged user:</p>
 <div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--fail-with-body<span class="w"> </span>--user<span class="w"> </span><span class="s2">&quot;&lt;user&gt;&quot;</span><span class="w"> </span><span class="se">\</span>
@@ -2208,7 +2213,7 @@ for a size label without supporting workload evidence.</p>
   <aside class="md-source-file" aria-label="Document metadata">
     
       <span class="md-source-file__fact">
-        <strong>Last verified:</strong> 2026-07-28
+        <strong>Last verified:</strong> 2026-07-29
       </span>
     
     
@@ -2265,6 +2270,10 @@ for a size label without supporting workload evidence.</p>
     
     
       <script src="../../assets/javascripts/bundle.af256bd8.min.js"></script>
+      
+        <script src="../../javascripts/vendor/vega-6.2.0.min.js"></script>
+      
+        <script src="../../javascripts/vega-diagrams.js"></script>
       
     
   <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});

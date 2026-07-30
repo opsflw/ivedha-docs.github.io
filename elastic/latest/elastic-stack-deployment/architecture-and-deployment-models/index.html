@@ -668,6 +668,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#managed-monitoring-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Managed monitoring flow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#azure-resource-boundaries" class="md-nav__link">
     <span class="md-ellipsis">
       Azure resource boundaries
@@ -2148,6 +2157,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#managed-monitoring-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Managed monitoring flow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#azure-resource-boundaries" class="md-nav__link">
     <span class="md-ellipsis">
       Azure resource boundaries
@@ -2184,10 +2202,819 @@
 <p>The platform combines Elastic Stack services with Azure infrastructure managed
 through an Azure Managed Application.</p>
 <h2 id="architecture-overview">Architecture overview</h2>
-<p><a class="glightbox" href="../../_media/azure/platform-resource-boundary.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Azure resource boundaries showing the customer environment, customer Azure subscription, application resource group, nested managed resource group, AKS-hosted Elasticsearch and Kibana, supporting Azure services, and external iVedha Opsflw operations." src="../../_media/azure/platform-resource-boundary.svg" /></a></p>
+<div class="vega highlight"><pre><span></span><code>{
+  &quot;$schema&quot;: &quot;https://vega.github.io/schema/vega/v6.json&quot;,
+  &quot;description&quot;: &quot;High-level Azure resource-boundary architecture for the iVedha Managed Elasticsearch Platform. The managed platform runs in the customer&#39;s Azure subscription. Customer users and data sources connect through customer network and DNS to the platform endpoint and AKS-hosted Elasticsearch and Kibana. A monitoring agent forwards platform telemetry to the iVedha monitoring cluster, while lifecycle automation coordinates the Azure Marketplace managed application.&quot;,
+  &quot;width&quot;: 1600,
+  &quot;height&quot;: 850,
+  &quot;padding&quot;: 0,
+  &quot;autosize&quot;: {
+    &quot;type&quot;: &quot;none&quot;,
+    &quot;contains&quot;: &quot;padding&quot;
+  },
+  &quot;background&quot;: &quot;#ffffff&quot;,
+  &quot;data&quot;: [
+    {
+      &quot;name&quot;: &quot;boundaries&quot;,
+      &quot;values&quot;: [
+        {
+          &quot;x&quot;: 20,
+          &quot;y&quot;: 75,
+          &quot;w&quot;: 225,
+          &quot;h&quot;: 730,
+          &quot;label&quot;: &quot;iVedha / Opsflw operations&quot;,
+          &quot;fill&quot;: &quot;#f1f8f2&quot;,
+          &quot;stroke&quot;: &quot;#76a67e&quot;,
+          &quot;labelColor&quot;: &quot;#276738&quot;,
+          &quot;dash&quot;: [
+            1,
+            0
+          ]
+        },
+        {
+          &quot;x&quot;: 270,
+          &quot;y&quot;: 75,
+          &quot;w&quot;: 310,
+          &quot;h&quot;: 260,
+          &quot;label&quot;: &quot;Customer environment&quot;,
+          &quot;fill&quot;: &quot;#f7f4fb&quot;,
+          &quot;stroke&quot;: &quot;#8b75a3&quot;,
+          &quot;labelColor&quot;: &quot;#5d3f76&quot;,
+          &quot;dash&quot;: [
+            1,
+            0
+          ]
+        },
+        {
+          &quot;x&quot;: 600,
+          &quot;y&quot;: 75,
+          &quot;w&quot;: 980,
+          &quot;h&quot;: 730,
+          &quot;label&quot;: &quot;Customer Azure subscription&quot;,
+          &quot;fill&quot;: &quot;#f2f7fc&quot;,
+          &quot;stroke&quot;: &quot;#377fb4&quot;,
+          &quot;labelColor&quot;: &quot;#0067a3&quot;,
+          &quot;dash&quot;: [
+            1,
+            0
+          ]
+        },
+        {
+          &quot;x&quot;: 625,
+          &quot;y&quot;: 110,
+          &quot;w&quot;: 700,
+          &quot;h&quot;: 590,
+          &quot;label&quot;: &quot;Managed resource group&quot;,
+          &quot;fill&quot;: &quot;#eaf4fc&quot;,
+          &quot;stroke&quot;: &quot;#77a8c9&quot;,
+          &quot;labelColor&quot;: &quot;#075f91&quot;,
+          &quot;dash&quot;: [
+            7,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      &quot;name&quot;: &quot;nodes&quot;,
+      &quot;values&quot;: [
+        {
+          &quot;x&quot;: 62,
+          &quot;y&quot;: 270,
+          &quot;w&quot;: 140,
+          &quot;h&quot;: 110,
+          &quot;label&quot;: &quot;Managed-resource\ntelemetry\nmonitoring cluster&quot;,
+          &quot;icon&quot;: &quot;asset:azure/vega-icons/monitoring-cluster.png&quot;,
+          &quot;kind&quot;: &quot;ops&quot;
+        },
+        {
+          &quot;x&quot;: 62,
+          &quot;y&quot;: 620,
+          &quot;w&quot;: 140,
+          &quot;h&quot;: 110,
+          &quot;label&quot;: &quot;Lifecycle\nautomation&quot;,
+          &quot;icon&quot;: &quot;asset:azure/vega-icons/marketplace.png&quot;,
+          &quot;kind&quot;: &quot;ops&quot;
+        },
+        {
+          &quot;x&quot;: 292,
+          &quot;y&quot;: 150,
+          &quot;w&quot;: 120,
+          &quot;h&quot;: 112,
+          &quot;label&quot;: &quot;Users and\ndata sources&quot;,
+          &quot;icon&quot;: &quot;asset:azure/vega-icons/users.png&quot;,
+          &quot;kind&quot;: &quot;customer&quot;
+        },
+        {
+          &quot;x&quot;: 438,
+          &quot;y&quot;: 150,
+          &quot;w&quot;: 120,
+          &quot;h&quot;: 112,
+          &quot;label&quot;: &quot;Customer network\nand DNS&quot;,
+          &quot;icon&quot;: &quot;asset:azure/vega-icons/network.png&quot;,
+          &quot;kind&quot;: &quot;customer&quot;
+        },
+        {
+          &quot;x&quot;: 648,
+          &quot;y&quot;: 175,
+          &quot;w&quot;: 122,
+          &quot;h&quot;: 112,
+          &quot;label&quot;: &quot;Platform endpoint\npublic or private&quot;,
+          &quot;icon&quot;: &quot;asset:azure/vega-icons/endpoint.png&quot;,
+          &quot;kind&quot;: &quot;azure&quot;
+        },
+        {
+          &quot;x&quot;: 805,
+          &quot;y&quot;: 175,
+          &quot;w&quot;: 122,
+          &quot;h&quot;: 112,
+          &quot;label&quot;: &quot;AKS platform\nruntime&quot;,
+          &quot;icon&quot;: &quot;asset:azure/vega-icons/aks.png&quot;,
+          &quot;kind&quot;: &quot;azure&quot;
+        },
+        {
+          &quot;x&quot;: 968,
+          &quot;y&quot;: 145,
+          &quot;w&quot;: 122,
+          &quot;h&quot;: 112,
+          &quot;label&quot;: &quot;Key Vault&quot;,
+          &quot;icon&quot;: &quot;asset:azure/vega-icons/key-vault.png&quot;,
+          &quot;kind&quot;: &quot;azure&quot;
+        },
+        {
+          &quot;x&quot;: 968,
+          &quot;y&quot;: 315,
+          &quot;w&quot;: 122,
+          &quot;h&quot;: 112,
+          &quot;label&quot;: &quot;Kibana&quot;,
+          &quot;icon&quot;: &quot;asset:azure/vega-icons/kibana.png&quot;,
+          &quot;kind&quot;: &quot;elastic&quot;
+        },
+        {
+          &quot;x&quot;: 1138,
+          &quot;y&quot;: 315,
+          &quot;w&quot;: 122,
+          &quot;h&quot;: 112,
+          &quot;label&quot;: &quot;Elasticsearch&quot;,
+          &quot;icon&quot;: &quot;asset:azure/vega-icons/elasticsearch.png&quot;,
+          &quot;kind&quot;: &quot;elastic&quot;
+        },
+        {
+          &quot;x&quot;: 1218,
+          &quot;y&quot;: 490,
+          &quot;w&quot;: 92,
+          &quot;h&quot;: 108,
+          &quot;label&quot;: &quot;Storage&quot;,
+          &quot;icon&quot;: &quot;asset:azure/vega-icons/storage.png&quot;,
+          &quot;kind&quot;: &quot;azure&quot;
+        },
+        {
+          &quot;x&quot;: 968,
+          &quot;y&quot;: 540,
+          &quot;w&quot;: 122,
+          &quot;h&quot;: 112,
+          &quot;label&quot;: &quot;Monitoring\nagent&quot;,
+          &quot;icon&quot;: &quot;asset:azure/vega-icons/monitoring-agent.png&quot;,
+          &quot;kind&quot;: &quot;azure&quot;
+        },
+        {
+          &quot;x&quot;: 1348,
+          &quot;y&quot;: 575,
+          &quot;w&quot;: 104,
+          &quot;h&quot;: 112,
+          &quot;label&quot;: &quot;Application\nresource group&quot;,
+          &quot;icon&quot;: &quot;asset:azure/vega-icons/resource-group.png&quot;,
+          &quot;kind&quot;: &quot;azure&quot;
+        },
+        {
+          &quot;x&quot;: 1460,
+          &quot;y&quot;: 575,
+          &quot;w&quot;: 104,
+          &quot;h&quot;: 112,
+          &quot;label&quot;: &quot;Azure Marketplace\nmanaged\napplication&quot;,
+          &quot;icon&quot;: &quot;asset:azure/vega-icons/marketplace.png&quot;,
+          &quot;kind&quot;: &quot;azure&quot;
+        }
+      ]
+    },
+    {
+      &quot;name&quot;: &quot;connections&quot;,
+      &quot;values&quot;: [
+        {
+          &quot;path&quot;: &quot;M 412 206 L 438 206&quot;,
+          &quot;endX&quot;: 438,
+          &quot;endY&quot;: 206,
+          &quot;angle&quot;: 90,
+          &quot;label&quot;: &quot;HTTPS and data&quot;,
+          &quot;labelX&quot;: 425,
+          &quot;labelY&quot;: 187,
+          &quot;dash&quot;: [
+            1,
+            0
+          ]
+        },
+        {
+          &quot;path&quot;: &quot;M 558 206 L 648 206&quot;,
+          &quot;endX&quot;: 648,
+          &quot;endY&quot;: 206,
+          &quot;angle&quot;: 90,
+          &quot;label&quot;: &quot;approved access&quot;,
+          &quot;labelX&quot;: 602,
+          &quot;labelY&quot;: 187,
+          &quot;dash&quot;: [
+            1,
+            0
+          ]
+        },
+        {
+          &quot;path&quot;: &quot;M 770 231 L 805 231&quot;,
+          &quot;endX&quot;: 805,
+          &quot;endY&quot;: 231,
+          &quot;angle&quot;: 90,
+          &quot;label&quot;: &quot;HTTPS 443&quot;,
+          &quot;labelX&quot;: 787,
+          &quot;labelY&quot;: 212,
+          &quot;dash&quot;: [
+            1,
+            0
+          ]
+        },
+        {
+          &quot;path&quot;: &quot;M 927 204 L 968 201&quot;,
+          &quot;endX&quot;: 968,
+          &quot;endY&quot;: 201,
+          &quot;angle&quot;: 90,
+          &quot;label&quot;: &quot;secrets&quot;,
+          &quot;labelX&quot;: 947,
+          &quot;labelY&quot;: 184,
+          &quot;dash&quot;: [
+            1,
+            0
+          ]
+        },
+        {
+          &quot;path&quot;: &quot;M 927 250 L 948 250 L 948 371 L 968 371&quot;,
+          &quot;endX&quot;: 968,
+          &quot;endY&quot;: 371,
+          &quot;angle&quot;: 90,
+          &quot;label&quot;: &quot;hosts&quot;,
+          &quot;labelX&quot;: 950,
+          &quot;labelY&quot;: 298,
+          &quot;dash&quot;: [
+            1,
+            0
+          ]
+        },
+        {
+          &quot;path&quot;: &quot;M 1090 371 L 1138 371&quot;,
+          &quot;endX&quot;: 1138,
+          &quot;endY&quot;: 371,
+          &quot;angle&quot;: 90,
+          &quot;label&quot;: &quot;queries&quot;,
+          &quot;labelX&quot;: 1114,
+          &quot;labelY&quot;: 352,
+          &quot;dash&quot;: [
+            1,
+            0
+          ]
+        },
+        {
+          &quot;path&quot;: &quot;M 866 287 L 866 455 L 1118 455 L 1138 414&quot;,
+          &quot;endX&quot;: 1138,
+          &quot;endY&quot;: 414,
+          &quot;angle&quot;: 27,
+          &quot;label&quot;: &quot;hosts&quot;,
+          &quot;labelX&quot;: 1010,
+          &quot;labelY&quot;: 438,
+          &quot;dash&quot;: [
+            1,
+            0
+          ]
+        },
+        {
+          &quot;path&quot;: &quot;M 1260 393 L 1278 393 L 1278 490&quot;,
+          &quot;endX&quot;: 1278,
+          &quot;endY&quot;: 490,
+          &quot;angle&quot;: 180,
+          &quot;label&quot;: &quot;snapshots&quot;,
+          &quot;labelX&quot;: 1288,
+          &quot;labelY&quot;: 439,
+          &quot;dash&quot;: [
+            1,
+            0
+          ]
+        },
+        {
+          &quot;path&quot;: &quot;M 927 270 L 944 270 L 944 596 L 968 596&quot;,
+          &quot;endX&quot;: 968,
+          &quot;endY&quot;: 596,
+          &quot;angle&quot;: 90,
+          &quot;label&quot;: &quot;runs&quot;,
+          &quot;labelX&quot;: 950,
+          &quot;labelY&quot;: 522,
+          &quot;dash&quot;: [
+            1,
+            0
+          ]
+        },
+        {
+          &quot;path&quot;: &quot;M 968 610 L 600 610 L 600 475 L 245 475 L 245 325 L 202 325&quot;,
+          &quot;endX&quot;: 202,
+          &quot;endY&quot;: 325,
+          &quot;angle&quot;: -90,
+          &quot;label&quot;: &quot;forwards platform telemetry&quot;,
+          &quot;labelX&quot;: 424,
+          &quot;labelY&quot;: 456,
+          &quot;dash&quot;: [
+            8,
+            6
+          ]
+        },
+        {
+          &quot;path&quot;: &quot;M 1460 631 L 1452 631&quot;,
+          &quot;endX&quot;: 1452,
+          &quot;endY&quot;: 631,
+          &quot;angle&quot;: -90,
+          &quot;label&quot;: &quot;creates&quot;,
+          &quot;labelX&quot;: 1456,
+          &quot;labelY&quot;: 612,
+          &quot;dash&quot;: [
+            1,
+            0
+          ]
+        },
+        {
+          &quot;path&quot;: &quot;M 1348 650 L 1315 650 L 1315 720 L 835 720 L 835 287&quot;,
+          &quot;endX&quot;: 835,
+          &quot;endY&quot;: 287,
+          &quot;angle&quot;: 0,
+          &quot;label&quot;: &quot;deploys&quot;,
+          &quot;labelX&quot;: 1075,
+          &quot;labelY&quot;: 702,
+          &quot;dash&quot;: [
+            1,
+            0
+          ]
+        },
+        {
+          &quot;path&quot;: &quot;M 202 675 L 575 675 L 575 765 L 1512 765 L 1512 687&quot;,
+          &quot;endX&quot;: 1512,
+          &quot;endY&quot;: 687,
+          &quot;angle&quot;: 0,
+          &quot;label&quot;: &quot;lifecycle coordination&quot;,
+          &quot;labelX&quot;: 1070,
+          &quot;labelY&quot;: 747,
+          &quot;dash&quot;: [
+            8,
+            6
+          ]
+        }
+      ]
+    }
+  ],
+  &quot;scales&quot;: [
+    {
+      &quot;name&quot;: &quot;nodeFill&quot;,
+      &quot;type&quot;: &quot;ordinal&quot;,
+      &quot;domain&quot;: [
+        &quot;ops&quot;,
+        &quot;customer&quot;,
+        &quot;azure&quot;,
+        &quot;elastic&quot;
+      ],
+      &quot;range&quot;: [
+        &quot;#f7fbf7&quot;,
+        &quot;#fbf9fd&quot;,
+        &quot;#ffffff&quot;,
+        &quot;#ffffff&quot;
+      ]
+    },
+    {
+      &quot;name&quot;: &quot;nodeStroke&quot;,
+      &quot;type&quot;: &quot;ordinal&quot;,
+      &quot;domain&quot;: [
+        &quot;ops&quot;,
+        &quot;customer&quot;,
+        &quot;azure&quot;,
+        &quot;elastic&quot;
+      ],
+      &quot;range&quot;: [
+        &quot;#76a67e&quot;,
+        &quot;#8b75a3&quot;,
+        &quot;#5b9bc7&quot;,
+        &quot;#6b7280&quot;
+      ]
+    }
+  ],
+  &quot;marks&quot;: [
+    {
+      &quot;type&quot;: &quot;text&quot;,
+      &quot;encode&quot;: {
+        &quot;enter&quot;: {
+          &quot;x&quot;: {
+            &quot;value&quot;: 800
+          },
+          &quot;y&quot;: {
+            &quot;value&quot;: 32
+          },
+          &quot;text&quot;: {
+            &quot;value&quot;: &quot;iVedha Managed Elasticsearch Platform \u2014 Azure resource boundaries&quot;
+          },
+          &quot;align&quot;: {
+            &quot;value&quot;: &quot;center&quot;
+          },
+          &quot;baseline&quot;: {
+            &quot;value&quot;: &quot;middle&quot;
+          },
+          &quot;font&quot;: {
+            &quot;value&quot;: &quot;Arial, sans-serif&quot;
+          },
+          &quot;fontSize&quot;: {
+            &quot;value&quot;: 23
+          },
+          &quot;fontWeight&quot;: {
+            &quot;value&quot;: 600
+          },
+          &quot;fill&quot;: {
+            &quot;value&quot;: &quot;#19324d&quot;
+          }
+        }
+      }
+    },
+    {
+      &quot;type&quot;: &quot;rect&quot;,
+      &quot;from&quot;: {
+        &quot;data&quot;: &quot;boundaries&quot;
+      },
+      &quot;encode&quot;: {
+        &quot;enter&quot;: {
+          &quot;x&quot;: {
+            &quot;field&quot;: &quot;x&quot;
+          },
+          &quot;y&quot;: {
+            &quot;field&quot;: &quot;y&quot;
+          },
+          &quot;width&quot;: {
+            &quot;field&quot;: &quot;w&quot;
+          },
+          &quot;height&quot;: {
+            &quot;field&quot;: &quot;h&quot;
+          },
+          &quot;fill&quot;: {
+            &quot;field&quot;: &quot;fill&quot;
+          },
+          &quot;fillOpacity&quot;: {
+            &quot;value&quot;: 0.8
+          },
+          &quot;stroke&quot;: {
+            &quot;field&quot;: &quot;stroke&quot;
+          },
+          &quot;strokeWidth&quot;: {
+            &quot;value&quot;: 1.5
+          },
+          &quot;strokeDash&quot;: {
+            &quot;field&quot;: &quot;dash&quot;
+          },
+          &quot;cornerRadius&quot;: {
+            &quot;value&quot;: 10
+          }
+        }
+      }
+    },
+    {
+      &quot;type&quot;: &quot;text&quot;,
+      &quot;from&quot;: {
+        &quot;data&quot;: &quot;boundaries&quot;
+      },
+      &quot;encode&quot;: {
+        &quot;enter&quot;: {
+          &quot;x&quot;: {
+            &quot;signal&quot;: &quot;datum.x + 10&quot;
+          },
+          &quot;y&quot;: {
+            &quot;signal&quot;: &quot;datum.y + 18&quot;
+          },
+          &quot;text&quot;: {
+            &quot;field&quot;: &quot;label&quot;
+          },
+          &quot;font&quot;: {
+            &quot;value&quot;: &quot;Arial, sans-serif&quot;
+          },
+          &quot;fontSize&quot;: {
+            &quot;value&quot;: 14
+          },
+          &quot;fontWeight&quot;: {
+            &quot;value&quot;: 700
+          },
+          &quot;fill&quot;: {
+            &quot;field&quot;: &quot;labelColor&quot;
+          },
+          &quot;baseline&quot;: {
+            &quot;value&quot;: &quot;middle&quot;
+          }
+        }
+      }
+    },
+    {
+      &quot;type&quot;: &quot;path&quot;,
+      &quot;from&quot;: {
+        &quot;data&quot;: &quot;connections&quot;
+      },
+      &quot;encode&quot;: {
+        &quot;enter&quot;: {
+          &quot;path&quot;: {
+            &quot;field&quot;: &quot;path&quot;
+          },
+          &quot;fillOpacity&quot;: {
+            &quot;value&quot;: 0
+          },
+          &quot;stroke&quot;: {
+            &quot;value&quot;: &quot;#425d78&quot;
+          },
+          &quot;strokeWidth&quot;: {
+            &quot;value&quot;: 1.7
+          },
+          &quot;strokeDash&quot;: {
+            &quot;field&quot;: &quot;dash&quot;
+          }
+        }
+      }
+    },
+    {
+      &quot;type&quot;: &quot;symbol&quot;,
+      &quot;from&quot;: {
+        &quot;data&quot;: &quot;connections&quot;
+      },
+      &quot;encode&quot;: {
+        &quot;enter&quot;: {
+          &quot;x&quot;: {
+            &quot;field&quot;: &quot;endX&quot;
+          },
+          &quot;y&quot;: {
+            &quot;field&quot;: &quot;endY&quot;
+          },
+          &quot;shape&quot;: {
+            &quot;value&quot;: &quot;triangle&quot;
+          },
+          &quot;size&quot;: {
+            &quot;value&quot;: 85
+          },
+          &quot;angle&quot;: {
+            &quot;field&quot;: &quot;angle&quot;
+          },
+          &quot;fill&quot;: {
+            &quot;value&quot;: &quot;#425d78&quot;
+          }
+        }
+      }
+    },
+    {
+      &quot;type&quot;: &quot;rect&quot;,
+      &quot;from&quot;: {
+        &quot;data&quot;: &quot;nodes&quot;
+      },
+      &quot;encode&quot;: {
+        &quot;enter&quot;: {
+          &quot;x&quot;: {
+            &quot;field&quot;: &quot;x&quot;
+          },
+          &quot;y&quot;: {
+            &quot;field&quot;: &quot;y&quot;
+          },
+          &quot;width&quot;: {
+            &quot;field&quot;: &quot;w&quot;
+          },
+          &quot;height&quot;: {
+            &quot;field&quot;: &quot;h&quot;
+          },
+          &quot;fill&quot;: {
+            &quot;scale&quot;: &quot;nodeFill&quot;,
+            &quot;field&quot;: &quot;kind&quot;
+          },
+          &quot;stroke&quot;: {
+            &quot;scale&quot;: &quot;nodeStroke&quot;,
+            &quot;field&quot;: &quot;kind&quot;
+          },
+          &quot;strokeWidth&quot;: {
+            &quot;value&quot;: 1.25
+          },
+          &quot;cornerRadius&quot;: {
+            &quot;value&quot;: 8
+          },
+          &quot;shadowColor&quot;: {
+            &quot;value&quot;: &quot;#0f2740&quot;
+          },
+          &quot;shadowBlur&quot;: {
+            &quot;value&quot;: 3
+          },
+          &quot;shadowOpacity&quot;: {
+            &quot;value&quot;: 0.12
+          },
+          &quot;shadowOffsetY&quot;: {
+            &quot;value&quot;: 1
+          }
+        }
+      }
+    },
+    {
+      &quot;type&quot;: &quot;image&quot;,
+      &quot;from&quot;: {
+        &quot;data&quot;: &quot;nodes&quot;
+      },
+      &quot;encode&quot;: {
+        &quot;enter&quot;: {
+          &quot;url&quot;: {
+            &quot;field&quot;: &quot;icon&quot;
+          },
+          &quot;x&quot;: {
+            &quot;signal&quot;: &quot;datum.x + datum.w / 2 - 22&quot;
+          },
+          &quot;y&quot;: {
+            &quot;signal&quot;: &quot;datum.y + 9&quot;
+          },
+          &quot;width&quot;: {
+            &quot;value&quot;: 44
+          },
+          &quot;height&quot;: {
+            &quot;value&quot;: 44
+          },
+          &quot;aspect&quot;: {
+            &quot;value&quot;: true
+          }
+        }
+      }
+    },
+    {
+      &quot;type&quot;: &quot;text&quot;,
+      &quot;from&quot;: {
+        &quot;data&quot;: &quot;nodes&quot;
+      },
+      &quot;encode&quot;: {
+        &quot;enter&quot;: {
+          &quot;x&quot;: {
+            &quot;signal&quot;: &quot;datum.x + datum.w / 2&quot;
+          },
+          &quot;y&quot;: {
+            &quot;signal&quot;: &quot;datum.y + 64&quot;
+          },
+          &quot;text&quot;: {
+            &quot;field&quot;: &quot;label&quot;
+          },
+          &quot;lineBreak&quot;: {
+            &quot;value&quot;: &quot;\n&quot;
+          },
+          &quot;lineHeight&quot;: {
+            &quot;value&quot;: 14
+          },
+          &quot;align&quot;: {
+            &quot;value&quot;: &quot;center&quot;
+          },
+          &quot;baseline&quot;: {
+            &quot;value&quot;: &quot;top&quot;
+          },
+          &quot;limit&quot;: {
+            &quot;signal&quot;: &quot;datum.w - 10&quot;
+          },
+          &quot;font&quot;: {
+            &quot;value&quot;: &quot;Arial, sans-serif&quot;
+          },
+          &quot;fontSize&quot;: {
+            &quot;value&quot;: 11.5
+          },
+          &quot;fontWeight&quot;: {
+            &quot;value&quot;: 600
+          },
+          &quot;fill&quot;: {
+            &quot;value&quot;: &quot;#20364d&quot;
+          }
+        }
+      }
+    },
+    {
+      &quot;type&quot;: &quot;text&quot;,
+      &quot;from&quot;: {
+        &quot;data&quot;: &quot;connections&quot;
+      },
+      &quot;encode&quot;: {
+        &quot;enter&quot;: {
+          &quot;x&quot;: {
+            &quot;field&quot;: &quot;labelX&quot;
+          },
+          &quot;y&quot;: {
+            &quot;field&quot;: &quot;labelY&quot;
+          },
+          &quot;text&quot;: {
+            &quot;field&quot;: &quot;label&quot;
+          },
+          &quot;align&quot;: {
+            &quot;value&quot;: &quot;center&quot;
+          },
+          &quot;baseline&quot;: {
+            &quot;value&quot;: &quot;middle&quot;
+          },
+          &quot;font&quot;: {
+            &quot;value&quot;: &quot;Arial, sans-serif&quot;
+          },
+          &quot;fontSize&quot;: {
+            &quot;value&quot;: 12
+          },
+          &quot;fontWeight&quot;: {
+            &quot;value&quot;: 500
+          },
+          &quot;fill&quot;: {
+            &quot;value&quot;: &quot;#34495e&quot;
+          },
+          &quot;stroke&quot;: {
+            &quot;value&quot;: &quot;#ffffff&quot;
+          },
+          &quot;strokeWidth&quot;: {
+            &quot;value&quot;: 4
+          },
+          &quot;strokeJoin&quot;: {
+            &quot;value&quot;: &quot;round&quot;
+          }
+        }
+      }
+    },
+    {
+      &quot;type&quot;: &quot;text&quot;,
+      &quot;from&quot;: {
+        &quot;data&quot;: &quot;connections&quot;
+      },
+      &quot;encode&quot;: {
+        &quot;enter&quot;: {
+          &quot;x&quot;: {
+            &quot;field&quot;: &quot;labelX&quot;
+          },
+          &quot;y&quot;: {
+            &quot;field&quot;: &quot;labelY&quot;
+          },
+          &quot;text&quot;: {
+            &quot;field&quot;: &quot;label&quot;
+          },
+          &quot;align&quot;: {
+            &quot;value&quot;: &quot;center&quot;
+          },
+          &quot;baseline&quot;: {
+            &quot;value&quot;: &quot;middle&quot;
+          },
+          &quot;font&quot;: {
+            &quot;value&quot;: &quot;Arial, sans-serif&quot;
+          },
+          &quot;fontSize&quot;: {
+            &quot;value&quot;: 12
+          },
+          &quot;fontWeight&quot;: {
+            &quot;value&quot;: 500
+          },
+          &quot;fill&quot;: {
+            &quot;value&quot;: &quot;#34495e&quot;
+          }
+        }
+      }
+    },
+    {
+      &quot;type&quot;: &quot;text&quot;,
+      &quot;encode&quot;: {
+        &quot;enter&quot;: {
+          &quot;x&quot;: {
+            &quot;value&quot;: 800
+          },
+          &quot;y&quot;: {
+            &quot;value&quot;: 828
+          },
+          &quot;text&quot;: {
+            &quot;value&quot;: &quot;The platform runs in the customer&#39;s Azure subscription. iVedha/Opsflw manages deployment and operations; the customer retains ownership of its Azure subscription, connectivity, identity, and data.&quot;
+          },
+          &quot;align&quot;: {
+            &quot;value&quot;: &quot;center&quot;
+          },
+          &quot;baseline&quot;: {
+            &quot;value&quot;: &quot;middle&quot;
+          },
+          &quot;font&quot;: {
+            &quot;value&quot;: &quot;Arial, sans-serif&quot;
+          },
+          &quot;fontSize&quot;: {
+            &quot;value&quot;: 12.5
+          },
+          &quot;fontWeight&quot;: {
+            &quot;value&quot;: 600
+          },
+          &quot;fill&quot;: {
+            &quot;value&quot;: &quot;#29445d&quot;
+          }
+        }
+      }
+    }
+  ]
+}
+</code></pre></div>
 <p><em>The managed platform runs in the customer's Azure subscription. Customers own
-the subscription, connectivity, identity, and data; iVedha and Opsflw operate
-the supported platform through managed interfaces.</em></p>
+the subscription, connectivity, identity, and data. A monitoring agent in the
+managed resource group forwards platform telemetry to the iVedha monitoring
+cluster so managed operations can observe platform health and respond to
+supported incidents.</em></p>
 <p>The diagram is conceptual. The exact Azure resources depend on the approved
 offer, plan, region, and version. It intentionally omits subnets, node pools,
 node roles, and internal automation.</p>
@@ -2200,6 +3027,8 @@ node roles, and internal automation.</p>
 <li><strong>Azure Key Vault</strong> holds deployment secrets and certificate material.</li>
 <li><strong>Azure Storage</strong> supports deployment data, diagnostics, and snapshot access
   where configured.</li>
+<li><strong>Monitoring agent</strong> collects managed-resource platform telemetry and
+  forwards it to the iVedha monitoring cluster.</li>
 <li><strong>Azure networking</strong> supplies virtual networks, private connectivity, DNS,
   and optional public access.</li>
 <li><strong>Managed identities and Azure RBAC</strong> authorize supported communication
@@ -2208,6 +3037,15 @@ node roles, and internal automation.</p>
 <p>Not every underlying resource is intended for direct customer administration.
 Use the managed application view and documented Elasticsearch or Kibana
 interfaces for supported changes.</p>
+<h2 id="managed-monitoring-flow">Managed monitoring flow</h2>
+<p>The monitoring agent runs in the managed resource group and forwards
+operational platform telemetry to the iVedha monitoring cluster outside the
+customer subscription. iVedha managed operations use the resulting health
+signals and alerts to investigate the supported platform.</p>
+<p>This path represents platform monitoring. It does not mean that the customer's
+Elasticsearch indices or application data are hosted in the iVedha operations
+environment. Customers remain responsible for monitoring workload outcomes,
+data quality, ingestion behavior, and application-level service objectives.</p>
 <h2 id="azure-resource-boundaries">Azure resource boundaries</h2>
 <table>
 <thead>
@@ -2316,6 +3154,10 @@ certificate, firewall, and client reconfiguration.</p>
     
     
       <script src="../../assets/javascripts/bundle.af256bd8.min.js"></script>
+      
+        <script src="../../javascripts/vendor/vega-6.2.0.min.js"></script>
+      
+        <script src="../../javascripts/vega-diagrams.js"></script>
       
     
   <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});

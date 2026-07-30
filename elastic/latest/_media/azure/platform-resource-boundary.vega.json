@@ -1,0 +1,807 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v6.json",
+  "description": "High-level Azure resource-boundary architecture for the iVedha Managed Elasticsearch Platform. The managed platform runs in the customer's Azure subscription. Customer users and data sources connect through customer network and DNS to the platform endpoint and AKS-hosted Elasticsearch and Kibana. A monitoring agent forwards platform telemetry to the iVedha monitoring cluster, while lifecycle automation coordinates the Azure Marketplace managed application.",
+  "width": 1600,
+  "height": 850,
+  "padding": 0,
+  "autosize": {
+    "type": "none",
+    "contains": "padding"
+  },
+  "background": "#ffffff",
+  "data": [
+    {
+      "name": "boundaries",
+      "values": [
+        {
+          "x": 20,
+          "y": 75,
+          "w": 225,
+          "h": 730,
+          "label": "iVedha / Opsflw operations",
+          "fill": "#f1f8f2",
+          "stroke": "#76a67e",
+          "labelColor": "#276738",
+          "dash": [
+            1,
+            0
+          ]
+        },
+        {
+          "x": 270,
+          "y": 75,
+          "w": 310,
+          "h": 260,
+          "label": "Customer environment",
+          "fill": "#f7f4fb",
+          "stroke": "#8b75a3",
+          "labelColor": "#5d3f76",
+          "dash": [
+            1,
+            0
+          ]
+        },
+        {
+          "x": 600,
+          "y": 75,
+          "w": 980,
+          "h": 730,
+          "label": "Customer Azure subscription",
+          "fill": "#f2f7fc",
+          "stroke": "#377fb4",
+          "labelColor": "#0067a3",
+          "dash": [
+            1,
+            0
+          ]
+        },
+        {
+          "x": 625,
+          "y": 110,
+          "w": 700,
+          "h": 590,
+          "label": "Managed resource group",
+          "fill": "#eaf4fc",
+          "stroke": "#77a8c9",
+          "labelColor": "#075f91",
+          "dash": [
+            7,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "name": "nodes",
+      "values": [
+        {
+          "x": 62,
+          "y": 270,
+          "w": 140,
+          "h": 110,
+          "label": "Managed-resource\ntelemetry\nmonitoring cluster",
+          "icon": "asset:azure/vega-icons/monitoring-cluster.png",
+          "kind": "ops"
+        },
+        {
+          "x": 62,
+          "y": 620,
+          "w": 140,
+          "h": 110,
+          "label": "Lifecycle\nautomation",
+          "icon": "asset:azure/vega-icons/marketplace.png",
+          "kind": "ops"
+        },
+        {
+          "x": 292,
+          "y": 150,
+          "w": 120,
+          "h": 112,
+          "label": "Users and\ndata sources",
+          "icon": "asset:azure/vega-icons/users.png",
+          "kind": "customer"
+        },
+        {
+          "x": 438,
+          "y": 150,
+          "w": 120,
+          "h": 112,
+          "label": "Customer network\nand DNS",
+          "icon": "asset:azure/vega-icons/network.png",
+          "kind": "customer"
+        },
+        {
+          "x": 648,
+          "y": 175,
+          "w": 122,
+          "h": 112,
+          "label": "Platform endpoint\npublic or private",
+          "icon": "asset:azure/vega-icons/endpoint.png",
+          "kind": "azure"
+        },
+        {
+          "x": 805,
+          "y": 175,
+          "w": 122,
+          "h": 112,
+          "label": "AKS platform\nruntime",
+          "icon": "asset:azure/vega-icons/aks.png",
+          "kind": "azure"
+        },
+        {
+          "x": 968,
+          "y": 145,
+          "w": 122,
+          "h": 112,
+          "label": "Key Vault",
+          "icon": "asset:azure/vega-icons/key-vault.png",
+          "kind": "azure"
+        },
+        {
+          "x": 968,
+          "y": 315,
+          "w": 122,
+          "h": 112,
+          "label": "Kibana",
+          "icon": "asset:azure/vega-icons/kibana.png",
+          "kind": "elastic"
+        },
+        {
+          "x": 1138,
+          "y": 315,
+          "w": 122,
+          "h": 112,
+          "label": "Elasticsearch",
+          "icon": "asset:azure/vega-icons/elasticsearch.png",
+          "kind": "elastic"
+        },
+        {
+          "x": 1218,
+          "y": 490,
+          "w": 92,
+          "h": 108,
+          "label": "Storage",
+          "icon": "asset:azure/vega-icons/storage.png",
+          "kind": "azure"
+        },
+        {
+          "x": 968,
+          "y": 540,
+          "w": 122,
+          "h": 112,
+          "label": "Monitoring\nagent",
+          "icon": "asset:azure/vega-icons/monitoring-agent.png",
+          "kind": "azure"
+        },
+        {
+          "x": 1348,
+          "y": 575,
+          "w": 104,
+          "h": 112,
+          "label": "Application\nresource group",
+          "icon": "asset:azure/vega-icons/resource-group.png",
+          "kind": "azure"
+        },
+        {
+          "x": 1460,
+          "y": 575,
+          "w": 104,
+          "h": 112,
+          "label": "Azure Marketplace\nmanaged\napplication",
+          "icon": "asset:azure/vega-icons/marketplace.png",
+          "kind": "azure"
+        }
+      ]
+    },
+    {
+      "name": "connections",
+      "values": [
+        {
+          "path": "M 412 206 L 438 206",
+          "endX": 438,
+          "endY": 206,
+          "angle": 90,
+          "label": "HTTPS and data",
+          "labelX": 425,
+          "labelY": 187,
+          "dash": [
+            1,
+            0
+          ]
+        },
+        {
+          "path": "M 558 206 L 648 206",
+          "endX": 648,
+          "endY": 206,
+          "angle": 90,
+          "label": "approved access",
+          "labelX": 602,
+          "labelY": 187,
+          "dash": [
+            1,
+            0
+          ]
+        },
+        {
+          "path": "M 770 231 L 805 231",
+          "endX": 805,
+          "endY": 231,
+          "angle": 90,
+          "label": "HTTPS 443",
+          "labelX": 787,
+          "labelY": 212,
+          "dash": [
+            1,
+            0
+          ]
+        },
+        {
+          "path": "M 927 204 L 968 201",
+          "endX": 968,
+          "endY": 201,
+          "angle": 90,
+          "label": "secrets",
+          "labelX": 947,
+          "labelY": 184,
+          "dash": [
+            1,
+            0
+          ]
+        },
+        {
+          "path": "M 927 250 L 948 250 L 948 371 L 968 371",
+          "endX": 968,
+          "endY": 371,
+          "angle": 90,
+          "label": "hosts",
+          "labelX": 950,
+          "labelY": 298,
+          "dash": [
+            1,
+            0
+          ]
+        },
+        {
+          "path": "M 1090 371 L 1138 371",
+          "endX": 1138,
+          "endY": 371,
+          "angle": 90,
+          "label": "queries",
+          "labelX": 1114,
+          "labelY": 352,
+          "dash": [
+            1,
+            0
+          ]
+        },
+        {
+          "path": "M 866 287 L 866 455 L 1118 455 L 1138 414",
+          "endX": 1138,
+          "endY": 414,
+          "angle": 27,
+          "label": "hosts",
+          "labelX": 1010,
+          "labelY": 438,
+          "dash": [
+            1,
+            0
+          ]
+        },
+        {
+          "path": "M 1260 393 L 1278 393 L 1278 490",
+          "endX": 1278,
+          "endY": 490,
+          "angle": 180,
+          "label": "snapshots",
+          "labelX": 1288,
+          "labelY": 439,
+          "dash": [
+            1,
+            0
+          ]
+        },
+        {
+          "path": "M 927 270 L 944 270 L 944 596 L 968 596",
+          "endX": 968,
+          "endY": 596,
+          "angle": 90,
+          "label": "runs",
+          "labelX": 950,
+          "labelY": 522,
+          "dash": [
+            1,
+            0
+          ]
+        },
+        {
+          "path": "M 968 610 L 600 610 L 600 475 L 245 475 L 245 325 L 202 325",
+          "endX": 202,
+          "endY": 325,
+          "angle": -90,
+          "label": "forwards platform telemetry",
+          "labelX": 424,
+          "labelY": 456,
+          "dash": [
+            8,
+            6
+          ]
+        },
+        {
+          "path": "M 1460 631 L 1452 631",
+          "endX": 1452,
+          "endY": 631,
+          "angle": -90,
+          "label": "creates",
+          "labelX": 1456,
+          "labelY": 612,
+          "dash": [
+            1,
+            0
+          ]
+        },
+        {
+          "path": "M 1348 650 L 1315 650 L 1315 720 L 835 720 L 835 287",
+          "endX": 835,
+          "endY": 287,
+          "angle": 0,
+          "label": "deploys",
+          "labelX": 1075,
+          "labelY": 702,
+          "dash": [
+            1,
+            0
+          ]
+        },
+        {
+          "path": "M 202 675 L 575 675 L 575 765 L 1512 765 L 1512 687",
+          "endX": 1512,
+          "endY": 687,
+          "angle": 0,
+          "label": "lifecycle coordination",
+          "labelX": 1070,
+          "labelY": 747,
+          "dash": [
+            8,
+            6
+          ]
+        }
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "nodeFill",
+      "type": "ordinal",
+      "domain": [
+        "ops",
+        "customer",
+        "azure",
+        "elastic"
+      ],
+      "range": [
+        "#f7fbf7",
+        "#fbf9fd",
+        "#ffffff",
+        "#ffffff"
+      ]
+    },
+    {
+      "name": "nodeStroke",
+      "type": "ordinal",
+      "domain": [
+        "ops",
+        "customer",
+        "azure",
+        "elastic"
+      ],
+      "range": [
+        "#76a67e",
+        "#8b75a3",
+        "#5b9bc7",
+        "#6b7280"
+      ]
+    }
+  ],
+  "marks": [
+    {
+      "type": "text",
+      "encode": {
+        "enter": {
+          "x": {
+            "value": 800
+          },
+          "y": {
+            "value": 32
+          },
+          "text": {
+            "value": "iVedha Managed Elasticsearch Platform \u2014 Azure resource boundaries"
+          },
+          "align": {
+            "value": "center"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "font": {
+            "value": "Arial, sans-serif"
+          },
+          "fontSize": {
+            "value": 23
+          },
+          "fontWeight": {
+            "value": 600
+          },
+          "fill": {
+            "value": "#19324d"
+          }
+        }
+      }
+    },
+    {
+      "type": "rect",
+      "from": {
+        "data": "boundaries"
+      },
+      "encode": {
+        "enter": {
+          "x": {
+            "field": "x"
+          },
+          "y": {
+            "field": "y"
+          },
+          "width": {
+            "field": "w"
+          },
+          "height": {
+            "field": "h"
+          },
+          "fill": {
+            "field": "fill"
+          },
+          "fillOpacity": {
+            "value": 0.8
+          },
+          "stroke": {
+            "field": "stroke"
+          },
+          "strokeWidth": {
+            "value": 1.5
+          },
+          "strokeDash": {
+            "field": "dash"
+          },
+          "cornerRadius": {
+            "value": 10
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "boundaries"
+      },
+      "encode": {
+        "enter": {
+          "x": {
+            "signal": "datum.x + 10"
+          },
+          "y": {
+            "signal": "datum.y + 18"
+          },
+          "text": {
+            "field": "label"
+          },
+          "font": {
+            "value": "Arial, sans-serif"
+          },
+          "fontSize": {
+            "value": 14
+          },
+          "fontWeight": {
+            "value": 700
+          },
+          "fill": {
+            "field": "labelColor"
+          },
+          "baseline": {
+            "value": "middle"
+          }
+        }
+      }
+    },
+    {
+      "type": "path",
+      "from": {
+        "data": "connections"
+      },
+      "encode": {
+        "enter": {
+          "path": {
+            "field": "path"
+          },
+          "fillOpacity": {
+            "value": 0
+          },
+          "stroke": {
+            "value": "#425d78"
+          },
+          "strokeWidth": {
+            "value": 1.7
+          },
+          "strokeDash": {
+            "field": "dash"
+          }
+        }
+      }
+    },
+    {
+      "type": "symbol",
+      "from": {
+        "data": "connections"
+      },
+      "encode": {
+        "enter": {
+          "x": {
+            "field": "endX"
+          },
+          "y": {
+            "field": "endY"
+          },
+          "shape": {
+            "value": "triangle"
+          },
+          "size": {
+            "value": 85
+          },
+          "angle": {
+            "field": "angle"
+          },
+          "fill": {
+            "value": "#425d78"
+          }
+        }
+      }
+    },
+    {
+      "type": "rect",
+      "from": {
+        "data": "nodes"
+      },
+      "encode": {
+        "enter": {
+          "x": {
+            "field": "x"
+          },
+          "y": {
+            "field": "y"
+          },
+          "width": {
+            "field": "w"
+          },
+          "height": {
+            "field": "h"
+          },
+          "fill": {
+            "scale": "nodeFill",
+            "field": "kind"
+          },
+          "stroke": {
+            "scale": "nodeStroke",
+            "field": "kind"
+          },
+          "strokeWidth": {
+            "value": 1.25
+          },
+          "cornerRadius": {
+            "value": 8
+          },
+          "shadowColor": {
+            "value": "#0f2740"
+          },
+          "shadowBlur": {
+            "value": 3
+          },
+          "shadowOpacity": {
+            "value": 0.12
+          },
+          "shadowOffsetY": {
+            "value": 1
+          }
+        }
+      }
+    },
+    {
+      "type": "image",
+      "from": {
+        "data": "nodes"
+      },
+      "encode": {
+        "enter": {
+          "url": {
+            "field": "icon"
+          },
+          "x": {
+            "signal": "datum.x + datum.w / 2 - 22"
+          },
+          "y": {
+            "signal": "datum.y + 9"
+          },
+          "width": {
+            "value": 44
+          },
+          "height": {
+            "value": 44
+          },
+          "aspect": {
+            "value": true
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "nodes"
+      },
+      "encode": {
+        "enter": {
+          "x": {
+            "signal": "datum.x + datum.w / 2"
+          },
+          "y": {
+            "signal": "datum.y + 64"
+          },
+          "text": {
+            "field": "label"
+          },
+          "lineBreak": {
+            "value": "\n"
+          },
+          "lineHeight": {
+            "value": 14
+          },
+          "align": {
+            "value": "center"
+          },
+          "baseline": {
+            "value": "top"
+          },
+          "limit": {
+            "signal": "datum.w - 10"
+          },
+          "font": {
+            "value": "Arial, sans-serif"
+          },
+          "fontSize": {
+            "value": 11.5
+          },
+          "fontWeight": {
+            "value": 600
+          },
+          "fill": {
+            "value": "#20364d"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "connections"
+      },
+      "encode": {
+        "enter": {
+          "x": {
+            "field": "labelX"
+          },
+          "y": {
+            "field": "labelY"
+          },
+          "text": {
+            "field": "label"
+          },
+          "align": {
+            "value": "center"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "font": {
+            "value": "Arial, sans-serif"
+          },
+          "fontSize": {
+            "value": 12
+          },
+          "fontWeight": {
+            "value": 500
+          },
+          "fill": {
+            "value": "#34495e"
+          },
+          "stroke": {
+            "value": "#ffffff"
+          },
+          "strokeWidth": {
+            "value": 4
+          },
+          "strokeJoin": {
+            "value": "round"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "connections"
+      },
+      "encode": {
+        "enter": {
+          "x": {
+            "field": "labelX"
+          },
+          "y": {
+            "field": "labelY"
+          },
+          "text": {
+            "field": "label"
+          },
+          "align": {
+            "value": "center"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "font": {
+            "value": "Arial, sans-serif"
+          },
+          "fontSize": {
+            "value": 12
+          },
+          "fontWeight": {
+            "value": 500
+          },
+          "fill": {
+            "value": "#34495e"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "encode": {
+        "enter": {
+          "x": {
+            "value": 800
+          },
+          "y": {
+            "value": 828
+          },
+          "text": {
+            "value": "The platform runs in the customer's Azure subscription. iVedha/Opsflw manages deployment and operations; the customer retains ownership of its Azure subscription, connectivity, identity, and data."
+          },
+          "align": {
+            "value": "center"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "font": {
+            "value": "Arial, sans-serif"
+          },
+          "fontSize": {
+            "value": 12.5
+          },
+          "fontWeight": {
+            "value": 600
+          },
+          "fill": {
+            "value": "#29445d"
+          }
+        }
+      }
+    }
+  ]
+}
