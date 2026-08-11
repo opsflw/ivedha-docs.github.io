@@ -64,3 +64,12 @@
     max-width: 100rem;
   }
 }
+
+/* Align desktop header controls and primary tabs with the article column. */
+@media screen and (min-width: 90rem) {
+  .md-header__inner,
+  .md-tabs > .md-grid {
+    box-sizing: border-box;
+    padding-inline: 13.3rem;
+  }
+}
