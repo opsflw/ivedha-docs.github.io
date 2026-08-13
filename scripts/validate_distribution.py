@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the multi-site Opsflw documentation distribution."""
+"""Validate the multi-site iVedha documentation distribution."""
 
 from __future__ import annotations
 
@@ -13,7 +13,7 @@ from urllib.parse import unquote, urlsplit
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DOMAIN = "docs.opsflw.io"
+DOMAIN = "docs.ivedha.cloud"
 SITE_ID = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 FORBIDDEN_TEXT = (
     "docs.example.com",

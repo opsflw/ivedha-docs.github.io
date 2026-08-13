@@ -1,8 +1,9 @@
-# Opsflw documentation distribution
+# iVedha documentation distribution
 
 This repository is the static distribution target for
-[docs.opsflw.io](https://docs.opsflw.io/). It hosts a catalog at the domain root
-and independently built MkDocs sites under application-specific paths.
+[docs.ivedha.cloud](https://docs.ivedha.cloud/). It hosts a catalog at the
+domain root and independently built MkDocs sites under application-specific
+paths.
 
 ## Path contract
 
@@ -22,7 +23,7 @@ In the application's `mkdocs.yml`, set the unversioned application URL and
 Mike prefix:
 
 ```yaml
-site_url: https://docs.opsflw.io/<application>/
+site_url: https://docs.ivedha.cloud/<application>/
 
 plugins:
   - mike:
@@ -78,7 +79,7 @@ redirected. Each application's current alias belongs under its own prefix.
 
 ## Root files
 
-- `CNAME` owns the `docs.opsflw.io` custom domain.
+- `CNAME` owns the `docs.ivedha.cloud` custom domain.
 - `.nojekyll` publishes all static assets without Jekyll processing.
 - `sites.json` is the machine-readable application catalog.
 - `index.html` and `assets/hub.css` render the human-facing catalog.

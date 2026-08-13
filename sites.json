@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "title": "Opsflw documentation",
+  "title": "iVedha documentation",
   "sites": [
     {
       "id": "elastic",
-      "name": "iVedha-managed Elasticsearch AI platform",
-      "description": "Deploy, connect to, secure, and operate the iVedha-managed Elasticsearch AI platform on Microsoft Azure.",
+      "name": "iVedha Managed Elasticsearch Platform",
+      "description": "Deploy, connect to, secure, and operate the iVedha Managed Elasticsearch Platform on Microsoft Azure.",
       "path": "/elastic/",
       "latest": "/elastic/latest/",
       "source_repository": "https://github.com/opsflw/opsflw-docs-src",
