@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v6.json",
-  "description": "High-level Azure resource-boundary architecture for the iVedha Managed Elasticsearch Platform. The managed platform runs in the customer's Azure subscription. Customer users and data sources connect through customer network and DNS to the platform endpoint and AKS-hosted Elasticsearch and Kibana. A monitoring agent forwards platform telemetry to the iVedha monitoring cluster, while lifecycle automation coordinates the Azure Marketplace managed application.",
+  "description": "High-level Azure resource-boundary architecture for the iVedha Managed Elasticsearch Platform. The Azure Marketplace Managed Application deploys AKS-hosted Elasticsearch, Kibana, and platform services into a managed platform resource group in the customer's Azure subscription. Customer users and data sources connect through customer network and DNS. Microsoft Entra ID remains customer-owned, and iVedha/Opsflw lifecycle automation coordinates deployment and operations.",
   "width": 1600,
   "height": 850,
   "padding": 0,
@@ -60,7 +60,7 @@
           "y": 110,
           "w": 1050,
           "h": 510,
-          "label": "Managed resource group",
+          "label": "Managed platform resource group",
           "fill": "#eaf4fc",
           "stroke": "#77a8c9",
           "labelColor": "#075f91",
@@ -165,11 +165,11 @@
           "kind": "azure"
         },
         {
-          "x": 1040,
+          "x": 870,
           "y": 480,
           "w": 122,
           "h": 112,
-          "label": "Monitoring\nagent",
+          "label": "Platform services",
           "icon": "asset:azure/vega-icons/monitoring-agent.png",
           "kind": "azure"
         },
@@ -189,6 +189,15 @@
           "h": 112,
           "label": "Azure Marketplace\nmanaged\napplication",
           "icon": "asset:azure/vega-icons/marketplace.png",
+          "kind": "azure"
+        },
+        {
+          "x": 535,
+          "y": 650,
+          "w": 140,
+          "h": 112,
+          "label": "Microsoft Entra ID",
+          "icon": "asset:azure/vega-icons/users.png",
           "kind": "azure"
         }
       ]
@@ -301,25 +310,25 @@
           ]
         },
         {
-          "path": "M 822 270 L 840 270 L 840 536 L 1040 536",
-          "endX": 1040,
+          "path": "M 822 270 L 840 270 L 840 536 L 870 536",
+          "endX": 870,
           "endY": 536,
           "angle": 90,
-          "label": "runs",
-          "labelX": 936,
-          "labelY": 518,
+          "label": "runs platform services",
+          "labelX": 855,
+          "labelY": 500,
           "dash": [
             1,
             0
           ]
         },
         {
-          "path": "M 1040 560 L 470 560 L 470 479 L 202 479",
+          "path": "M 870 560 L 470 560 L 470 479 L 202 479",
           "endX": 202,
           "endY": 479,
           "angle": -90,
           "label": "forwards platform telemetry",
-          "labelX": 605,
+          "labelX": 535,
           "labelY": 542,
           "dash": [
             8,
@@ -414,7 +423,7 @@
             "value": 32
           },
           "text": {
-            "value": "iVedha Managed Elasticsearch Platform \u2014 Azure resource boundaries"
+            "value": "iVedha Managed Elasticsearch Platform — Azure resource boundaries"
           },
           "align": {
             "value": "center"
@@ -780,7 +789,7 @@
             "value": 828
           },
           "text": {
-            "value": "The platform runs in the customer's Azure subscription. iVedha/Opsflw manages deployment and operations; the customer retains ownership of its Azure subscription, connectivity, identity, and data."
+            "value": "The platform runs in the customer's Azure subscription. iVedha/Opsflw manages deployment and operations; the customer retains subscription, network, DNS, identity, and data responsibilities."
           },
           "align": {
             "value": "center"
