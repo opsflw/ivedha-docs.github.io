@@ -24,7 +24,7 @@
     
     
       
-        <title>Troubleshoot deployment problems - iVedha Managed Elasticsearch Platform</title>
+        <title>Deployment issues - iVedha Managed Elasticsearch Platform</title>
       
     
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#troubleshoot-deployment-problems" class="md-skip">
+        <a href="#deployment-issues" class="md-skip">
           Skip to content
         </a>
       
@@ -138,7 +138,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Troubleshoot deployment problems
+              Deployment issues
             
           </span>
         </div>
@@ -433,6 +433,8 @@
       
         
       
+        
+      
     
     
       
@@ -478,6 +480,27 @@
   
   <span class="md-ellipsis">
     Planning overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../available-stack-versions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Available stack versions
   </span>
   
 
@@ -557,7 +580,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../appendix-limits-references-checklists/" class="md-nav__link">
+      <a href="../deployment-checklist/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -821,91 +844,16 @@
   
   
   
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../network-access/" class="md-nav__link">
         
-      
-        
-      
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
-            
   
   <span class="md-ellipsis">
     Configure network access
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_3">
-            <span class="md-nav__icon md-icon"></span>
-            Configure network access
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../public-dns/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Public access
-  </span>
-  
-
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../private-access/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Private access
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -968,7 +916,7 @@
         
   
   <span class="md-ellipsis">
-    Public access
+    Public DNS
   </span>
   
 
@@ -1240,6 +1188,8 @@
       
         
       
+        
+      
     
     
       
@@ -1285,6 +1235,27 @@
   
   <span class="md-ellipsis">
     Choose an onboarding path
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../manage-elastic-agents-with-fleet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manage Elastic Agents with Fleet
   </span>
   
 
@@ -1703,7 +1674,7 @@
         
   
   <span class="md-ellipsis">
-    Start here
+    Troubleshooting overview
   </span>
   
 
@@ -1766,27 +1737,81 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#azure-validation-fails-before-creation" class="md-nav__link">
+  <a href="#understand-the-deployment-stages" class="md-nav__link">
     <span class="md-ellipsis">
-      Azure validation fails before creation
+      Understand the deployment stages
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#an-arm-deployment-fails" class="md-nav__link">
+  <a href="#marketplace-validation-fails" class="md-nav__link">
     <span class="md-ellipsis">
-      An ARM deployment fails
+      Marketplace validation fails
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#azure-succeeds-but-the-service-is-not-ready" class="md-nav__link">
+  <a href="#azure-resource-deployment-fails" class="md-nav__link">
     <span class="md-ellipsis">
-      Azure succeeds but the service is not ready
+      Azure resource deployment fails
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#marketplace-deployment-completed-but-onboarding-continues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Marketplace deployment completed but onboarding continues
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment-does-not-become-ready" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deployment does not become ready
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment-notification-was-not-received" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deployment notification was not received
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment-failed-after-onboarding-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deployment failed after onboarding started
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-to-include-when-contacting-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      What to include when contacting support
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next step
     </span>
   </a>
   
@@ -1879,8 +1904,6 @@
   
     
     
-      
-        
       
         
       
@@ -2114,28 +2137,7 @@
         
   
   <span class="md-ellipsis">
-    Deployment checklist
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../release-notes/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Release notes
+    Limits and checklists
   </span>
   
 
@@ -2200,27 +2202,81 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#azure-validation-fails-before-creation" class="md-nav__link">
+  <a href="#understand-the-deployment-stages" class="md-nav__link">
     <span class="md-ellipsis">
-      Azure validation fails before creation
+      Understand the deployment stages
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#an-arm-deployment-fails" class="md-nav__link">
+  <a href="#marketplace-validation-fails" class="md-nav__link">
     <span class="md-ellipsis">
-      An ARM deployment fails
+      Marketplace validation fails
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#azure-succeeds-but-the-service-is-not-ready" class="md-nav__link">
+  <a href="#azure-resource-deployment-fails" class="md-nav__link">
     <span class="md-ellipsis">
-      Azure succeeds but the service is not ready
+      Azure resource deployment fails
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#marketplace-deployment-completed-but-onboarding-continues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Marketplace deployment completed but onboarding continues
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment-does-not-become-ready" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deployment does not become ready
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment-notification-was-not-received" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deployment notification was not received
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment-failed-after-onboarding-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deployment failed after onboarding started
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-to-include-when-contacting-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      What to include when contacting support
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next step
     </span>
   </a>
   
@@ -2241,42 +2297,123 @@
                   
 
 
-<h1 id="troubleshoot-deployment-problems">Troubleshoot deployment problems</h1>
-<p>Complete the safe first-response checks in
-<a href="../troubleshooting-and-support/">Start troubleshooting here</a> before changing a
-deployment input or escalating.</p>
-<h2 id="azure-validation-fails-before-creation">Azure validation fails before creation</h2>
+<h1 id="deployment-issues">Deployment issues</h1>
+<p>Use this guide when an Azure Marketplace deployment fails, remains incomplete, or does not reach managed-platform readiness.</p>
+<p>Start with <a href="../troubleshooting-and-support/">Troubleshooting overview</a>.</p>
+<h2 id="understand-the-deployment-stages">Understand the deployment stages</h2>
+<p>A successful deployment normally progresses through these stages:</p>
+<ol>
+<li>Azure Marketplace accepts the deployment.</li>
+<li>Azure creates the Managed Application and required resources.</li>
+<li>iVedha receives and begins processing the deployment.</li>
+<li>Managed platform onboarding and readiness checks run.</li>
+<li>You receive the <strong>Your deployment is ready</strong> notification.</li>
+</ol>
+<p>Azure provisioning success does not necessarily mean the managed platform is ready yet.</p>
+<h2 id="marketplace-validation-fails">Marketplace validation fails</h2>
+<p>If Azure reports an error before deployment starts:</p>
 <ol>
 <li>Read the complete validation message.</li>
-<li>Confirm the selected subscription, region, and application resource group.</li>
-<li>Check Marketplace purchase policy and plan availability.</li>
-<li>Check Azure Policy denials, registered resource providers, and quota.</li>
-<li>Check whether the deploying identity may create required role assignments.</li>
-<li>Correct the approved input and rerun <strong>Review + create</strong>.</li>
+<li>Confirm the selected:</li>
+<li>subscription;</li>
+<li>region;</li>
+<li>Marketplace plan.</li>
+<li>Check whether Marketplace purchases are permitted for the subscription.</li>
+<li>Confirm the deploying identity has the required permissions.</li>
+<li>Review any Azure Policy or quota error reported by Azure.</li>
+<li>Correct the reported issue and run <strong>Review + create</strong> again.</li>
 </ol>
-<p>Do not bypass policy or grant Owner merely to test a hypothesis.</p>
-<h2 id="an-arm-deployment-fails">An ARM deployment fails</h2>
+<p>Common causes include:</p>
+<ul>
+<li>Marketplace purchasing restrictions;</li>
+<li>plan availability;</li>
+<li>insufficient permissions;</li>
+<li>Azure Policy restrictions;</li>
+<li>insufficient subscription quota;</li>
+<li>unsupported region or resource configuration.</li>
+</ul>
+<p>Do not grant broad permissions or disable policy simply to bypass the validation error.</p>
+<h2 id="azure-resource-deployment-fails">Azure resource deployment fails</h2>
+<p>If Marketplace deployment starts but Azure reports a deployment failure:</p>
 <ol>
-<li>Open the application resource group.</li>
-<li>Open <strong>Deployments</strong> and select the failed operation.</li>
-<li>Record the deployment name, time, correlation ID, error code, and redacted
-   error message.</li>
-<li>Identify the first failed operation rather than only the final cascade.</li>
-<li>Check for policy, quota, name, region, RBAC, or network conflicts.</li>
-<li>Do not delete or edit partially created resources unless the managed
-   application procedure instructs you to do so.</li>
+<li>Open the Managed Application or application resource group in the Azure portal.</li>
+<li>Review the failed deployment operation.</li>
+<li>Find the <strong>first failed resource operation</strong>, not only the final <code>DeploymentFailed</code> message.</li>
+<li>Record:</li>
+<li>deployment name;</li>
+<li>failure time;</li>
+<li>Azure correlation ID;</li>
+<li>error code;</li>
+<li>redacted error message.</li>
 </ol>
-<h2 id="azure-succeeds-but-the-service-is-not-ready">Azure succeeds but the service is not ready</h2>
-<ol>
-<li>Confirm that the managed application still exists and reports success.</li>
-<li>Review deployment outputs for endpoints and status.</li>
-<li>Check whether the managed application exposes a readiness or synchronization
-   state.</li>
-<li>Wait while progress is changing.</li>
-<li>Escalate when progress stops, required outputs never appear, or the service
-   remains unavailable.</li>
-</ol>
-<p>Include safe deployment evidence when you <a href="../get-support/">get support</a>.</p>
+<p>Typical Azure-side causes include:</p>
+<ul>
+<li>Azure Policy denial;</li>
+<li>insufficient RBAC permissions;</li>
+<li>role-assignment restrictions;</li>
+<li>quota;</li>
+<li>unsupported resource operation;</li>
+<li>naming or regional restrictions.</li>
+</ul>
+<p>Do not manually modify or delete partially deployed managed resources unless instructed by iVedha support.</p>
+<h2 id="marketplace-deployment-completed-but-onboarding-continues">Marketplace deployment completed but onboarding continues</h2>
+<p>After Azure Marketplace provisioning completes, you can receive the notification
+<code>Marketplace deployment completed — onboarding is in progress</code>.</p>
+<p>This means the Azure deployment succeeded, but iVedha is still onboarding the deployment and running platform readiness checks.</p>
+<p>No action is normally required while onboarding is progressing.</p>
+<p>Wait for the <strong>Your deployment is ready</strong> notification before starting post-deployment configuration.</p>
+<h2 id="deployment-does-not-become-ready">Deployment does not become ready</h2>
+<p>If Azure succeeded but you do not receive the ready notification within the expected onboarding period, contact iVedha.</p>
+<p>Provide:</p>
+<ul>
+<li>deployment name;</li>
+<li>deployment reference from the notification email;</li>
+<li>approximate deployment time;</li>
+<li>current Azure deployment state;</li>
+<li>any relevant redacted error messages.</li>
+</ul>
+<p>Do not attempt to repair Kubernetes, Elasticsearch, or other managed resources directly.</p>
+<h2 id="deployment-notification-was-not-received">Deployment notification was not received</h2>
+<p>Deployment notifications are sent to the support email address provided during Marketplace deployment.</p>
+<p>Check:</p>
+<ul>
+<li>the support email entered during deployment;</li>
+<li>spam or junk folders;</li>
+<li>organizational mail filtering.</li>
+</ul>
+<p>If the Azure deployment succeeded but no deployment notification was received, contact iVedha and provide the deployment name and Azure subscription information.</p>
+<h2 id="deployment-failed-after-onboarding-started">Deployment failed after onboarding started</h2>
+<p>If you received the initial <strong>request received</strong> or <strong>onboarding in progress</strong> notification but later receive an error or the deployment stops progressing, the problem is likely in the managed onboarding process rather than the initial Marketplace deployment.</p>
+<p>Use:</p>
+<ul>
+<li>AI chat: <code>https://chat.ivedha.cloud</code></li>
+<li>Support portal: <code>https://support.ivedha.com/</code></li>
+</ul>
+<p>Provide the deployment reference from the notification email.</p>
+<h2 id="what-to-include-when-contacting-support">What to include when contacting support</h2>
+<p>Useful information includes:</p>
+<ul>
+<li>deployment reference;</li>
+<li>deployment name;</li>
+<li>Azure subscription ID;</li>
+<li>Azure region;</li>
+<li>approximate start time;</li>
+<li>Azure correlation ID when available;</li>
+<li>error code;</li>
+<li>redacted error message;</li>
+<li>which deployment notification was received last.</li>
+</ul>
+<p>Do not include:</p>
+<ul>
+<li>passwords;</li>
+<li>API keys;</li>
+<li>bootstrap tokens;</li>
+<li>private keys;</li>
+<li>certificate private keys;</li>
+<li>other secrets.</li>
+</ul>
+<h2 id="next-step">Next step</h2>
+<p>If the deployment reaches <strong>Your deployment is ready</strong> but you cannot reach Elasticsearch or Kibana, continue with <a href="../troubleshoot-connectivity/">Connectivity issues</a>.</p>
 
   
   
@@ -2286,7 +2423,7 @@ deployment input or escalating.</p>
   <aside class="md-source-file" aria-label="Document metadata">
     
       <span class="md-source-file__fact">
-        <strong>Last verified:</strong> 2026-07-28
+        <strong>Last verified:</strong> 2026-08-18
       </span>
     
     

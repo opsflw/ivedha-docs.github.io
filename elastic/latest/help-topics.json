@@ -16,29 +16,40 @@
       "id": "elastic-appendix-limits-references-checklists",
       "path": "elastic-stack-deployment/appendix-limits-references-checklists.md",
       "title": "Limits and checklists",
-      "summary": "Use verified readiness, handover, change, and decommissioning checklists without relying on undocumented fixed limits.",
+      "summary": "Use practical deployment, onboarding, change, upgrade, certificate, and decommissioning checklists without relying on undocumented fixed limits.",
       "owner": "platform",
       "intents": [
         "find Elasticsearch deployment limits",
-        "use the deployment readiness checklist"
+        "use platform handover and change checklists"
       ]
     },
     {
       "id": "elastic-architecture-and-deployment-models",
       "path": "elastic-stack-deployment/architecture-and-deployment-models.md",
       "title": "Architecture details",
-      "summary": "Understand the service components, Azure resource boundaries, and public or private access models.",
+      "summary": "Understand the managed Elasticsearch platform components, Azure resource boundaries, connectivity, observability, and operational control model.",
       "owner": "platform",
       "intents": [
         "understand the iVedha Managed Elasticsearch Platform architecture",
-        "see what Azure resources the managed application creates"
+        "see how the managed platform runs in Azure"
+      ]
+    },
+    {
+      "id": "elastic-available-stack-versions",
+      "path": "elastic-stack-deployment/available-stack-versions.md",
+      "title": "Available stack versions",
+      "summary": "Identify the Elastic Stack version used for new managed deployments and plan version changes through the supported lifecycle.",
+      "owner": "platform",
+      "intents": [
+        "find available Elastic Stack versions",
+        "choose an Elasticsearch version for a new deployment"
       ]
     },
     {
       "id": "elastic-certificate-renewal",
       "path": "elastic-stack-deployment/certificate-renewal.md",
       "title": "Renew TLS certificates",
-      "summary": "Replace a private service certificate before expiry and verify the new chain from every approved client network.",
+      "summary": "Renew customer-provided TLS certificates before expiry through the iVedha certificate workflow and verify the new certificate after activation.",
       "owner": "platform",
       "intents": [
         "renew the Elasticsearch TLS certificate",
@@ -49,7 +60,7 @@
       "id": "elastic-compatibility",
       "path": "elastic-stack-deployment/compatibility.md",
       "title": "Compatibility",
-      "summary": "Verify the deployed platform, Elastic, client, integration, and Azure versions before enabling a feature or planning a change.",
+      "summary": "Verify platform, Elastic, client, integration, and OpenTelemetry compatibility before enabling features or planning changes.",
       "owner": "platform",
       "intents": [
         "find supported Elasticsearch and Kibana versions",
@@ -60,18 +71,18 @@
       "id": "elastic-data-onboarding",
       "path": "elastic-stack-deployment/data-onboarding.md",
       "title": "Choose a data onboarding path",
-      "summary": "Select a production ingestion path by workload, endpoint, network, identity, version, and operational ownership.",
+      "summary": "Choose how applications, infrastructure, and existing data sources send telemetry and application data to the managed Elasticsearch platform.",
       "owner": "platform",
       "intents": [
         "choose how to send production data to Elasticsearch",
-        "compare Elastic Agent OpenTelemetry Logstash and API ingestion"
+        "onboard observability and search data"
       ]
     },
     {
       "id": "elastic-delete-application",
       "path": "elastic-stack-deployment/delete-application.md",
       "title": "Delete the application",
-      "summary": "Prepare data, access, DNS, and audit records before deleting the Azure Managed Application and its managed resource group.",
+      "summary": "Safely decommission the managed Elasticsearch platform and remove associated customer-owned connectivity and credentials.",
       "owner": "platform",
       "intents": [
         "delete the Elasticsearch managed application",
@@ -82,7 +93,7 @@
       "id": "elastic-deploy-first-instance",
       "path": "elastic-stack-deployment/deploy-first-instance.md",
       "title": "Deploy from Azure Marketplace",
-      "summary": "Create the approved Azure Marketplace managed application using the planned subscription, capacity, connectivity, maintenance, and support settings.",
+      "summary": "Create the managed Elasticsearch application from Azure Marketplace using the subscription, capacity, access, DNS domain, maintenance, and support settings selected during planning.",
       "owner": "platform",
       "intents": [
         "deploy my first Elasticsearch platform instance",
@@ -90,10 +101,21 @@
       ]
     },
     {
+      "id": "elastic-deployment-checklist",
+      "path": "elastic-stack-deployment/deployment-checklist.md",
+      "title": "Deployment checklist",
+      "summary": "Confirm the required stack version, Azure, Marketplace, capacity, access, maintenance, and support decisions before deploying the managed application.",
+      "owner": "platform",
+      "intents": [
+        "check if I am ready to deploy Elasticsearch",
+        "review Elasticsearch deployment requirements"
+      ]
+    },
+    {
       "id": "elastic-deployment-field-reference",
       "path": "elastic-stack-deployment/deployment-field-reference.md",
       "title": "Deployment options",
-      "summary": "Understand each Marketplace option in form order and select only values approved for the deployment.",
+      "summary": "Understand the main Azure Marketplace options used to deploy the managed Elasticsearch platform.",
       "owner": "platform",
       "intents": [
         "understand Elasticsearch Marketplace deployment fields",
@@ -104,18 +126,18 @@
       "id": "elastic-deployment-outputs",
       "path": "elastic-stack-deployment/deployment-outputs.md",
       "title": "Review deployment details",
-      "summary": "Find and record authoritative service endpoints, resource identifiers, access mode, and operational settings after deployment.",
+      "summary": "Review the endpoints and deployment information provided when the managed Elasticsearch platform becomes ready.",
       "owner": "platform",
       "intents": [
         "find Elasticsearch and Kibana URLs",
-        "find the Private Link Service resource ID"
+        "find deployment endpoints"
       ]
     },
     {
       "id": "elastic-deployment-status",
       "path": "elastic-stack-deployment/deployment-status.md",
       "title": "Monitor deployment",
-      "summary": "Follow Azure and managed-platform readiness from Marketplace acceptance to healthy services and published endpoints.",
+      "summary": "Follow the Azure and managed-platform deployment until Elasticsearch, Kibana, and the required endpoints are ready.",
       "owner": "platform",
       "intents": [
         "check Elasticsearch deployment status",
@@ -126,7 +148,7 @@
       "id": "elastic-get-support",
       "path": "elastic-stack-deployment/get-support.md",
       "title": "Contact support",
-      "summary": "Use the support route attached to the managed application and provide useful, redacted evidence without sharing credentials or customer data.",
+      "summary": "Contact iVedha support with the deployment reference, business impact, and redacted diagnostic information needed to investigate the issue.",
       "owner": "platform",
       "intents": [
         "contact iVedha support",
@@ -137,29 +159,29 @@
       "id": "elastic-glossary",
       "path": "elastic-stack-deployment/glossary.md",
       "title": "Glossary",
-      "summary": "Distinguish Azure Managed Application, Private Endpoint, DNS, TLS, Elasticsearch, Kibana, snapshot, and deployment terminology.",
+      "summary": "Define the Azure, Elastic, OpenTelemetry, networking, and deployment terms used throughout the managed Elasticsearch platform documentation.",
       "owner": "platform",
       "intents": [
         "define managed Elasticsearch platform terms",
-        "understand Private Endpoint DNS and TLS"
+        "understand Private Endpoint DNS TLS Fleet and OpenTelemetry terminology"
       ]
     },
     {
       "id": "elastic-health-and-capacity",
       "path": "elastic-stack-deployment/health-and-capacity.md",
       "title": "Monitor health and capacity",
-      "summary": "Review cluster health, ingestion, storage, shard behavior, and query demand before requesting a capacity change.",
+      "summary": "Understand the difference between managed platform health and customer workload health, and know when to request a capacity review.",
       "owner": "platform",
       "intents": [
         "check Elasticsearch health",
-        "fix Elasticsearch capacity warnings"
+        "understand when more Elasticsearch capacity is needed"
       ]
     },
     {
       "id": "elastic-license-and-feature-management",
       "path": "elastic-stack-deployment/license-and-feature-management.md",
       "title": "Manage the Elastic license",
-      "summary": "Check license status and use the managed license action without assuming feature availability from a plan name.",
+      "summary": "Check the active Elasticsearch license and request supported license changes through iVedha.",
       "owner": "platform",
       "intents": [
         "check the Elasticsearch license",
@@ -170,7 +192,7 @@
       "id": "elastic-lifecycle-state-reference",
       "path": "elastic-stack-deployment/lifecycle-state-reference.md",
       "title": "Lifecycle states",
-      "summary": "Interpret customer-visible Azure Marketplace creation and deletion states without confusing ARM success with service readiness.",
+      "summary": "Understand the customer-visible Azure Marketplace and managed platform lifecycle from deployment request through readiness or deletion.",
       "owner": "platform",
       "intents": [
         "understand managed application lifecycle states",
@@ -181,7 +203,7 @@
       "id": "elastic-maintenance",
       "path": "elastic-stack-deployment/maintenance.md",
       "title": "Manage maintenance",
-      "summary": "Review or update the maintenance schedule through supported managed application controls and validate the service afterward.",
+      "summary": "Review or update the platform maintenance window and prepare applications and users for planned maintenance.",
       "owner": "platform",
       "intents": [
         "change the Elasticsearch maintenance window",
@@ -189,10 +211,22 @@
       ]
     },
     {
+      "id": "elastic-manage-elastic-agents-with-fleet",
+      "path": "elastic-stack-deployment/manage-elastic-agents-with-fleet.md",
+      "title": "Manage Elastic Agents with Fleet",
+      "summary": "Manage Elastic Agents, OpenTelemetry integrations, policies, health, and lifecycle centrally through Fleet.",
+      "owner": "platform",
+      "intents": [
+        "manage Elastic Agents with Fleet",
+        "configure OpenTelemetry collection",
+        "configure Elastic Agent policies"
+      ]
+    },
+    {
       "id": "elastic-marketplace-prerequisites",
       "path": "elastic-stack-deployment/marketplace-prerequisites.md",
       "title": "Azure and Marketplace prerequisites",
-      "summary": "Confirm Azure purchasing permissions, subscription access, resource providers, policies, quotas, region support, and ownership before deployment.",
+      "summary": "Confirm that the Azure subscription can purchase and deploy the managed application before starting the Marketplace deployment.",
       "owner": "platform",
       "intents": [
         "prepare Azure for the Elasticsearch managed application",
@@ -200,10 +234,21 @@
       ]
     },
     {
+      "id": "elastic-network-access",
+      "path": "elastic-stack-deployment/network-access.md",
+      "title": "Configure network access",
+      "summary": "Configure the public or private network path required to reach the managed Elasticsearch platform after deployment.",
+      "owner": "platform",
+      "intents": [
+        "configure network access to Elasticsearch",
+        "connect to the managed Elasticsearch platform"
+      ]
+    },
+    {
       "id": "elastic-network-design-prerequisites",
       "path": "elastic-stack-deployment/network-design-prerequisites.md",
       "title": "Plan connectivity",
-      "summary": "Choose public or private service access and assign ownership for routing, DNS, TLS, and access restrictions before deployment.",
+      "summary": "Decide whether to enable public access and whether to use the platform-provided or a company-owned DNS domain before deployment.",
       "owner": "platform",
       "intents": [
         "plan networking for Elasticsearch",
@@ -214,7 +259,7 @@
       "id": "elastic-next-steps",
       "path": "elastic-stack-deployment/next-steps.md",
       "title": "Next steps overview",
-      "summary": "Complete the required password, network, DNS, TLS, and access checks after the managed platform publishes its deployment details.",
+      "summary": "Complete the password, networking, DNS, certificate, and access configuration required after the managed platform is ready.",
       "owner": "platform",
       "intents": [
         "configure Elasticsearch after Marketplace deployment",
@@ -225,7 +270,7 @@
       "id": "elastic-onboard-observability-data",
       "path": "elastic-stack-deployment/onboard-observability-data.md",
       "title": "Onboard observability data",
-      "summary": "Send synthetic OpenTelemetry logs, metrics, or traces through a collector using a deployment-derived endpoint and least-privilege API key.",
+      "summary": "Onboard OpenTelemetry logs, metrics, and traces through Elastic Agent and Fleet into the managed Elasticsearch platform.",
       "owner": "platform",
       "intents": [
         "send OpenTelemetry data to managed Elasticsearch",
@@ -236,18 +281,18 @@
       "id": "elastic-onboard-search-data",
       "path": "elastic-stack-deployment/onboard-search-data.md",
       "title": "Onboard search data",
-      "summary": "Create a least-privilege API key and data stream, index a synthetic search document, verify it, and remove the tutorial resources.",
+      "summary": "Send application, document, knowledge, and vector data to Elasticsearch using production-ready indices, mappings, and scoped application credentials.",
       "owner": "platform",
       "intents": [
-        "ingest application documents with an Elasticsearch API key",
-        "create a search data stream"
+        "ingest application documents with Elasticsearch",
+        "onboard search and vector data"
       ]
     },
     {
       "id": "elastic-operations-and-lifecycle-management",
       "path": "elastic-stack-deployment/operations-and-lifecycle-management.md",
       "title": "Operations overview",
-      "summary": "Operate the deployment through supported health, capacity, maintenance, licensing, recovery, upgrade, certificate, and deletion workflows.",
+      "summary": "Manage access, data onboarding, capacity, maintenance, licensing, backup, upgrades, certificates, and other lifecycle tasks after deployment.",
       "owner": "platform",
       "intents": [
         "operate the iVedha Managed Elasticsearch Platform",
@@ -258,18 +303,18 @@
       "id": "elastic-platform-components",
       "path": "elastic-stack-deployment/platform-components.md",
       "title": "Platform components",
-      "summary": "Identify the customer-facing purpose and responsibility boundary of each component deployed by the platform's Argo CD applications.",
+      "summary": "Understand the major services that make up the managed Elasticsearch platform and what each component provides.",
       "owner": "platform",
       "intents": [
-        "understand every deployed managed Elasticsearch platform component",
-        "map Argo CD applications to customer-facing platform components"
+        "understand managed Elasticsearch platform components",
+        "understand Elasticsearch Kibana Fleet and Logstash roles"
       ]
     },
     {
       "id": "elastic-prerequisites-and-planning",
       "path": "elastic-stack-deployment/prerequisites-and-planning.md",
       "title": "Planning overview",
-      "summary": "Decide the Azure ownership, capacity, topology, connectivity, maintenance, and support inputs required before opening Azure Marketplace.",
+      "summary": "Choose the stack version, Azure environment, workload, initial capacity, access, DNS domain, maintenance window, and support contacts required before deployment.",
       "owner": "platform",
       "intents": [
         "plan an iVedha Managed Elasticsearch Platform deployment",
@@ -280,7 +325,7 @@
       "id": "elastic-private-access",
       "path": "elastic-stack-deployment/private-access.md",
       "title": "Create a Private Endpoint",
-      "summary": "Connect an approved customer subnet to the deployment's authoritative Private Link Service resource ID.",
+      "summary": "Connect a customer VNet to the managed Elasticsearch platform using the Private Link Service information provided for the deployment.",
       "owner": "platform",
       "intents": [
         "create a Private Endpoint for Elasticsearch",
@@ -291,7 +336,7 @@
       "id": "elastic-private-dns",
       "path": "elastic-stack-deployment/private-dns.md",
       "title": "Configure private DNS",
-      "summary": "Resolve each deployment service hostname to the approved Private Endpoint from Azure and hybrid client networks.",
+      "summary": "Resolve the private Elasticsearch, Kibana, and Fleet hostnames to the customer Private Endpoint.",
       "owner": "platform",
       "intents": [
         "configure Azure Private DNS for Elasticsearch",
@@ -302,7 +347,7 @@
       "id": "elastic-private-tls",
       "path": "elastic-stack-deployment/private-tls.md",
       "title": "Configure TLS certificates",
-      "summary": "Issue, upload, and validate the public certificate chain required for the deployment-provided public or private service hostnames.",
+      "summary": "Configure trusted TLS certificates for the Elasticsearch, Kibana, Fleet, and Logstash hostnames using the iVedha AI chat certificate workflow.",
       "owner": "platform",
       "intents": [
         "configure a TLS certificate for Elasticsearch and Kibana",
@@ -313,7 +358,7 @@
       "id": "elastic-profiles-overview",
       "path": "elastic-stack-deployment/profiles-overview.md",
       "title": "Choose capacity and topology",
-      "summary": "Select only the workload profile, capacity, topology, and optional features verified in the approved Marketplace plan.",
+      "summary": "Choose the workload, initial capacity, topology, and optional features available in the Marketplace plan.",
       "owner": "platform",
       "intents": [
         "choose an Elasticsearch capacity profile",
@@ -323,30 +368,19 @@
     {
       "id": "elastic-public-dns",
       "path": "elastic-stack-deployment/public-dns.md",
-      "title": "Configure public access",
-      "summary": "Apply deployment-provided public access and DNS settings, then validate the endpoint path without exposing credentials.",
+      "title": "Configure public DNS",
+      "summary": "Configure company-owned public DNS records for the public Elasticsearch, Kibana, and Fleet endpoints provided by the platform.",
       "owner": "platform",
       "intents": [
         "configure public DNS for Elasticsearch",
-        "connect to public Kibana"
-      ]
-    },
-    {
-      "id": "elastic-release-notes",
-      "path": "elastic-stack-deployment/release-notes.md",
-      "title": "Release notes",
-      "summary": "Distinguish documentation updates from verified managed-platform releases and find the checks required before adopting a change.",
-      "owner": "platform",
-      "intents": [
-        "find Elasticsearch platform release notes",
-        "see what changed in the documentation"
+        "configure public Kibana DNS"
       ]
     },
     {
       "id": "elastic-reset-admin-password",
       "path": "elastic-stack-deployment/reset-admin-password.md",
       "title": "Reset the administrator password",
-      "summary": "Replace the initial Elasticsearch administrator credential through the managed application and verify it without exposing the password.",
+      "summary": "Reset the Elasticsearch administrator password through the iVedha AI chat using email verification and a one-time generated credential.",
       "owner": "platform",
       "intents": [
         "reset the Elasticsearch administrator password",
@@ -357,7 +391,7 @@
       "id": "elastic-roles-and-permissions",
       "path": "elastic-stack-deployment/roles-and-permissions.md",
       "title": "Roles and permissions",
-      "summary": "Separate Azure deployment permissions from Elasticsearch and Kibana privileges and avoid unnecessary administrator access.",
+      "summary": "Separate Azure deployment permissions from Elasticsearch, Kibana, Fleet, and application privileges and avoid unnecessary administrator access.",
       "owner": "platform",
       "intents": [
         "understand required Azure roles",
@@ -368,7 +402,7 @@
       "id": "elastic-search-and-visualize",
       "path": "elastic-stack-deployment/search-and-visualize.md",
       "title": "Search and visualize data",
-      "summary": "Create a Kibana data view, find indexed events in Discover, and save a first visualization without granting unnecessary privileges.",
+      "summary": "Explore indexed data in Kibana, create data views, search OpenTelemetry and application data, and build dashboards.",
       "owner": "platform",
       "intents": [
         "search data in Kibana",
@@ -379,7 +413,7 @@
       "id": "elastic-secure-access-kibana-elasticsearch",
       "path": "elastic-stack-deployment/secure-access-kibana-elasticsearch.md",
       "title": "Verify access",
-      "summary": "Verify DNS, HTTPS, TLS, Elasticsearch, Kibana, and authentication before optionally indexing a synthetic test document.",
+      "summary": "Verify DNS, HTTPS, TLS, Elasticsearch, Kibana, and authentication before beginning normal platform use.",
       "owner": "platform",
       "intents": [
         "verify Kibana and Elasticsearch access",
@@ -390,7 +424,7 @@
       "id": "elastic-shared-responsibility",
       "path": "elastic-stack-deployment/shared-responsibility.md",
       "title": "Shared responsibility",
-      "summary": "Identify which platform, Azure, security, and data-management tasks belong to the customer, iVedha, Microsoft, or Elastic.",
+      "summary": "Understand which Azure, platform, security, observability, and data-management responsibilities belong to the customer and which are managed by iVedha.",
       "owner": "platform",
       "intents": [
         "understand who manages the Elasticsearch deployment",
@@ -401,7 +435,7 @@
       "id": "elastic-single-sign-on",
       "path": "elastic-stack-deployment/single-sign-on.md",
       "title": "Configure single sign-on",
-      "summary": "Prepare Microsoft Entra OIDC settings and use the managed configuration action only when it is available for the deployed plan.",
+      "summary": "Configure Microsoft Entra single sign-on for Kibana using the iVedha AI chat and Elastic role mappings.",
       "owner": "platform",
       "intents": [
         "configure Microsoft Entra SSO for Kibana",
@@ -412,7 +446,7 @@
       "id": "elastic-snapshots-and-restore",
       "path": "elastic-stack-deployment/snapshots-and-restore.md",
       "title": "Back up and restore",
-      "summary": "Verify snapshot repository and policy health, create an on-demand snapshot, and plan a controlled restore.",
+      "summary": "Understand Elasticsearch snapshot protection, verify backup status, and request supported restore operations through iVedha.",
       "owner": "platform",
       "intents": [
         "back up Elasticsearch",
@@ -433,8 +467,8 @@
     {
       "id": "elastic-troubleshoot-connectivity",
       "path": "elastic-stack-deployment/troubleshoot-connectivity.md",
-      "title": "Troubleshoot connectivity problems",
-      "summary": "Isolate Private Endpoint, routing, DNS, TLS, and authentication failures in the correct order.",
+      "title": "Connectivity issues",
+      "summary": "Troubleshoot network, Private Endpoint, DNS, TLS, and authentication problems for Elasticsearch, Kibana, Fleet, and Logstash endpoints.",
       "owner": "platform",
       "intents": [
         "fix Kibana connection problems",
@@ -444,19 +478,19 @@
     {
       "id": "elastic-troubleshoot-deployment",
       "path": "elastic-stack-deployment/troubleshoot-deployment.md",
-      "title": "Troubleshoot deployment problems",
-      "summary": "Diagnose Azure validation, policy, quota, role-assignment, provisioning, and readiness failures without editing managed resources.",
+      "title": "Deployment issues",
+      "summary": "Troubleshoot Marketplace validation, Azure deployment failures, and managed platform readiness problems.",
       "owner": "platform",
       "intents": [
         "fix a failed Elasticsearch deployment",
-        "troubleshoot a stuck Azure managed application"
+        "troubleshoot an Azure Marketplace deployment"
       ]
     },
     {
       "id": "elastic-troubleshoot-elasticsearch",
       "path": "elastic-stack-deployment/troubleshoot-elasticsearch.md",
-      "title": "Troubleshoot Elasticsearch problems",
-      "summary": "Diagnose unhealthy clusters, blocked writes, missing search results, ingest failures, and Kibana readiness symptoms safely.",
+      "title": "Elasticsearch issues",
+      "summary": "Troubleshoot Elasticsearch health, indexing, search, Kibana, and data availability problems after connectivity has been verified.",
       "owner": "platform",
       "intents": [
         "fix Elasticsearch cluster health",
@@ -466,8 +500,8 @@
     {
       "id": "elastic-troubleshooting-and-support",
       "path": "elastic-stack-deployment/troubleshooting-and-support.md",
-      "title": "Start troubleshooting here",
-      "summary": "Identify the failing layer, run the safest checks in order, and collect redacted evidence before changing configuration or contacting support.",
+      "title": "Troubleshooting overview",
+      "summary": "Identify the failing layer, run safe checks in order, and collect useful evidence before contacting support.",
       "owner": "platform",
       "intents": [
         "troubleshoot the iVedha Managed Elasticsearch Platform",
@@ -478,7 +512,7 @@
       "id": "elastic-upgrades",
       "path": "elastic-stack-deployment/upgrades.md",
       "title": "Prepare for upgrades",
-      "summary": "Prepare data, clients, integrations, snapshots, and validation evidence for a supported managed Elastic Stack upgrade.",
+      "summary": "Prepare applications, integrations, Elastic Agents, and validation checks for a supported managed Elastic Stack upgrade.",
       "owner": "platform",
       "intents": [
         "upgrade the managed Elasticsearch platform",
@@ -489,7 +523,7 @@
       "id": "elastic-users-and-roles",
       "path": "elastic-stack-deployment/users-and-roles.md",
       "title": "Manage users and roles",
-      "summary": "Create named users or identity mappings and grant only the Elasticsearch and Kibana privileges required for each task.",
+      "summary": "Create users, roles, and application credentials with the minimum Elasticsearch and Kibana privileges required.",
       "owner": "platform",
       "intents": [
         "create an Elasticsearch user",

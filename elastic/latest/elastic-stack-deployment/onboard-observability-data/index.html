@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://docs.ivedha.cloud/elastic/latest/elastic-stack-deployment/onboard-observability-data/">
       
       
-        <link rel="prev" href="../data-onboarding/">
+        <link rel="prev" href="../manage-elastic-agents-with-fleet/">
       
       
         <link rel="next" href="../onboard-search-data/">
@@ -433,6 +433,8 @@
       
         
       
+        
+      
     
     
       
@@ -478,6 +480,27 @@
   
   <span class="md-ellipsis">
     Planning overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../available-stack-versions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Available stack versions
   </span>
   
 
@@ -557,7 +580,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../appendix-limits-references-checklists/" class="md-nav__link">
+      <a href="../deployment-checklist/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -821,91 +844,16 @@
   
   
   
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../network-access/" class="md-nav__link">
         
-      
-        
-      
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
-            
   
   <span class="md-ellipsis">
     Configure network access
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_3">
-            <span class="md-nav__icon md-icon"></span>
-            Configure network access
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../public-dns/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Public access
-  </span>
-  
-
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../private-access/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Private access
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -968,7 +916,7 @@
         
   
   <span class="md-ellipsis">
-    Public access
+    Public DNS
   </span>
   
 
@@ -1250,6 +1198,8 @@
       
         
       
+        
+      
     
     
       
@@ -1298,6 +1248,27 @@
   
   <span class="md-ellipsis">
     Choose an onboarding path
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../manage-elastic-agents-with-fleet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manage Elastic Agents with Fleet
   </span>
   
 
@@ -1360,15 +1331,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#choose-the-supported-intake-path" class="md-nav__link">
-    <span class="md-ellipsis">
-      Choose the supported intake path
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#before-you-begin" class="md-nav__link">
     <span class="md-ellipsis">
       Before you begin
@@ -1378,27 +1340,213 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#create-a-least-privilege-api-key" class="md-nav__link">
+  <a href="#choose-the-telemetry-source" class="md-nav__link">
     <span class="md-ellipsis">
-      Create a least-privilege API key
+      Choose the telemetry source
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#configure-the-collector" class="md-nav__link">
+  <a href="#application-telemetry" class="md-nav__link">
     <span class="md-ellipsis">
-      Configure the Collector
+      Application telemetry
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#verify-and-hand-over" class="md-nav__link">
+  <a href="#hosts-and-virtual-machines" class="md-nav__link">
     <span class="md-ellipsis">
-      Verify and hand over
+      Hosts and virtual machines
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kubernetes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kubernetes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#azure-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Azure services
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opentelemetry-semantic-conventions" class="md-nav__link">
+    <span class="md-ellipsis">
+      OpenTelemetry semantic conventions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#otel-native-data-streams" class="md-nav__link">
+    <span class="md-ellipsis">
+      OTel-native data streams
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concrete-opentelemetry-integration-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concrete OpenTelemetry integration examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Concrete OpenTelemetry integration examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#host-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Host monitoring
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nginx" class="md-nav__link">
+    <span class="md-ellipsis">
+      NGINX
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      MySQL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apache-airflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apache Airflow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apache-kafka" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apache Kafka
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-opentelemetry-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other OpenTelemetry packages
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommended pattern
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#start-with-one-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      Start with one source
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validate-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validate logs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validate-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validate metrics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validate-traces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validate traces
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expand-onboarding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expand onboarding
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#existing-pipelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Existing pipelines
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next step
     </span>
   </a>
   
@@ -1802,7 +1950,7 @@
         
   
   <span class="md-ellipsis">
-    Start here
+    Troubleshooting overview
   </span>
   
 
@@ -1911,8 +2059,6 @@
   
     
     
-      
-        
       
         
       
@@ -2146,28 +2292,7 @@
         
   
   <span class="md-ellipsis">
-    Deployment checklist
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../release-notes/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Release notes
+    Limits and checklists
   </span>
   
 
@@ -2232,15 +2357,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#choose-the-supported-intake-path" class="md-nav__link">
-    <span class="md-ellipsis">
-      Choose the supported intake path
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#before-you-begin" class="md-nav__link">
     <span class="md-ellipsis">
       Before you begin
@@ -2250,27 +2366,213 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#create-a-least-privilege-api-key" class="md-nav__link">
+  <a href="#choose-the-telemetry-source" class="md-nav__link">
     <span class="md-ellipsis">
-      Create a least-privilege API key
+      Choose the telemetry source
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#configure-the-collector" class="md-nav__link">
+  <a href="#application-telemetry" class="md-nav__link">
     <span class="md-ellipsis">
-      Configure the Collector
+      Application telemetry
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#verify-and-hand-over" class="md-nav__link">
+  <a href="#hosts-and-virtual-machines" class="md-nav__link">
     <span class="md-ellipsis">
-      Verify and hand over
+      Hosts and virtual machines
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kubernetes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kubernetes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#azure-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Azure services
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opentelemetry-semantic-conventions" class="md-nav__link">
+    <span class="md-ellipsis">
+      OpenTelemetry semantic conventions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#otel-native-data-streams" class="md-nav__link">
+    <span class="md-ellipsis">
+      OTel-native data streams
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concrete-opentelemetry-integration-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concrete OpenTelemetry integration examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Concrete OpenTelemetry integration examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#host-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Host monitoring
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nginx" class="md-nav__link">
+    <span class="md-ellipsis">
+      NGINX
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      MySQL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apache-airflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apache Airflow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apache-kafka" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apache Kafka
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-opentelemetry-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other OpenTelemetry packages
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommended pattern
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#start-with-one-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      Start with one source
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validate-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validate logs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validate-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validate metrics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validate-traces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validate traces
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expand-onboarding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expand onboarding
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#existing-pipelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Existing pipelines
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next step
     </span>
   </a>
   
@@ -2292,136 +2594,405 @@
 
 
 <h1 id="onboard-observability-data">Onboard observability data</h1>
-<p>Use an OpenTelemetry Collector in gateway mode so applications send to a
-customer-operated collector that can batch, retry, and control egress. This
-procedure applies only when the deployment's Elasticsearch version supports
-the OTLP/HTTP endpoint.</p>
-<p><a class="glightbox" href="../../_media/azure/observability-otlp.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="OpenTelemetry onboarding path showing instrumented applications sending OTLP to a customer-operated Collector, which uses OTLP over HTTPS to reach Elasticsearch data streams and Kibana in the managed Azure platform." src="../../_media/azure/observability-otlp.svg" /></a></p>
-<p><em>Applications send telemetry to a customer-operated Collector. The Collector
-uses the deployment-provided HTTPS endpoint; telemetry remains in the
-customer's Azure-hosted managed platform.</em></p>
-<h2 id="choose-the-supported-intake-path">Choose the supported intake path</h2>
-<p>Do not treat all Elastic OpenTelemetry endpoints as interchangeable:</p>
+<p>The managed platform uses an <strong>OpenTelemetry-first architecture</strong> for observability.</p>
+<p>For new observability workloads:</p>
+<div class="highlight"><pre><span></span><code>Applications / Hosts / Kubernetes / Azure Services
+                         ↓
+                    Elastic Agent
+                         ↓
+              Fleet-managed policy
+                         ↓
+       OpenTelemetry logs, metrics, traces
+                         ↓
+                    Elasticsearch
+                         ↓
+                       Kibana
+</code></pre></div>
+<p>Use <strong>Elastic Agent</strong> as the standard collection and telemetry gateway layer and
+<strong>Fleet</strong> to manage agent configuration centrally.</p>
+<p>The goal is for logs, metrics, and traces from different sources to use a
+consistent OpenTelemetry model.</p>
+<h2 id="before-you-begin">Before you begin</h2>
+<p>Make sure:</p>
+<ul>
+<li>platform access is working;</li>
+<li>Fleet is available for the deployment;</li>
+<li>at least one Elastic Agent can connect to Fleet;</li>
+<li>the source environment can reach the required Elastic Agent or platform endpoints;</li>
+<li>DNS and TLS trust are configured;</li>
+<li>appropriate ingestion credentials are available.</li>
+</ul>
+<p>If you have not configured Fleet and Elastic Agent yet, start with
+<a href="../manage-elastic-agents-with-fleet/">Manage Elastic Agents with Fleet</a>.</p>
+<h2 id="choose-the-telemetry-source">Choose the telemetry source</h2>
+<p>Elastic Agent can collect or receive observability data from different sources.</p>
 <table>
 <thead>
 <tr>
-<th>Path</th>
-<th>When to use it</th>
+<th>Source</th>
+<th>Typical collection method</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Direct Elasticsearch OTLP/HTTP</td>
-<td>Use this tutorial only after confirming the deployed Elasticsearch version exposes <code>/_otlp/v1/logs</code>, <code>/_otlp/v1/metrics</code>, and <code>/_otlp/v1/traces</code></td>
+<td>Instrumented applications</td>
+<td>OTLP to Elastic Agent</td>
 </tr>
 <tr>
-<td>Customer-operated Collector</td>
-<td>Recommended gateway for batching, retry, egress control, and limiting application connection churn</td>
+<td>Hosts and virtual machines</td>
+<td>Elastic Agent host integrations</td>
 </tr>
 <tr>
-<td>APM Server OTLP intake</td>
-<td>Use only when the deployment explicitly exposes and supports an APM Server endpoint; its protocol and paths differ</td>
+<td>Kubernetes</td>
+<td>Elastic Agent Kubernetes and OpenTelemetry integrations</td>
 </tr>
 <tr>
-<td>Elastic Agent and Fleet</td>
-<td>Use when Fleet and the required integration are exposed and compatible with the deployed Elastic version</td>
+<td>Azure services</td>
+<td>Elastic Agent Azure integrations</td>
+</tr>
+<tr>
+<td>Custom applications</td>
+<td>OpenTelemetry instrumentation and OTLP</td>
+</tr>
+<tr>
+<td>Existing telemetry pipelines</td>
+<td>Integrate with Elastic Agent or retain the existing supported pipeline where required</td>
 </tr>
 </tbody>
 </table>
-<p>The direct Elasticsearch endpoint accepts OTLP/HTTP with protobuf encoding. It
-does not accept OTLP/gRPC. Do not send OTLP to Kibana, omit the <code>/_otlp</code> base
-path, or guess that a Cloud-hosted or APM endpoint exists.</p>
-<h2 id="before-you-begin">Before you begin</h2>
-<p>Confirm:</p>
+<p>For new application telemetry, prefer native OpenTelemetry instrumentation.</p>
+<h2 id="application-telemetry">Application telemetry</h2>
+<p>Instrument applications using OpenTelemetry SDKs or supported auto-instrumentation.</p>
+<p>Applications can produce:</p>
 <ul>
-<li>the deployment-derived Elasticsearch URL;</li>
-<li>OTLP/HTTP support for the deployed version;</li>
-<li>TCP 443, DNS, and TLS trust from the collector;</li>
-<li>an administrator who can create a scoped API key;</li>
-<li>a non-production source for the first validation;</li>
-<li>ownership for collector availability, buffering, and upgrades.</li>
+<li>logs;</li>
+<li>metrics;</li>
+<li>traces.</li>
 </ul>
-<h2 id="create-a-least-privilege-api-key">Create a least-privilege API key</h2>
-<p>Set the endpoint without credentials:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">ELASTICSEARCH_URL</span><span class="o">=</span><span class="s2">&quot;https://&lt;deployment-elasticsearch-hostname&gt;&quot;</span>
+<p>Send OTLP telemetry to the Elastic Agent endpoint configured for the workload.</p>
+<div class="highlight"><pre><span></span><code>Application
+    ↓
+   OTLP
+    ↓
+Elastic Agent
+    ↓
+Elasticsearch
 </code></pre></div>
-<p>Using an approved administrator credential, create an expiring onboarding key:</p>
-<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--fail-with-body<span class="w"> </span>--user<span class="w"> </span><span class="s2">&quot;&lt;api-key-administrator&gt;&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--request<span class="w"> </span>POST<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">ELASTICSEARCH_URL</span><span class="si">}</span><span class="s2">/_security/api_key&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--header<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--data<span class="w"> </span><span class="s1">&#39;{</span>
-<span class="s1">    &quot;name&quot;: &quot;otel-gateway&quot;,</span>
-<span class="s1">    &quot;expiration&quot;: &quot;30d&quot;,</span>
-<span class="s1">    &quot;role_descriptors&quot;: {</span>
-<span class="s1">      &quot;otel_writer&quot;: {</span>
-<span class="s1">        &quot;indices&quot;: [</span>
-<span class="s1">          {</span>
-<span class="s1">            &quot;names&quot;: [&quot;logs-*&quot;, &quot;metrics-*&quot;, &quot;traces-*&quot;],</span>
-<span class="s1">            &quot;privileges&quot;: [&quot;auto_configure&quot;, &quot;create_doc&quot;]</span>
-<span class="s1">          }</span>
-<span class="s1">        ]</span>
-<span class="s1">      }</span>
-<span class="s1">    }</span>
-<span class="s1">  }&#39;</span>
+<p>Use the OTLP endpoint and protocol configured in the Fleet policy.</p>
+<p>Do not guess endpoints or send telemetry directly to Kibana.</p>
+<h2 id="hosts-and-virtual-machines">Hosts and virtual machines</h2>
+<p>Use Elastic Agent to collect operating-system and application telemetry.</p>
+<p>Typical signals include:</p>
+<ul>
+<li>system logs;</li>
+<li>CPU and memory metrics;</li>
+<li>filesystem metrics;</li>
+<li>network metrics;</li>
+<li>application logs;</li>
+<li>custom telemetry.</li>
+</ul>
+<p>Where supported, normalize the resulting telemetry around OpenTelemetry conventions.</p>
+<h2 id="kubernetes">Kubernetes</h2>
+<p>For Kubernetes, Elastic Agent can combine infrastructure collection with
+application OpenTelemetry telemetry.</p>
+<p>Typical data includes:</p>
+<ul>
+<li>node metrics;</li>
+<li>pod and container metrics;</li>
+<li>container logs;</li>
+<li>Kubernetes metadata;</li>
+<li>application logs;</li>
+<li>application metrics;</li>
+<li>distributed traces.</li>
+</ul>
+<p>Use Fleet policies to manage the Kubernetes collection configuration consistently
+across clusters.</p>
+<h2 id="azure-services">Azure services</h2>
+<p>Use supported Elastic integrations through Elastic Agent to collect telemetry
+from Azure services.</p>
+<p>Examples can include:</p>
+<ul>
+<li>Azure Monitor metrics;</li>
+<li>platform logs;</li>
+<li>activity logs;</li>
+<li>supported service-specific telemetry.</li>
+</ul>
+<p>The resulting data can then be analyzed alongside application, host, and
+Kubernetes telemetry in Elasticsearch.</p>
+<h2 id="opentelemetry-semantic-conventions">OpenTelemetry semantic conventions</h2>
+<p>For new observability data, preserve meaningful OpenTelemetry resource and
+service attributes.</p>
+<p>Important examples include:</p>
+<ul>
+<li><code>service.name</code>;</li>
+<li>service version;</li>
+<li>deployment environment;</li>
+<li>cloud provider and region;</li>
+<li>host identity;</li>
+<li>Kubernetes cluster, namespace, pod, and container identity.</li>
+</ul>
+<p>Consistent attributes make it possible to correlate telemetry across logs,
+metrics, and traces.</p>
+<h2 id="otel-native-data-streams">OTel-native data streams</h2>
+<p>OpenTelemetry-native telemetry uses signal-specific Elasticsearch data streams.</p>
+<p>Typical patterns include:</p>
+<table>
+<thead>
+<tr>
+<th>Signal</th>
+<th>Data stream pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Logs</td>
+<td><code>logs-*.otel-*</code></td>
+</tr>
+<tr>
+<td>Metrics</td>
+<td><code>metrics-*.otel-*</code></td>
+</tr>
+<tr>
+<td>Traces</td>
+<td><code>traces-*.otel-*</code></td>
+</tr>
+</tbody>
+</table>
+<p>Existing Elastic integrations may continue to use ECS-compatible data streams.</p>
+<p>Both can coexist, but new observability implementations should prefer
+OpenTelemetry-native conventions where supported.</p>
+<h2 id="concrete-opentelemetry-integration-examples">Concrete OpenTelemetry integration examples</h2>
+<p>Elastic provides OpenTelemetry-native integration assets for many common
+infrastructure and application technologies.</p>
+<p>These packages illustrate the preferred direction for new observability
+onboarding: collect telemetry using OpenTelemetry receivers and conventions,
+then use Elastic-provided assets to visualize and analyze the resulting OTel
+data.</p>
+<p>Examples include:</p>
+<table>
+<thead>
+<tr>
+<th>Technology</th>
+<th>Elastic package</th>
+<th>OTel dataset examples</th>
+<th>Typical use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Host / operating system</td>
+<td><code>system_otel</code></td>
+<td><code>hostmetricsreceiver.otel</code></td>
+<td>CPU, memory, filesystem, network, and host metrics</td>
+</tr>
+<tr>
+<td>NGINX</td>
+<td><code>nginx_otel</code></td>
+<td><code>nginxreceiver.otel</code>, <code>nginx.access.otel</code>, <code>nginx.error.otel</code></td>
+<td>Web-server metrics, access logs, and error logs</td>
+</tr>
+<tr>
+<td>MySQL</td>
+<td><code>mysql_otel</code></td>
+<td><code>mysqlreceiver.otel</code></td>
+<td>Database availability, performance, queries, and resource metrics</td>
+</tr>
+<tr>
+<td>Apache Airflow</td>
+<td><code>airflow_otel</code></td>
+<td><code>airflow.otel</code></td>
+<td>Scheduler, DAG processing, task, capacity, and error metrics</td>
+</tr>
+<tr>
+<td>Apache Kafka</td>
+<td><code>kafka_otel</code></td>
+<td><code>kafkametricsreceiver.otel</code></td>
+<td>Broker, topic, partition, replication, and consumer-group metrics</td>
+</tr>
+</tbody>
+</table>
+<h3 id="host-monitoring">Host monitoring</h3>
+<p>For servers and virtual machines, the Elastic <code>system_otel</code> package provides
+dashboards for telemetry collected with the OpenTelemetry <strong>hostmetrics receiver</strong>.</p>
+<p>A typical flow is:</p>
+<div class="highlight"><pre><span></span><code>Linux / Windows host
+        ↓
+OpenTelemetry hostmetrics receiver
+        ↓
+Elastic Agent
+        ↓
+hostmetricsreceiver.otel
+        ↓
+Elasticsearch + Kibana
 </code></pre></div>
-<p>Enter the administrator password through the client prompt. Store the returned
-encoded API key in the approved secret store; do not place it in a file,
-screenshot, shell history, or ticket.</p>
-<h2 id="configure-the-collector">Configure the Collector</h2>
-<p>Use environment substitution for the endpoint and secret:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">receivers</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">otlp</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">protocols</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">http</span><span class="p">:</span>
-
-<span class="nt">processors</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">batch</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
-<span class="w">  </span><span class="nt">memory_limiter</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">check_interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
-<span class="w">    </span><span class="nt">limit_mib</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">512</span>
-
-<span class="nt">exporters</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">otlphttp/elastic</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">endpoint</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${env:ELASTICSEARCH_URL}/_otlp</span>
-<span class="w">    </span><span class="nt">headers</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">Authorization</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ApiKey</span><span class="nv"> </span><span class="s">${env:ELASTIC_API_KEY}&quot;</span>
-
-<span class="nt">service</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">pipelines</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">logs</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">receivers</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">otlp</span><span class="p p-Indicator">]</span>
-<span class="w">      </span><span class="nt">processors</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">memory_limiter</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">batch</span><span class="p p-Indicator">]</span>
-<span class="w">      </span><span class="nt">exporters</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">otlphttp/elastic</span><span class="p p-Indicator">]</span>
-<span class="w">    </span><span class="nt">metrics</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">receivers</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">otlp</span><span class="p p-Indicator">]</span>
-<span class="w">      </span><span class="nt">processors</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">memory_limiter</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">batch</span><span class="p p-Indicator">]</span>
-<span class="w">      </span><span class="nt">exporters</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">otlphttp/elastic</span><span class="p p-Indicator">]</span>
-<span class="w">    </span><span class="nt">traces</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">receivers</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">otlp</span><span class="p p-Indicator">]</span>
-<span class="w">      </span><span class="nt">processors</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">memory_limiter</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">batch</span><span class="p p-Indicator">]</span>
-<span class="w">      </span><span class="nt">exporters</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">otlphttp/elastic</span><span class="p p-Indicator">]</span>
+<p>This provides a standard OpenTelemetry representation for infrastructure metrics
+instead of relying on a source-specific schema.</p>
+<h3 id="nginx">NGINX</h3>
+<p>Elastic provides the <code>nginx_otel</code> package for NGINX telemetry.</p>
+<p>It recognizes OTel datasets including:</p>
+<div class="highlight"><pre><span></span><code>nginxreceiver.otel
+nginx.access.otel
+nginx.error.otel
 </code></pre></div>
-<p>Pin a Collector version supported by your organization. Add persistent
-buffering, high availability, resource limits, and telemetry for the Collector
-before production use.</p>
-<p>The exporter appends <code>/v1/logs</code>, <code>/v1/metrics</code>, or <code>/v1/traces</code> to the
-<code>/_otlp</code> base path. Follow the
-<a href="https://www.elastic.co/docs/manage-data/ingest/otlp-endpoint">Elastic Elasticsearch OTLP/HTTP endpoint guidance</a>
-for the deployed version rather than copying configuration for Elastic Cloud
-Managed OTLP or APM Server.</p>
-<h2 id="verify-and-hand-over">Verify and hand over</h2>
+<p>This allows NGINX server metrics, access logs, and error logs to participate in
+the same OpenTelemetry-based observability model as application and
+infrastructure telemetry.</p>
+<h3 id="mysql">MySQL</h3>
+<p>The <code>mysql_otel</code> package provides OpenTelemetry assets for MySQL telemetry
+collected through the corresponding OpenTelemetry receiver.</p>
+<p>The primary dataset is:</p>
+<div class="highlight"><pre><span></span><code>mysqlreceiver.otel
+</code></pre></div>
+<p>Elastic includes visualization assets for areas such as:</p>
+<ul>
+<li>database overview;</li>
+<li>performance;</li>
+<li>queries;</li>
+<li>availability.</li>
+</ul>
+<h3 id="apache-airflow">Apache Airflow</h3>
+<p>The <code>airflow_otel</code> package provides OpenTelemetry assets specifically for
+Apache Airflow.</p>
+<p>Its OTel dataset is:</p>
+<div class="highlight"><pre><span></span><code>airflow.otel
+</code></pre></div>
+<p>The package includes observability content for:</p>
+<ul>
+<li>scheduler health;</li>
+<li>capacity;</li>
+<li>task execution;</li>
+<li>errors;</li>
+<li>DAG processing.</li>
+</ul>
+<p>This is a good example of a platform application producing domain-specific
+telemetry while still using the common OpenTelemetry model.</p>
+<h3 id="apache-kafka">Apache Kafka</h3>
+<p>For Kafka, Elastic provides the <code>kafka_otel</code> package using:</p>
+<div class="highlight"><pre><span></span><code>kafkametricsreceiver.otel
+</code></pre></div>
+<p>The provided assets cover operational areas such as:</p>
+<ul>
+<li>Kafka overview;</li>
+<li>consumer groups;</li>
+<li>topics and partitions;</li>
+<li>replication health.</li>
+</ul>
+<h3 id="other-opentelemetry-packages">Other OpenTelemetry packages</h3>
+<p>The Elastic integrations repository contains additional OTel-native packages
+such as:</p>
+<ul>
+<li><code>apache_otel</code>;</li>
+<li><code>iis_otel</code>;</li>
+<li><code>redis_otel</code>;</li>
+<li><code>docker_otel</code>;</li>
+<li><code>oracle_otel</code>;</li>
+<li><code>etcd_otel</code>;</li>
+<li><code>activemq_otel</code>;</li>
+<li><code>ibmmq_otel</code>;</li>
+<li><code>aws_elb_otel</code>.</li>
+</ul>
+<p>The available integrations continue to evolve with Elastic releases.</p>
+<p>For new onboarding, check the current Elastic integrations catalog and prefer
+an OpenTelemetry-native integration when one is available.</p>
+<h2 id="recommended-pattern">Recommended pattern</h2>
+<p>When an OTel-native integration exists, use this sequence:</p>
+<div class="highlight"><pre><span></span><code>Source technology
+      ↓
+OpenTelemetry receiver / instrumentation
+      ↓
+Elastic Agent
+      ↓
+Fleet-managed configuration
+      ↓
+OTel-native dataset
+      ↓
+Elastic integration assets
+      ↓
+Elasticsearch + Kibana
+</code></pre></div>
+<p>This is preferred over building custom parsing and dashboards for each
+technology because the integration provides a tested telemetry model and
+reusable Elastic content.</p>
+<p>When no dedicated OTel-native integration exists, continue using Elastic Agent
+with the best supported integration while preserving OpenTelemetry semantic
+conventions wherever possible.</p>
+<h2 id="start-with-one-source">Start with one source</h2>
+<p>Before onboarding a full environment:</p>
 <ol>
-<li>Send one synthetic log, metric, and trace from a test source.</li>
-<li>Confirm the Collector reports successful export without retry or TLS errors.</li>
-<li>In Kibana, confirm <code>logs-*</code>, <code>metrics-*</code>, and <code>traces-*</code> data streams appear
-   only for the signals sent.</li>
-<li>Verify timestamps, service identity, environment, and sensitive-field
-   handling.</li>
-<li>Test Collector restart and destination unavailability behavior.</li>
-<li>Record the API-key owner and rotation date.</li>
+<li>choose one representative application, host, or workload;</li>
+<li>assign the appropriate Fleet policy;</li>
+<li>confirm the Elastic Agent is <strong>Healthy</strong>;</li>
+<li>send or collect a small amount of telemetry;</li>
+<li>confirm logs, metrics, or traces arrive in Elasticsearch;</li>
+<li>verify OpenTelemetry attributes and resource metadata;</li>
+<li>confirm the telemetry is usable in Kibana.</li>
 </ol>
-<p>Revoke the test key if the onboarding is abandoned. For endpoint or TLS
-failures, follow <a href="../troubleshoot-connectivity/">connectivity troubleshooting</a>.</p>
+<p>Then expand the same pattern to additional sources.</p>
+<h2 id="validate-logs">Validate logs</h2>
+<p>For logs, confirm:</p>
+<ul>
+<li>timestamps are correct;</li>
+<li><code>service.name</code> or source identity is present;</li>
+<li>log severity is represented correctly;</li>
+<li>environment and infrastructure metadata are available;</li>
+<li>multiline events are handled correctly where required;</li>
+<li>sensitive information is not being collected unintentionally.</li>
+</ul>
+<h2 id="validate-metrics">Validate metrics</h2>
+<p>For metrics, confirm:</p>
+<ul>
+<li>expected metric names are present;</li>
+<li>units are correct;</li>
+<li>resource attributes identify the source;</li>
+<li>collection intervals are appropriate;</li>
+<li>unnecessary high-cardinality dimensions are avoided.</li>
+</ul>
+<h2 id="validate-traces">Validate traces</h2>
+<p>For traces, confirm:</p>
+<ul>
+<li>services appear with the expected <code>service.name</code>;</li>
+<li>traces contain expected spans;</li>
+<li>service-to-service relationships are visible;</li>
+<li>environment and resource metadata are present;</li>
+<li>trace and span identifiers can correlate with application logs where configured.</li>
+</ul>
+<h2 id="expand-onboarding">Expand onboarding</h2>
+<p>After the first source is validated:</p>
+<ol>
+<li>add additional Elastic Agents or workloads;</li>
+<li>reuse Fleet policies where collection requirements are the same;</li>
+<li>create separate policies only when the requirements differ materially;</li>
+<li>verify agent health after each major policy change;</li>
+<li>monitor ingestion volume as additional sources are added.</li>
+</ol>
+<h2 id="existing-pipelines">Existing pipelines</h2>
+<p>Existing Logstash, ECS-based, or OpenTelemetry Collector pipelines do not need
+to be replaced immediately if they are already operating successfully.</p>
+<p>For <strong>new observability onboarding</strong>, however, use the OpenTelemetry-first
+Elastic Agent and Fleet architecture unless there is a specific compatibility
+or integration requirement.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>If telemetry does not arrive:</p>
+<ul>
+<li>confirm the Elastic Agent is healthy in Fleet;</li>
+<li>confirm the correct policy is assigned;</li>
+<li>verify the relevant integration is enabled;</li>
+<li>check OTLP endpoint configuration for application telemetry;</li>
+<li>verify DNS, networking, and TLS;</li>
+<li>review Elastic Agent logs;</li>
+<li>check the expected OTel-native data streams.</li>
+</ul>
+<p>For assistance:</p>
+<ul>
+<li>AI chat: <code>https://chat.ivedha.cloud</code></li>
+<li>Support portal: <code>https://support.ivedha.com/</code></li>
+</ul>
+<p>Provide the deployment reference, affected source type, and Elastic Agent
+information. Do not include API keys, enrollment tokens, passwords, or other
+secrets.</p>
+<h2 id="next-step">Next step</h2>
+<p>After telemetry is flowing, use Kibana to verify and explore the data, then
+continue with <a href="../search-and-visualize/">search and visualize data</a>.</p>
 
   
   
@@ -2431,7 +3002,7 @@ failures, follow <a href="../troubleshoot-connectivity/">connectivity troublesho
   <aside class="md-source-file" aria-label="Document metadata">
     
       <span class="md-source-file__fact">
-        <strong>Last verified:</strong> 2026-07-29
+        <strong>Last verified:</strong> 2026-08-18
       </span>
     
     

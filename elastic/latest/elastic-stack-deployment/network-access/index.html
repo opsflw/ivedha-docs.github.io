@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://docs.ivedha.cloud/elastic/latest/elastic-stack-deployment/troubleshoot-connectivity/">
+        <link rel="canonical" href="https://docs.ivedha.cloud/elastic/latest/elastic-stack-deployment/network-access/">
       
       
-        <link rel="prev" href="../troubleshoot-deployment/">
+        <link rel="prev" href="../reset-admin-password/">
       
       
-        <link rel="next" href="../troubleshoot-elasticsearch/">
+        <link rel="next" href="../public-dns/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Connectivity issues - iVedha Managed Elasticsearch Platform</title>
+        <title>Configure network access - iVedha Managed Elasticsearch Platform</title>
       
     
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#connectivity-issues" class="md-skip">
+        <a href="#configure-network-access" class="md-skip">
           Skip to content
         </a>
       
@@ -138,7 +138,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Connectivity issues
+              Configure network access
             
           </span>
         </div>
@@ -282,10 +282,12 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../next-steps/" class="md-tabs__link">
           
   
@@ -322,12 +324,10 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
+      <li class="md-tabs__item">
         <a href="../troubleshooting-and-support/" class="md-tabs__link">
           
   
@@ -746,8 +746,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -766,19 +768,22 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -789,7 +794,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Next Steps
@@ -842,10 +847,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../network-access/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Configure network access
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -854,6 +879,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#if-public-access-is-enabled" class="md-nav__link">
+    <span class="md-ellipsis">
+      If public access is enabled
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#if-private-access-is-required" class="md-nav__link">
+    <span class="md-ellipsis">
+      If private access is required
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verify-the-network-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verify the network path
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next step
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -877,17 +958,20 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
         
           
-          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -1610,10 +1694,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -1630,22 +1712,19 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1656,7 +1735,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Get Help
@@ -1709,30 +1788,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Connectivity issues
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../troubleshoot-connectivity/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1741,116 +1800,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-identify-the-affected-endpoint" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Identify the affected endpoint
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-check-the-network-path" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Check the network path
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-check-dns" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Check DNS
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-check-tls" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Check TLS
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#common-connectivity-results" class="md-nav__link">
-    <span class="md-ellipsis">
-      Common connectivity results
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-check-authentication" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Check authentication
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-fleet-and-elastic-agent-connectivity" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Fleet and Elastic Agent connectivity
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#7-logstash-connectivity" class="md-nav__link">
-    <span class="md-ellipsis">
-      7. Logstash connectivity
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#if-the-issue-remains" class="md-nav__link">
-    <span class="md-ellipsis">
-      If the issue remains
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#next-step" class="md-nav__link">
-    <span class="md-ellipsis">
-      Next step
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2211,81 +2160,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-identify-the-affected-endpoint" class="md-nav__link">
+  <a href="#if-public-access-is-enabled" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Identify the affected endpoint
+      If public access is enabled
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-check-the-network-path" class="md-nav__link">
+  <a href="#if-private-access-is-required" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Check the network path
+      If private access is required
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-check-dns" class="md-nav__link">
+  <a href="#verify-the-network-path" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Check DNS
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-check-tls" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Check TLS
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#common-connectivity-results" class="md-nav__link">
-    <span class="md-ellipsis">
-      Common connectivity results
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-check-authentication" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Check authentication
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-fleet-and-elastic-agent-connectivity" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Fleet and Elastic Agent connectivity
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#7-logstash-connectivity" class="md-nav__link">
-    <span class="md-ellipsis">
-      7. Logstash connectivity
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#if-the-issue-remains" class="md-nav__link">
-    <span class="md-ellipsis">
-      If the issue remains
+      Verify the network path
     </span>
   </a>
   
@@ -2315,168 +2210,47 @@
                   
 
 
-<h1 id="connectivity-issues">Connectivity issues</h1>
-<p>Use this guide when a deployment is ready but Elasticsearch, Kibana, Fleet, or Logstash cannot be reached.</p>
-<p>Start with <a href="../troubleshooting-and-support/">Troubleshooting overview</a>.</p>
-<p>Run tests from an affected client and, when possible, compare the result with a known-good client.</p>
-<h2 id="1-identify-the-affected-endpoint">1. Identify the affected endpoint</h2>
-<p>Determine which service is failing:</p>
+<h1 id="configure-network-access">Configure network access</h1>
+<p>Configure the network path for the access model selected during deployment.</p>
+<p>The <strong>Your deployment is ready</strong> notification provides the public and private
+endpoints available for the deployment.</p>
+<h2 id="if-public-access-is-enabled">If public access is enabled</h2>
+<p>Public endpoints are available over HTTPS.</p>
+<p>Confirm that:</p>
 <ul>
-<li>Elasticsearch;</li>
-<li>Kibana;</li>
-<li>Fleet;</li>
-<li>Logstash.</li>
+<li>the required client networks are allowed to reach the public endpoints;</li>
+<li>outbound HTTPS on TCP port 443 is permitted;</li>
+<li>any organization firewall, proxy, or access restrictions allow the required
+  service hostnames.</li>
 </ul>
-<p>Use only the hostname provided for your deployment.</p>
-<p>Do not construct service names from Azure resource names or internal naming conventions.</p>
-<h2 id="2-check-the-network-path">2. Check the network path</h2>
-<p>For public access, confirm the client can reach the service over HTTPS.</p>
-<div class="highlight"><pre><span></span><code>nc<span class="w"> </span>-vz<span class="w"> </span>&lt;service-hostname&gt;<span class="w"> </span><span class="m">443</span>
-</code></pre></div>
-<p>For private access, confirm:</p>
+<p>Do not configure DNS on this page. DNS is handled in the next step.</p>
+<p>Continue to <a href="../public-dns/">configure public DNS</a>.</p>
+<h2 id="if-private-access-is-required">If private access is required</h2>
+<p>Create an Azure Private Endpoint that connects your customer network to the
+platform's Private Link Service.</p>
+<p>You need:</p>
 <ul>
-<li>the Private Endpoint exists;</li>
-<li>connection status is <strong>Approved</strong>;</li>
-<li>it has a private IP address;</li>
-<li>the client network can route to the Private Endpoint subnet;</li>
-<li>customer firewall or network controls permit the required connection.</li>
+<li>the Private Link Service resource ID provided for the deployment;</li>
+<li>an Azure VNet and subnet where the Private Endpoint will be created;</li>
+<li>network connectivity from the required client networks to that subnet.</li>
 </ul>
-<p>If several services fail at the same time, investigate the shared network path before troubleshooting individual applications.</p>
-<h2 id="3-check-dns">3. Check DNS</h2>
-<p>Resolve the exact service hostname.</p>
-<div class="highlight"><pre><span></span><code>nslookup<span class="w"> </span>&lt;service-hostname&gt;
-</code></pre></div>
-<p>For private access, the result should be the Private Endpoint private IP.</p>
-<p>If DNS returns:</p>
+<p>Follow <a href="../private-access/">Create a Private Endpoint</a>.</p>
+<p>After the Private Endpoint is approved and reachable, continue to
+<a href="../private-dns/">configure private DNS</a>.</p>
+<h2 id="verify-the-network-path">Verify the network path</h2>
+<p>Before moving to DNS configuration, confirm that the required network path
+exists.</p>
+<p>For public access, confirm that TCP port 443 can reach the public endpoint.</p>
+<p>For private access, confirm that:</p>
 <ul>
-<li><code>NXDOMAIN</code> — check the DNS record, zone, or forwarding configuration;</li>
-<li>a public address for a private deployment — check private DNS resolution;</li>
-<li>an old private address — check stale records and DNS caching.</li>
+<li>the Private Endpoint is created;</li>
+<li>the connection is approved;</li>
+<li>the endpoint has a private IP address;</li>
+<li>required client networks can route to the endpoint.</li>
 </ul>
-<p>For hybrid environments, also confirm corporate DNS forwarding to Azure is working.</p>
-<h2 id="4-check-tls">4. Check TLS</h2>
-<p>Validate the certificate with the exact service hostname.</p>
-<div class="highlight"><pre><span></span><code><span class="nv">SERVICE_HOSTNAME</span><span class="o">=</span><span class="s2">"&lt;service-hostname&gt;"</span>
-
-openssl<span class="w"> </span>s_client<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-connect<span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">SERVICE_HOSTNAME</span><span class="si">}</span><span class="s2">:443"</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-servername<span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">SERVICE_HOSTNAME</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-verify_return_error<span class="w"> </span>&lt;/dev/null
-</code></pre></div>
-<p>A successful result should include:</p>
-<div class="highlight"><pre><span></span><code>Verify return code: 0 (ok)
-</code></pre></div>
-<p>The platform-generated CSR covers the required deployment service hostnames, including:</p>
-<ul>
-<li>Kibana;</li>
-<li>Elasticsearch;</li>
-<li>Fleet;</li>
-<li>Logstash.</li>
-</ul>
-<p>Check that the certificate:</p>
-<ul>
-<li>is within its validity period;</li>
-<li>contains the expected hostname in its SANs;</li>
-<li>includes the required intermediate certificates;</li>
-<li>chains to a CA trusted by the client.</li>
-</ul>
-<p>Do not disable certificate verification to work around TLS errors.</p>
-<h2 id="common-connectivity-results">Common connectivity results</h2>
-<table>
-<thead>
-<tr>
-<th>Result</th>
-<th>Investigate</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>Name or service not known</code> or <code>NXDOMAIN</code></td>
-<td>DNS configuration</td>
-</tr>
-<tr>
-<td>Connection timeout</td>
-<td>Routing, firewall, Private Endpoint, or service availability</td>
-</tr>
-<tr>
-<td>Connection refused</td>
-<td>Endpoint or service availability</td>
-</tr>
-<tr>
-<td><code>unable to get local issuer certificate</code></td>
-<td>Certificate chain or client trust</td>
-</tr>
-<tr>
-<td>Hostname mismatch</td>
-<td>DNS hostname or certificate SAN</td>
-</tr>
-<tr>
-<td>Expired certificate</td>
-<td>Certificate renewal</td>
-</tr>
-<tr>
-<td>TLS works but HTTP returns <code>401</code></td>
-<td>Authentication</td>
-</tr>
-<tr>
-<td>TLS works but HTTP returns <code>403</code></td>
-<td>Authorization or role permissions</td>
-</tr>
-</tbody>
-</table>
-<h2 id="5-check-authentication">5. Check authentication</h2>
-<p>Only troubleshoot authentication after network, DNS, and TLS checks succeed.</p>
-<p>For Elasticsearch, verify the configured user or API key.</p>
-<p>For Kibana, test using a private browser session when stale cookies or SSO sessions might be involved.</p>
-<p>For Fleet or Elastic Agent connectivity, also confirm:</p>
-<ul>
-<li>the correct Fleet endpoint is configured;</li>
-<li>the agent is enrolled;</li>
-<li>the correct policy is assigned;</li>
-<li>the agent can establish TLS trust.</li>
-</ul>
-<h2 id="6-fleet-and-elastic-agent-connectivity">6. Fleet and Elastic Agent connectivity</h2>
-<p>If an Elastic Agent is unhealthy or offline:</p>
-<ol>
-<li>Check <strong>Fleet → Agents</strong>.</li>
-<li>Confirm the agent's last check-in time.</li>
-<li>Confirm the assigned policy.</li>
-<li>Check DNS resolution to the Fleet endpoint.</li>
-<li>Check network connectivity.</li>
-<li>Check TLS trust.</li>
-<li>Review Elastic Agent logs.</li>
-</ol>
-<p>If the agent is <strong>Healthy</strong> but telemetry is missing, continue troubleshooting the integration or OpenTelemetry pipeline rather than the Fleet connection.</p>
-<h2 id="7-logstash-connectivity">7. Logstash connectivity</h2>
-<p>If Logstash is enabled for the deployment, confirm:</p>
-<ul>
-<li>the correct Logstash hostname is being used;</li>
-<li>DNS resolves correctly;</li>
-<li>the required network path is open;</li>
-<li>TLS validates against the deployment certificate;</li>
-<li>the configured protocol and port match the supported deployment configuration.</li>
-</ul>
-<p>Do not assume Logstash uses the same application protocol or port as Elasticsearch.</p>
-<p>Use the endpoint information provided for the deployment.</p>
-<h2 id="if-the-issue-remains">If the issue remains</h2>
-<p>For assistance:</p>
-<ul>
-<li>AI chat: <code>https://chat.ivedha.cloud</code></li>
-<li>Support portal: <code>https://support.ivedha.com/</code></li>
-</ul>
-<p>Provide:</p>
-<ul>
-<li>deployment reference;</li>
-<li>affected service hostname;</li>
-<li>whether access is public or private;</li>
-<li>DNS result;</li>
-<li>TCP connectivity result;</li>
-<li>TLS verification result;</li>
-<li>relevant HTTP status or redacted error.</li>
-</ul>
-<p>Do not include passwords, API keys, enrollment tokens, or private keys.</p>
+<p>DNS and TLS validation are completed in the following steps.</p>
 <h2 id="next-step">Next step</h2>
-<p>If connectivity works but Elasticsearch, Kibana, indexing, or search behavior is incorrect, continue with <a href="../troubleshoot-elasticsearch/">Elasticsearch issues</a>.</p>
+<p>Continue to <strong>Configure DNS</strong> for the endpoints you plan to use.</p>
 
   
   
@@ -2486,12 +2260,12 @@ openssl<span class="w"> </span>s_client<span class="w"> </span><span class="se">
   <aside class="md-source-file" aria-label="Document metadata">
     
       <span class="md-source-file__fact">
-        <strong>Last verified:</strong> 2026-08-18
+        <strong>Last verified:</strong> 2026-08-17
       </span>
     
     
       <span class="md-source-file__fact">
-        <strong>Published:</strong> <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 28, 2026</span>
+        <strong>Published:</strong> <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 17, 2026</span>
       </span>
     
     

@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://docs.ivedha.cloud/elastic/latest/elastic-stack-deployment/public-dns/">
       
       
-        <link rel="prev" href="../private-access/">
+        <link rel="prev" href="../network-access/">
       
       
         <link rel="next" href="../private-dns/">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Configure public access - iVedha Managed Elasticsearch Platform</title>
+        <title>Configure public DNS - iVedha Managed Elasticsearch Platform</title>
       
     
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#configure-public-access" class="md-skip">
+        <a href="#configure-public-dns" class="md-skip">
           Skip to content
         </a>
       
@@ -138,7 +138,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Configure public access
+              Configure public DNS
             
           </span>
         </div>
@@ -433,6 +433,8 @@
       
         
       
+        
+      
     
     
       
@@ -478,6 +480,27 @@
   
   <span class="md-ellipsis">
     Planning overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../available-stack-versions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Available stack versions
   </span>
   
 
@@ -557,7 +580,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../appendix-limits-references-checklists/" class="md-nav__link">
+      <a href="../deployment-checklist/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -826,161 +849,16 @@
   
   
   
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../network-access/" class="md-nav__link">
         
-      
-        
-      
-    
-    
-      
-      
-        
-          
-          
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="">
-            
   
   <span class="md-ellipsis">
     Configure network access
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_3">
-            <span class="md-nav__icon md-icon"></span>
-            Configure network access
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Public access
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Public access
-  </span>
-  
-
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#before-you-begin" class="md-nav__link">
-    <span class="md-ellipsis">
-      Before you begin
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configure-public-access-and-dns" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configure public access and DNS
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#safe-result" class="md-nav__link">
-    <span class="md-ellipsis">
-      Safe result
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../private-access/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Private access
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -1057,7 +935,7 @@
           
   
   <span class="md-ellipsis">
-    Public access
+    Public DNS
   </span>
   
 
@@ -1068,7 +946,7 @@
         
   
   <span class="md-ellipsis">
-    Public access
+    Public DNS
   </span>
   
 
@@ -1099,18 +977,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configure-public-access-and-dns" class="md-nav__link">
+  <a href="#create-the-dns-records" class="md-nav__link">
     <span class="md-ellipsis">
-      Configure public access and DNS
+      Create the DNS records
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#safe-result" class="md-nav__link">
+  <a href="#verify-dns" class="md-nav__link">
     <span class="md-ellipsis">
-      Safe result
+      Verify DNS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next step
     </span>
   </a>
   
@@ -1387,6 +1274,8 @@
       
         
       
+        
+      
     
     
       
@@ -1432,6 +1321,27 @@
   
   <span class="md-ellipsis">
     Choose an onboarding path
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../manage-elastic-agents-with-fleet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manage Elastic Agents with Fleet
   </span>
   
 
@@ -1845,7 +1755,7 @@
         
   
   <span class="md-ellipsis">
-    Start here
+    Troubleshooting overview
   </span>
   
 
@@ -1954,8 +1864,6 @@
   
     
     
-      
-        
       
         
       
@@ -2189,28 +2097,7 @@
         
   
   <span class="md-ellipsis">
-    Deployment checklist
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../release-notes/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Release notes
+    Limits and checklists
   </span>
   
 
@@ -2284,18 +2171,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configure-public-access-and-dns" class="md-nav__link">
+  <a href="#create-the-dns-records" class="md-nav__link">
     <span class="md-ellipsis">
-      Configure public access and DNS
+      Create the DNS records
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#safe-result" class="md-nav__link">
+  <a href="#verify-dns" class="md-nav__link">
     <span class="md-ellipsis">
-      Safe result
+      Verify DNS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next step
     </span>
   </a>
   
@@ -2316,40 +2212,43 @@
                   
 
 
-<h1 id="configure-public-access">Configure public access</h1>
-<p>Use this procedure only when the deployment outputs identify public service
-URLs and your security policy permits public access.</p>
-<h2 id="before-you-begin">Before you begin</h2>
-<p>Obtain from deployment details:</p>
+<h1 id="configure-public-dns">Configure public DNS</h1>
+<p>Complete this step when:</p>
 <ul>
-<li>every public service hostname;</li>
-<li>the authoritative DNS target or records requested by the deployment;</li>
-<li>certificate status;</li>
-<li>any approved source restrictions.</li>
+<li>public access is enabled; and</li>
+<li>you selected a <strong>company-owned DNS domain</strong> during deployment.</li>
 </ul>
-<p>Do not invent an IP address or infer a target from an internal Azure resource.</p>
-<h2 id="configure-public-access-and-dns">Configure public access and DNS</h2>
+<p>If you use the platform-provided DNS domain, use the hostnames provided in the <strong>Your deployment is ready</strong> notification and no customer DNS records are required unless specifically instructed.</p>
+<h2 id="before-you-begin">Before you begin</h2>
+<p>Use the endpoint and DNS information provided for your deployment.</p>
+<p>Depending on the enabled services, this can include hostnames for:</p>
+<ul>
+<li>Elasticsearch;</li>
+<li>Kibana;</li>
+<li>Fleet.</li>
+</ul>
+<p>Do not construct DNS targets from Azure resource names or naming conventions.</p>
+<h2 id="create-the-dns-records">Create the DNS records</h2>
+<p>For each service hostname:</p>
 <ol>
-<li>Ask the authoritative DNS owner to create exactly the records supplied by
-   the deployment.</li>
-<li>Wait for the record's configured DNS time to live.</li>
-<li>
-<p>From an approved client, query each hostname:</p>
+<li>Open the authoritative DNS service for your company-owned DNS domain.</li>
+<li>Create the DNS record using the hostname and target provided by the platform.</li>
+<li>Save the record.</li>
+<li>Allow time for DNS propagation.</li>
+</ol>
+<p>Use the record type and target provided by the deployment information.</p>
+<h2 id="verify-dns">Verify DNS</h2>
+<p>From a client that uses public DNS, verify each service hostname.</p>
 <div class="highlight"><pre><span></span><code>nslookup<span class="w"> </span>&lt;service-hostname&gt;
 </code></pre></div>
-</li>
-<li>
-<p>Confirm the answer matches the authoritative deployment target.</p>
-</li>
-<li>Confirm that any deployment-supported source, proxy, or firewall
-   restrictions match the approved access plan.</li>
-</ol>
-<h2 id="safe-result">Safe result</h2>
-<p>DNS resolves consistently and TCP port 443 reaches the intended public
-endpoint. Complete TLS and application checks in <a href="../secure-access-kibana-elasticsearch/">verify access</a>.</p>
-<p>If the hostname does not resolve, verify the authoritative record. If it
-resolves but the connection fails, follow
-<a href="../troubleshoot-connectivity/">connectivity troubleshooting</a>.</p>
+<p>Confirm that the hostname resolves to the expected platform target.</p>
+<p>Repeat the check for each endpoint you plan to use.</p>
+<h2 id="next-step">Next step</h2>
+<p>After DNS resolution is working, continue to
+<a href="../private-tls/">configure TLS certificates</a> when a customer certificate is required.</p>
+<p>Then <a href="../secure-access-kibana-elasticsearch/">verify access</a>.</p>
+<p>If the hostname does not resolve as expected, see
+<a href="../troubleshoot-connectivity/">connectivity issues</a>.</p>
 
   
   
@@ -2359,7 +2258,7 @@ resolves but the connection fails, follow
   <aside class="md-source-file" aria-label="Document metadata">
     
       <span class="md-source-file__fact">
-        <strong>Last verified:</strong> 2026-08-12
+        <strong>Last verified:</strong> 2026-08-17
       </span>
     
     

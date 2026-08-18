@@ -24,7 +24,7 @@
     
     
       
-        <title>Troubleshoot Elasticsearch problems - iVedha Managed Elasticsearch Platform</title>
+        <title>Elasticsearch issues - iVedha Managed Elasticsearch Platform</title>
       
     
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#troubleshoot-elasticsearch-problems" class="md-skip">
+        <a href="#elasticsearch-issues" class="md-skip">
           Skip to content
         </a>
       
@@ -138,7 +138,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Troubleshoot Elasticsearch problems
+              Elasticsearch issues
             
           </span>
         </div>
@@ -433,6 +433,8 @@
       
         
       
+        
+      
     
     
       
@@ -478,6 +480,27 @@
   
   <span class="md-ellipsis">
     Planning overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../available-stack-versions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Available stack versions
   </span>
   
 
@@ -557,7 +580,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../appendix-limits-references-checklists/" class="md-nav__link">
+      <a href="../deployment-checklist/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -821,91 +844,16 @@
   
   
   
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../network-access/" class="md-nav__link">
         
-      
-        
-      
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
-            
   
   <span class="md-ellipsis">
     Configure network access
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_3">
-            <span class="md-nav__icon md-icon"></span>
-            Configure network access
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../public-dns/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Public access
-  </span>
-  
-
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../private-access/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Private access
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -968,7 +916,7 @@
         
   
   <span class="md-ellipsis">
-    Public access
+    Public DNS
   </span>
   
 
@@ -1240,6 +1188,8 @@
       
         
       
+        
+      
     
     
       
@@ -1285,6 +1235,27 @@
   
   <span class="md-ellipsis">
     Choose an onboarding path
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../manage-elastic-agents-with-fleet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manage Elastic Agents with Fleet
   </span>
   
 
@@ -1703,7 +1674,7 @@
         
   
   <span class="md-ellipsis">
-    Start here
+    Troubleshooting overview
   </span>
   
 
@@ -1808,18 +1779,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#check-cluster-health" class="md-nav__link">
+  <a href="#check-elasticsearch-health" class="md-nav__link">
     <span class="md-ellipsis">
-      Check cluster health
+      Check Elasticsearch health
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#writes-are-blocked-or-return-http-429" class="md-nav__link">
+  <a href="#indexing-fails" class="md-nav__link">
     <span class="md-ellipsis">
-      Writes are blocked or return HTTP 429
+      Indexing fails
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#observability-data-is-missing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Observability data is missing
     </span>
   </a>
   
@@ -1835,18 +1815,45 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#kibana-is-not-ready" class="md-nav__link">
+  <a href="#search-results-are-incorrect" class="md-nav__link">
     <span class="md-ellipsis">
-      Kibana is not ready
+      Search results are incorrect
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ingest-fails" class="md-nav__link">
+  <a href="#kibana-does-not-load-correctly" class="md-nav__link">
     <span class="md-ellipsis">
-      Ingest fails
+      Kibana does not load correctly
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#writes-are-blocked-or-requests-return-429" class="md-nav__link">
+    <span class="md-ellipsis">
+      Writes are blocked or requests return 429
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collect-evidence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Collect evidence
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get help
     </span>
   </a>
   
@@ -1897,8 +1904,6 @@
   
     
     
-      
-        
       
         
       
@@ -2132,28 +2137,7 @@
         
   
   <span class="md-ellipsis">
-    Deployment checklist
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../release-notes/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Release notes
+    Limits and checklists
   </span>
   
 
@@ -2218,18 +2202,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#check-cluster-health" class="md-nav__link">
+  <a href="#check-elasticsearch-health" class="md-nav__link">
     <span class="md-ellipsis">
-      Check cluster health
+      Check Elasticsearch health
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#writes-are-blocked-or-return-http-429" class="md-nav__link">
+  <a href="#indexing-fails" class="md-nav__link">
     <span class="md-ellipsis">
-      Writes are blocked or return HTTP 429
+      Indexing fails
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#observability-data-is-missing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Observability data is missing
     </span>
   </a>
   
@@ -2245,18 +2238,45 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#kibana-is-not-ready" class="md-nav__link">
+  <a href="#search-results-are-incorrect" class="md-nav__link">
     <span class="md-ellipsis">
-      Kibana is not ready
+      Search results are incorrect
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ingest-fails" class="md-nav__link">
+  <a href="#kibana-does-not-load-correctly" class="md-nav__link">
     <span class="md-ellipsis">
-      Ingest fails
+      Kibana does not load correctly
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#writes-are-blocked-or-requests-return-429" class="md-nav__link">
+    <span class="md-ellipsis">
+      Writes are blocked or requests return 429
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collect-evidence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Collect evidence
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get help
     </span>
   </a>
   
@@ -2277,40 +2297,178 @@
                   
 
 
-<h1 id="troubleshoot-elasticsearch-problems">Troubleshoot Elasticsearch problems</h1>
-<p>Use a user with only the diagnostic privileges required for the affected
-operation.
-Complete the endpoint, DNS, TLS, and authentication checks in
-<a href="../troubleshooting-and-support/">Start troubleshooting here</a> first.</p>
-<h2 id="check-cluster-health">Check cluster health</h2>
-<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--fail-with-body<span class="w"> </span>--user<span class="w"> </span><span class="s2">&quot;&lt;user&gt;&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span><span class="s2">&quot;https://&lt;elasticsearch-hostname&gt;/_cluster/health?pretty&quot;</span>
+<h1 id="elasticsearch-issues">Elasticsearch issues</h1>
+<p>Use this guide when network, DNS, TLS, and authentication are working but Elasticsearch, Kibana, indexing, or search behavior is not.</p>
+<p>Start with <a href="../troubleshooting-and-support/">Troubleshooting overview</a>.</p>
+<h2 id="check-elasticsearch-health">Check Elasticsearch health</h2>
+<p>Users with appropriate permissions can review high-level cluster health.</p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--fail-with-body<span class="w"> </span>--user<span class="w"> </span><span class="s2">"&lt;user&gt;"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="s2">"https://&lt;elasticsearch-hostname&gt;/_cluster/health?pretty"</span>
 </code></pre></div>
-<p>Record status, unassigned shards, node count, and task symptoms.</p>
-<h2 id="writes-are-blocked-or-return-http-429">Writes are blocked or return HTTP 429</h2>
-<p>Check disk use and watermark messages. At flood stage, Elasticsearch can mark
-affected indices read-only. Reduce avoidable ingestion, remove data only under
-an approved retention decision, or request supported capacity. Do not
-permanently raise watermarks to mask a full disk.</p>
-<h2 id="search-returns-no-results">Search returns no results</h2>
+<p>Review the cluster status:</p>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Green</td>
+<td>Primary and replica shards are available</td>
+</tr>
+<tr>
+<td>Yellow</td>
+<td>Primary shards are available, but one or more replicas are unavailable</td>
+</tr>
+<tr>
+<td>Red</td>
+<td>One or more primary shards are unavailable</td>
+</tr>
+</tbody>
+</table>
+<p>Persistent yellow or any red condition should be investigated.</p>
+<p>Do not modify shard allocation, disk watermarks, Kubernetes resources, or Elasticsearch infrastructure directly.</p>
+<h2 id="indexing-fails">Indexing fails</h2>
+<p>If an application cannot index documents, record the HTTP status code and redacted error message.</p>
+<p>Common areas to check include:</p>
+<ul>
+<li>target index or data-stream name;</li>
+<li>mapping conflicts;</li>
+<li>document format;</li>
+<li>API-key or user permissions;</li>
+<li>rejected requests;</li>
+<li>available capacity.</li>
+</ul>
+<p>Typical HTTP responses include:</p>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Typical cause</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>400</code></td>
+<td>Invalid document, mapping, or request</td>
+</tr>
+<tr>
+<td><code>401</code></td>
+<td>Authentication</td>
+</tr>
+<tr>
+<td><code>403</code></td>
+<td>Insufficient privileges</td>
+</tr>
+<tr>
+<td><code>404</code></td>
+<td>Incorrect target or endpoint</td>
+</tr>
+<tr>
+<td><code>409</code></td>
+<td>Document or version conflict</td>
+</tr>
+<tr>
+<td><code>429</code></td>
+<td>Elasticsearch is temporarily unable to accept more work</td>
+</tr>
+<tr>
+<td><code>5xx</code></td>
+<td>Service or platform condition</td>
+</tr>
+</tbody>
+</table>
+<p>Do not grant administrator privileges to an application just to bypass an indexing error.</p>
+<h2 id="observability-data-is-missing">Observability data is missing</h2>
+<p>For logs, metrics, or traces, first determine whether the problem is before or after Elasticsearch.</p>
+<p>Check:</p>
 <ol>
-<li>Confirm the index or data stream contains documents.</li>
-<li>Confirm the user can read it.</li>
-<li>Check the Kibana data view and time range.</li>
-<li>Confirm the expected field exists and has the intended type.</li>
-<li>Check whether data was written to another index or pipeline.</li>
+<li><strong>Fleet → Agents</strong> and confirm the Elastic Agent is <strong>Healthy</strong>.</li>
+<li>Confirm the correct Fleet policy is assigned.</li>
+<li>Confirm the expected OpenTelemetry or Elastic integration is enabled.</li>
+<li>Verify the source is actually producing telemetry.</li>
+<li>Confirm the expected OTel-native dataset or data stream exists.</li>
+<li>Check the Kibana time range and filters.</li>
 </ol>
-<h2 id="kibana-is-not-ready">Kibana is not ready</h2>
-<p>Confirm Elasticsearch connectivity and health first. Disk pressure, unavailable
-system indices, authentication, or certificate failures can prevent Kibana from
-becoming ready.</p>
-<h2 id="ingest-fails">Ingest fails</h2>
-<p>Record the status code and redacted error type. Check mapping conflicts,
-pipeline errors, rejected requests, permissions, and target index names. Test a
-synthetic document rather than replaying sensitive production data.</p>
-<p>Use <a href="https://www.elastic.co/docs/troubleshoot">Elastic troubleshooting</a> for
-current product diagnostics, then <a href="../get-support/">get support</a> if the managed
-service requires intervention.</p>
+<p>For OpenTelemetry workloads, also verify important resource attributes such as:</p>
+<ul>
+<li><code>service.name</code>;</li>
+<li>environment;</li>
+<li>host;</li>
+<li>cloud;</li>
+<li>Kubernetes metadata.</li>
+</ul>
+<p>If the Elastic Agent is unhealthy, troubleshoot Fleet or connectivity first.</p>
+<h2 id="search-returns-no-results">Search returns no results</h2>
+<p>If a query returns no data:</p>
+<ol>
+<li>Confirm the expected index or data stream exists.</li>
+<li>Confirm it contains documents.</li>
+<li>Confirm the user has read access.</li>
+<li>Check the Kibana data view.</li>
+<li>Check the selected time range.</li>
+<li>Confirm the query uses the expected fields.</li>
+<li>Verify that data was not written to a different index, data stream, or dataset.</li>
+</ol>
+<p>For application search, also review mappings and analyzers when the document exists but expected text does not match.</p>
+<h2 id="search-results-are-incorrect">Search results are incorrect</h2>
+<p>If documents are returned but relevance or filtering is incorrect, review:</p>
+<ul>
+<li>field mappings;</li>
+<li>text versus keyword fields;</li>
+<li>analyzers;</li>
+<li>query structure;</li>
+<li>filters;</li>
+<li>document values;</li>
+<li>vector or semantic-search configuration when used.</li>
+</ul>
+<p>This is usually an application/search-design issue rather than a managed-platform health problem.</p>
+<h2 id="kibana-does-not-load-correctly">Kibana does not load correctly</h2>
+<p>If Kibana cannot be reached at all, use <a href="../troubleshoot-connectivity/">Connectivity issues</a>.</p>
+<p>If Kibana loads but behaves incorrectly, check:</p>
+<ul>
+<li>authentication;</li>
+<li>user roles;</li>
+<li>Kibana space access;</li>
+<li>Elasticsearch health;</li>
+<li>expected indices and data streams;</li>
+<li>browser session state.</li>
+</ul>
+<p>For SSO issues, verify Microsoft Entra authentication and Elastic role mappings.</p>
+<h2 id="writes-are-blocked-or-requests-return-429">Writes are blocked or requests return <code>429</code></h2>
+<p>Sustained capacity pressure can affect indexing.</p>
+<p>Do not change Elasticsearch disk watermarks or managed infrastructure directly.</p>
+<p>Check:</p>
+<ul>
+<li>whether ingestion recently increased;</li>
+<li>whether retention increased;</li>
+<li>whether stored data is growing rapidly;</li>
+<li>whether query or indexing demand changed.</li>
+</ul>
+<p>If the condition persists, request a capacity review through iVedha.</p>
+<p>See <a href="../health-and-capacity/">Monitor health and capacity</a>.</p>
+<h2 id="collect-evidence">Collect evidence</h2>
+<p>Before escalating, collect:</p>
+<ul>
+<li>deployment reference;</li>
+<li>affected index or data stream;</li>
+<li>approximate start time;</li>
+<li>HTTP status;</li>
+<li>redacted Elasticsearch error;</li>
+<li>whether all workloads or only one workload is affected;</li>
+<li>Elastic Agent status when relevant;</li>
+<li>affected OpenTelemetry signal: logs, metrics, or traces.</li>
+</ul>
+<p>Do not include passwords, API keys, enrollment tokens, private keys, or sensitive production documents.</p>
+<h2 id="get-help">Get help</h2>
+<p>For managed-platform investigation:</p>
+<ul>
+<li>AI chat: <code>https://chat.ivedha.cloud</code></li>
+<li>Support portal: <code>https://support.ivedha.com/</code></li>
+</ul>
+<p>For detailed Elasticsearch product behavior, use Elastic’s official troubleshooting documentation.</p>
 
   
   
@@ -2320,7 +2478,7 @@ service requires intervention.</p>
   <aside class="md-source-file" aria-label="Document metadata">
     
       <span class="md-source-file__fact">
-        <strong>Last verified:</strong> 2026-07-28
+        <strong>Last verified:</strong> 2026-08-18
       </span>
     
     
