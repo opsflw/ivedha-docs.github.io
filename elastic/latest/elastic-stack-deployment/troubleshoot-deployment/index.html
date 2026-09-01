@@ -2374,13 +2374,18 @@
 </ul>
 <p>Do not attempt to repair Kubernetes, Elasticsearch, or other managed resources directly.</p>
 <h2 id="deployment-notification-was-not-received">Deployment notification was not received</h2>
-<p>Deployment notifications are sent to the support email address provided during Marketplace deployment.</p>
+<p>Deployment notifications are sent to each configured delivery address, or to
+the account address when no separate delivery address is configured.</p>
 <p>Check:</p>
 <ul>
-<li>the support email entered during deployment;</li>
+<li>the configured account and delivery addresses;</li>
 <li>spam or junk folders;</li>
 <li>organizational mail filtering.</li>
 </ul>
+<p>If a mapped delivery address is configured, check that mailbox. The delivery
+address receives email but does not grant access to the deployment. Review the
+<a href="../deployment-field-reference/#support-contacts">support-contact mapping</a> if
+the configuration is unclear.</p>
 <p>If the Azure deployment succeeded but no deployment notification was received, contact iVedha and provide the deployment name and Azure subscription information.</p>
 <h2 id="deployment-failed-after-onboarding-started">Deployment failed after onboarding started</h2>
 <p>If you received the initial <strong>request received</strong> or <strong>onboarding in progress</strong> notification but later receive an error or the deployment stops progressing, the problem is likely in the managed onboarding process rather than the initial Marketplace deployment.</p>
@@ -2423,7 +2428,7 @@
   <aside class="md-source-file" aria-label="Document metadata">
     
       <span class="md-source-file__fact">
-        <strong>Last verified:</strong> 2026-08-18
+        <strong>Last verified:</strong> 2026-08-31
       </span>
     
     

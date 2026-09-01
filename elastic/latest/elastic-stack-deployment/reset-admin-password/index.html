@@ -2221,13 +2221,19 @@
 <li>Select or identify the deployment you want to manage.</li>
 <li>Request an Elasticsearch administrator password reset.</li>
 <li>Request the verification code when prompted.</li>
-<li>A one-time password (OTP) is sent to the email address associated with your deployment.</li>
+<li>A one-time password (OTP) is sent to the delivery address mapped to your
+   authorized account, or to the account address when no delivery address is
+   configured.</li>
 <li>Enter the OTP in the chat when prompted.</li>
 <li>Confirm the password reset.</li>
 <li>Wait for the reset operation to complete.</li>
 <li>The newly generated administrator password is displayed once.</li>
 </ol>
 <p>Save the password immediately in your organization's approved password or secrets-management system.</p>
+<p>The delivery address receives the OTP but cannot authorize the request. Sign in
+and request the reset with the configured account address. See
+<a href="../deployment-field-reference/#support-contacts">Support contacts</a> for the
+mapping format.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>The generated password is shown only once and cannot be retrieved later.
@@ -2263,7 +2269,7 @@ If it is lost, run the password-reset process again to generate a new one.</p>
   <aside class="md-source-file" aria-label="Document metadata">
     
       <span class="md-source-file__fact">
-        <strong>Last verified:</strong> 2026-08-17
+        <strong>Last verified:</strong> 2026-08-31
       </span>
     
     

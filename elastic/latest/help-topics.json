@@ -119,7 +119,8 @@
       "owner": "platform",
       "intents": [
         "understand Elasticsearch Marketplace deployment fields",
-        "review managed application inputs"
+        "review managed application inputs",
+        "configure account and delivery email addresses"
       ]
     },
     {
@@ -384,7 +385,8 @@
       "owner": "platform",
       "intents": [
         "reset the Elasticsearch administrator password",
-        "change the initial Elastic password after deployment"
+        "change the initial Elastic password after deployment",
+        "find which email receives the verification code"
       ]
     },
     {

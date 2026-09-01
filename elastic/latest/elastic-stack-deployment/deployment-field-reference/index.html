@@ -2507,8 +2507,44 @@ required by the Marketplace form.</p>
 <p>The maintenance window can later be managed through the supported iVedha
 maintenance workflow.</p>
 <h2 id="support-contacts">Support contacts</h2>
-<p>Enter the operational and support contact information requested by the Marketplace form.</p>
-<p>The support email address is used for deployment lifecycle notifications, including:</p>
+<p>Enter the operational and support contact information requested by the
+Marketplace form. Each item can use either form:</p>
+<div class="highlight"><pre><span></span><code>account@example.com
+account@example.com|delivery@example.com
+</code></pre></div>
+<p>The <strong>account address</strong> on the left is the identity that can access and manage
+the deployment through supported iVedha workflows. The optional <strong>delivery
+address</strong> on the right receives one-time passwords and service communication.
+A delivery address does not grant access to the deployment.</p>
+<p>Separate multiple items with commas or semicolons. You can mix delimiters and
+add whitespace around items or the <code>|</code> separator. The value is stored in a
+stable comma-separated form. For example:</p>
+<div class="highlight"><pre><span></span><code>admin@example.com; operator@example.com | alerts@example.net,
+legacy@example.org
+</code></pre></div>
+<p>is stored in canonical form as:</p>
+<div class="highlight"><pre><span></span><code>admin@example.com,operator@example.com|alerts@example.net,legacy@example.org
+</code></pre></div>
+<p>The first and third items are legacy entries: their account addresses also
+receive email. The mapped second item authorizes <code>operator@example.com</code>, but
+sends its one-time passwords and service communication to
+<code>alerts@example.net</code>.</p>
+<p>Account matching is exact and case-insensitive. An address authorizes access
+only when it matches a complete account address; matching a delivery address or
+part of another address is denied.</p>
+<p>The configuration is rejected when it contains:</p>
+<ul>
+<li>empty items, including leading, trailing, or repeated delimiters;</li>
+<li>a missing or invalid account or delivery address;</li>
+<li>an item containing more than one <code>|</code> separator;</li>
+<li>multiple items with the same account address, including case-only
+  differences.</li>
+</ul>
+<p>Different accounts can use the same delivery address. Broadcast service
+communication is sent only once to each delivery recipient, using
+case-insensitive recipient matching.</p>
+<p>The configured delivery recipients are used for deployment lifecycle
+notifications, including:</p>
 <ul>
 <li>deployment request received;</li>
 <li>Marketplace deployment completed and onboarding in progress;</li>
@@ -2536,7 +2572,7 @@ free-text fields.</p>
   <aside class="md-source-file" aria-label="Document metadata">
     
       <span class="md-source-file__fact">
-        <strong>Last verified:</strong> 2026-08-18
+        <strong>Last verified:</strong> 2026-08-31
       </span>
     
     
